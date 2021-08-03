@@ -16,7 +16,7 @@ PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "tinFoilHat.jpg"
+featuredImage: "./images/tinFoilHat.jpg"
 ImageCredit: "James Bithell"
 Client: "University of York Drama Society"
 ---

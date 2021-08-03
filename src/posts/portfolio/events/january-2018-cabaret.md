@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "cabaret02r96.jpg"
+featuredImage: "./images/cabaret02r96.jpg"
 ImageCredit: "James Bithell"
 Client: "Westminster School"
 ---

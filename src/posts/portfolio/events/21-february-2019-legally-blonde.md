@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "legallyBlonde.jpg"
+featuredImage: "./images/legallyBlonde.jpg"
 ImageCredit: "CHMS York"
 Client: "CHMS York"
 ---

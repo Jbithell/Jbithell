@@ -16,7 +16,7 @@ PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "yorks-got-talent-2019.jpg"
+featuredImage: "./images/yorks-got-talent-2019.jpg"
 ImageCredit: "James Bithell"
 Client: "University of York Student's Union"
 ---

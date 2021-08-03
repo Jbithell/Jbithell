@@ -16,7 +16,7 @@ PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "election-results-night-2020.jpg"
+featuredImage: "./images/election-results-night-2020.jpg"
 ImageCredit: "Jacob Dicker"
 Client: "University of York Students' Union"
 ---

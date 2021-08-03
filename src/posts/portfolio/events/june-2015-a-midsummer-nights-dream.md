@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "midsummers.jpg"
+featuredImage: "./images/midsummers.jpg"
 ImageCredit: "Sandy Crole"
 Client:  "Westminster School"
 ---

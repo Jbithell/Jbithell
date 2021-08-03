@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "fromUpHere.jpg"
+featuredImage: "./images/fromUpHere.jpg"
 ImageCredit: "Anna Bunch"
 Client:  "University of York Drama Society"
 ---

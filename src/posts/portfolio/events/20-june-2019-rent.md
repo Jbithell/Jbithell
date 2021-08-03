@@ -16,7 +16,7 @@ PerformancesAttended: 4
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "rent.jpg"
+featuredImage: "./images/rent.jpg"
 ImageCredit: "Katherine Johnston"
 Client: "CHMS York"
 ---

@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "hercules.jpg"
+featuredImage: "./images/hercules.jpg"
 ImageCredit: "Kat Johnston"
 Client: "University of York Pantomime Society"
 ---

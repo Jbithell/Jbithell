@@ -15,7 +15,7 @@ PerformancesAttended:
 Fee: "Up School | Westminster School"
 Professional: false
 Paid: false
-ImageThumb: "oklahoma.jpg"
+featuredImage: "./images/oklahoma.jpg"
 ImageCredit: "Sandy Crole"
 Client: ""
 ---

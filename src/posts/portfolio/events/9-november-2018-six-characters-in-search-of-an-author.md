@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "sixCharacters.jpg"
+featuredImage: "./images/sixCharacters.jpg"
 ImageCredit: "Greg Tiani"
 Client: "University of York Drama Society"
 ---

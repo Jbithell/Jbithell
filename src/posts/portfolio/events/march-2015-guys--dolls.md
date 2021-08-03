@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "guysAndDolls.jpg"
+featuredImage: "./images/guysAndDolls.jpg"
 ImageCredit: "Sandy Crole"
 Client:  "Westminster School"
 ---

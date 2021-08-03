@@ -15,7 +15,7 @@ PerformancesAttended: 2
 Fee: "£119.72"
 Professional: false
 Paid: true
-ImageThumb: ""
+featuredImage: ""
 ImageCredit: ""
 Client: ""
 ---

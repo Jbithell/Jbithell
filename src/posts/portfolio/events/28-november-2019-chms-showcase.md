@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "autumn-showcase-2019.jpg"
+featuredImage: "./images/autumn-showcase-2019.jpg"
 ImageCredit: "Nathan Billis"
 Client: "CHMS York"
 ---

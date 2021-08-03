@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "tempest.jpg"
+featuredImage: "./images/tempest.jpg"
 ImageCredit: "Sandy Crole"
 Client: 
 ---

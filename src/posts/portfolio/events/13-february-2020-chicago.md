@@ -16,7 +16,7 @@ PerformancesAttended: 4
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "chicago.jpg"
+featuredImage: "./images/chicago.jpg"
 ImageCredit: "James Bithell"
 Client: ""
 ---

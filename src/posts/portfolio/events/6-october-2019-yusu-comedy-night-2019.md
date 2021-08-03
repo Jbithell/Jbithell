@@ -15,7 +15,7 @@ PerformancesAttended: 1
 Fee: ""
 Professional: true
 Paid: false
-ImageThumb: "yusu-comedy-night-2019.jpeg"
+featuredImage: "./images/yusu-comedy-night-2019.jpeg"
 ImageCredit: "James Bithell"
 Client: "University of York Student's Union"
 ---

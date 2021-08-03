@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "desperateMeasures.jpg"
+featuredImage: "./images/desperateMeasures.jpg"
 ImageCredit: "Sandy Crole"
 Client:  "Westminster School"
 ---

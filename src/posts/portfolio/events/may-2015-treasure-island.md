@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "treasureIsland.jpg"
+featuredImage: "./images/treasureIsland.jpg"
 ImageCredit: "Sandy Crole"
 Client:  "Westminster School"
 ---

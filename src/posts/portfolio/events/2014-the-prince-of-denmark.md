@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: ""
+featuredImage: ""
 ImageCredit: ""
 Client: "Westminster School"
 ---

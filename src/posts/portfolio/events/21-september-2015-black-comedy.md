@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "blackComedy.jpg"
+featuredImage: "./images/blackComedy.jpg"
 ImageCredit: "Sandy Crole"
 Client: "Westminster School"
 ---

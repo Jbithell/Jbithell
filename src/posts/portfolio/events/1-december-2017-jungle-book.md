@@ -16,7 +16,7 @@ PerformancesAttended: 2
 Fee: "£206.42"
 Professional: false
 Paid: true
-ImageThumb: "jungleBook.jpg"
+featuredImage: "./images/jungleBook.jpg"
 ImageCredit: "James Bithell"
 Client: ""
 ---

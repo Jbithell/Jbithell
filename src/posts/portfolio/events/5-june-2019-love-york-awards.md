@@ -15,7 +15,7 @@ PerformancesAttended: 0
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "loveYork.jpg"
+featuredImage: "./images/loveYork.jpg"
 ImageCredit: "James Bithell"
 Client:  "University of York Student's Union"
 ---

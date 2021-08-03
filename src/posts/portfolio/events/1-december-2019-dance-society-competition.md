@@ -15,7 +15,7 @@ PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: ""
+featuredImage: ""
 ImageCredit: ""
 Client: "University of York Dance Society"
 ---

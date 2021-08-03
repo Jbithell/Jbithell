@@ -38,7 +38,15 @@ export const pageQuery = graphql`
         Fee
         Professional
         Paid
-        ImageThumb
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 200
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
         ImageCredit
         Client
       }

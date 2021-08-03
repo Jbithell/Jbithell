@@ -16,7 +16,7 @@ PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "drinkingCompanions.jpg"
+featuredImage: "./images/drinkingCompanions.jpg"
 ImageCredit: "James Bithell"
 Client:  "Westminster School"
 ---

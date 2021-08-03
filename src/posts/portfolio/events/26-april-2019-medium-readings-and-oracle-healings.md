@@ -16,7 +16,7 @@ PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: "mediumReadings.jpg"
+featuredImage: "./images/mediumReadings.jpg"
 ImageCredit: "Greg Tiani"
 Client:  "University of York Drama Society"
 ---

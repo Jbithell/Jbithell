@@ -16,7 +16,7 @@ PerformancesAttended: 0
 Fee: ""
 Professional: false
 Paid: false
-ImageThumb: ""
+featuredImage: ""
 ImageCredit: ""
 Client: "Westminster Under School"
 ---

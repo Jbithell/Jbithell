@@ -1,45 +1,62 @@
 import { Link, graphql } from "gatsby"
 import * as React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Template from "../components/Template"
 
 const CreditsPage = ({data}) => {
   const { edges: posts } = data.allMarkdownRemark
+  const skills = [{
+      name: "Sound",
+      description: "Theatrical & live event front-of-house engineer with experience line-by-line mixing musical theatre and associated sound design. Experience of Allen&Heath dLive/SQ, Digico SD Series and Yamaha."
+    },
+    {
+      name: "Lighting",
+      description: "Lighting design, programming and operation for theatre and live events, including busking. Experience in ETC EOS (including with Augment3d)"
+    },
+    {
+      name: "Video",
+      description: "Experienced vision mixer and director, both in live and documentary formats. Experience with Blackmagic vision mixers, as well as Premiere Pro and Vegas"
+    }
+]
   return (
     <Template>
-      <div className="mt-10 py-10 text-center">
+      <div className="py-10 text-center">
         <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
         Event Portfolio
         </h3>
-        <p>
-          
-WEB DEVELOPMENT
-Principally building RESTful APIs in PHP on the backend with a good understanding of Node.js and use of sockets. JQuery and Bootstrap on the frontend running in Electron & Apache Cordova on some projects.
-
- 
-LIVE SOUND
-Theatrical & live event front-of-house engineer with experience line-by-line mixing musical theatre and associated sound design.
-
- 
-LIGHTING DESIGN
-Lighting design for theatre and live events, including busking - normally on ETC EOS
-
- 
-VIDEO
-Experienced video director (documentary format), editor and vision mixer (including live sport).
-        </p>
-        <div className="flex flex-wrap justify-center">
-          <div className="w-full lg:w-9/12 px-4">
-          {posts.filter(post => (post.node.frontmatter.type === "liveEvent" && post.node.frontmatter.example !== true)).map(({ node: post }) => {
+        <div class={`grid md:grid-cols-${skills.length} gap-4 my-4`}>
+          {skills.map((skill) => {
             return (
-              <div key={post.id}>
-                <h1>
-                  <Link to={`/events/${post.frontmatter.slug}`}>{post.frontmatter.Name}</Link>
-                </h1>
-                <h2>{post.frontmatter.Date}</h2>
+              <div className="bg-white bg-gray-100 shadow overflow-hidden sm:rounded-lg">
+                <div className="px-4 py-5 sm:px-6">
+                  <h2 className="text-xl leading-6 font-medium text-gray-900">{skill.name}</h2>
+                  <p className="mt-1 max-w-2xl text-sm text-gray-500">{skill.description}</p>
+                </div>
               </div>
             )
           })}
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          {posts.filter(post => post.node.frontmatter.type === "liveEvent" && post.node.frontmatter.example !== true).map(({ node: post }) => {
+            let image = post.frontmatter.featuredImage ? getImage(post.frontmatter.featuredImage) : false
+            return (
+              <div class="bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-200">
+                <Link to={`/events/${post.frontmatter.slug}`}>
+                  { image ? (<GatsbyImage class="rounded-t-lg" image={image} alt={`${post.frontmatter.Name} | Credit: ${post.frontmatter.ImageCredit}`} />) : null }
+                  <div class="py-4 px-8">
+                    <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">{post.frontmatter.Name}</h1>
+                    <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">{post.frontmatter.Date}</p>
+                  </div>
+                </Link>
+              </div>
+            )
+          })}
+          
+        </div>
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full lg:w-9/12 px-4">
+          
           </div>
         </div>
       </div>
@@ -73,7 +90,14 @@ export const pageQuery = graphql`
             Fee
             Professional
             Paid
-            ImageThumb
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
             ImageCredit
             Client
           }

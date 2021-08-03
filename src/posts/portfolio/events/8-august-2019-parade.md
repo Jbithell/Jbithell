@@ -16,7 +16,7 @@ PerformancesAttended: 1
 Fee: ""
 Professional: true
 Paid: false
-ImageThumb: ""
+featuredImage: ""
 ImageCredit: ""
 Client: "NYMT"
 ---

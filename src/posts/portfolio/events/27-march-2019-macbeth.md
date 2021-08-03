@@ -16,7 +16,7 @@ PerformancesAttended: 0
 Fee: "£59.24"
 Professional: false
 Paid: true
-ImageThumb: ""
+featuredImage: ""
 ImageCredit: ""
 Client: "Westminster Under School"
 ---

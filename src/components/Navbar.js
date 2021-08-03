@@ -38,6 +38,7 @@ export default function Navbar(props) {
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                   href="https://github.com/jbithell"
+                  target="_blank"  rel="noreferrer"
                 >
                   <i
                     className={

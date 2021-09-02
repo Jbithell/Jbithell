@@ -1,9 +1,9 @@
 # Hi 👋, I'm James Bithell
 
-A theatre lover working as a Full Stack Engineer
+A theatre lover who's worked as a Full Stack Engineer, currently taking some time out of the industry. 
 
-- 🔭 I’m currently working at [Intuety](https://intuety.io)
-- 📫 Reach me at **hi@jbithell.com**
+- 🔭 I’m currently working as a Civil Servant for the UK Government.
+- 📫 Reach me at **hi@jbithell.com**s
 - 📄 Visit my website [jbithell.com](https://jbithell.com)
 
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=jbithell&count_private=true&show_icons=true)
@@ -23,5 +23,3 @@ A theatre lover working as a Full Stack Engineer
 
 ## Support:
 <a href="https://www.buymeacoffee.com/jbithell"><img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="jbithell" /></a>
-
-![Snake Gif](https://github.com/jbithell/jbithell/blob/output/github-contribution-grid-snake.svg)

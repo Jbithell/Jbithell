@@ -118,6 +118,12 @@ export default function Footer() {
                          href="https://www.etsy.com/uk/shop/bithellstudios">Etsy
                       </a>
                     </li>
+                    <li>
+                      <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                         href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fjbithell.com">Environmental Impact
+                      </a>
+                    </li>
+                    
                   </ul>
 
                 </div>

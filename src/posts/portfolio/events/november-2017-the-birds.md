@@ -16,7 +16,7 @@ PerformancesAttended: 0
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: ""
+featuredImage: null
 ImageCredit: ""
 Client: "Westminster School"
 ---

@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: ""
+featuredImage: null
 ImageCredit: ""
 Client: "University of York Pantomime Society"
 ---

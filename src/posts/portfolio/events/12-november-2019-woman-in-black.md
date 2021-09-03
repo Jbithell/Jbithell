@@ -16,7 +16,7 @@ PerformancesAttended: 0
 Fee: ""
 Professional: true
 Paid: true
-featuredImage: ""
+featuredImage: null
 ImageCredit: ""
 Client: ""
 ---

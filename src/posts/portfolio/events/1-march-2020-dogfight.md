@@ -15,7 +15,7 @@ PerformancesAttended: 4
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: ""
+featuredImage: null
 ImageCredit: ""
 Client: "CHMS York"
 ---

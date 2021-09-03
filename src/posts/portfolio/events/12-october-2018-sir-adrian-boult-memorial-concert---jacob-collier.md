@@ -16,7 +16,7 @@ PerformancesAttended: 1
 Fee: "£130.00"
 Professional: false
 Paid: true
-featuredImage: ""
+featuredImage: null
 ImageCredit: ""
 Client: "Westminster School"
 ---

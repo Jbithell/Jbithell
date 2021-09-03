@@ -16,7 +16,7 @@ PerformancesAttended: 4
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: ""
+featuredImage: null
 ImageCredit: ""
 Client: "University of York Drama Society"
 ---

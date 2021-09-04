@@ -106,17 +106,17 @@ export default function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://studios.jbithell.com">Bithell Studios
+                      href="https://studios.jbithell.com" target="_blank" rel="noreferrer">Bithell Studios
                     </a>
                     </li>
                     <li>
                       <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                         href="https://www.etsy.com/uk/shop/bithellstudios">Etsy
+                         href="https://www.etsy.com/uk/shop/bithellstudios" target="_blank" rel="noreferrer">Etsy
                       </a>
                     </li>
                     <li>
                       <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                         href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fjbithell.com">Environmental Impact
+                         href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fjbithell.com" target="_blank" rel="noreferrer">Environmental Impact
                       </a>
                     </li>
                     

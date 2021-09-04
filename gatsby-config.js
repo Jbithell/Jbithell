@@ -25,7 +25,18 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "James Bithell",
+        short_name: "JBithell",
+        description: "Website for James Bithell",
+        start_url: "/",
+        background_color: "#f7f0eb",
+        theme_color: "#fd93cc",
+        display: "standalone",
         icon: "src/assets/img/icon.png",
+        icon_options: {
+          purpose: "any maskable",
+        },
+        cache_busting_mode: "none",
       },
     },
     "gatsby-transformer-remark",

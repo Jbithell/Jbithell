@@ -1,11 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 
-import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
-import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
-import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
-import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
-
+import { FaTwitter, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (

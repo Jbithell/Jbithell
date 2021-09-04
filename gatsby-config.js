@@ -4,11 +4,11 @@ module.exports = {
     title: "James Bithell",
     personalDetails: {
       name: "James Bithell",
-      location: "Bristol, United Kingdom",
+      location: "London, United Kingdom",
       company: {
-        jobTitle: "Full Stack Developer",
-        name: "Intuety",
-        url: "https://intuety.io"
+        jobTitle: "",
+        name: "",
+        url: ""
       }
     }
   },

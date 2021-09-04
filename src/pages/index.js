@@ -26,9 +26,12 @@ const IndexPage = ({data}) => {
         <div className="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
         {data.site.siteMetadata.personalDetails.location}
         </div>
-        <div className="mb-2 text-gray-700 mt-0">
-        {data.site.siteMetadata.personalDetails.company.jobTitle} at <a href={data.site.siteMetadata.personalDetails.company.url} target="_blank" rel="noreferrer">{data.site.siteMetadata.personalDetails.company.name}</a>
-        </div>
+        { data.site.siteMetadata.personalDetails.company.jobTitle ? (
+          <div className="mb-2 text-gray-700 mt-0">
+          {data.site.siteMetadata.personalDetails.company.jobTitle} at <a href={data.site.siteMetadata.personalDetails.company.url} target="_blank" rel="noreferrer">{data.site.siteMetadata.personalDetails.company.name}</a>
+          </div>
+        ) : null}
+        
       </div>
       {/*<div className="mt-10 py-10 border-t border-gray-300 text-center">
         <div className="flex flex-wrap justify-center">

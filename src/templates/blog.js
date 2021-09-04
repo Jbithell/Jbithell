@@ -5,18 +5,19 @@ import Template from "../components/Template"
 
 export default function PostTemplate({ data }) {
   const { markdownRemark: post } = data
-  console.log(data)
   return (
-    <div className="blog-post-container">
-      <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
-      <div className="blog-post">
-        <h1>{post.frontmatter.title}</h1>
-        <div
-          className="blog-post-content"
+    <Template smallBanner={true}>
+      <Helmet title={post.frontmatter.title} />
+      <div className="px-6 py-6">
+        <h1 className="text-3xl text-center font-semibold leading-normal text-gray-800 mb-2">
+          {post.frontmatter.title}
+        </h1>
+        <h2 className="text-xl text-center font-light text-gray-800 mb-1">{post.frontmatter.date}</h2>
+        <div className="prose w-full max-w-full"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
-    </div>
+    </Template>
   )
 }
 
@@ -25,7 +26,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug }, type: { eq: $type } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM YYYY")
         slug
         title
       }

@@ -2,6 +2,7 @@
 slug: "raspberry-pi-weather-station"
 type: "blog"
 example: false
+showInList: true
 date: "2017-07-01"
 title: "Resin.io Weather Station on the Raspberry Pi"
 ---

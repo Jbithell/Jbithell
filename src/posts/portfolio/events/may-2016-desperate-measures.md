@@ -20,11 +20,4 @@ featuredImage: "./images/desperateMeasures.jpg"
 ImageCredit: "Sandy Crole"
 Client:  "Westminster School"
 ---
-
-# Desperate Measures
-
 Responsible for emergency cover & repairs. Mixed sound on last night. Repaired cans link on first night
-
-![Image by Sandy Crole](./images/desperateMeasures.jpg)
-*Image Credit: Sandy Crole*
-

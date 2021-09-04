@@ -20,10 +20,3 @@ featuredImage: "./images/rent.jpg"
 ImageCredit: "Katherine Johnston"
 Client: "CHMS York"
 ---
-
-# RENT
-
-CHMS York
-![Image by Katherine Johnston](./images/rent.jpg)
-*Image Credit: Katherine Johnston*
-

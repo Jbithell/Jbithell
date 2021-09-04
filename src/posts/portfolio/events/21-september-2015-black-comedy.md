@@ -20,9 +20,3 @@ featuredImage: "./images/blackComedy.jpg"
 ImageCredit: "Sandy Crole"
 Client: "Westminster School"
 ---
-
-# Black Comedy
-
-![Image by Sandy Crole](./images/blackComedy.jpg)
-*Image Credit: Sandy Crole*
-

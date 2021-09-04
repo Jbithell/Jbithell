@@ -19,8 +19,3 @@ featuredImage: "./images/yusu-comedy-night-2019.jpeg"
 ImageCredit: "James Bithell"
 Client: "University of York Student's Union"
 ---
-
-# YUSU Comedy Night 2019
-
-![Image by James Bithell](./images/yusu-comedy-night-2019.jpeg)
-

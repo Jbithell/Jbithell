@@ -21,8 +21,3 @@ ImageCredit: "James Bithell"
 Client:  "Westminster School"
 ---
 
-# Drinking Companions & A Talk in the Park
-
-![Image by James Bithell](./images/drinkingCompanions.jpg)
-*Image Credit: James Bithell*
-

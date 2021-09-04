@@ -20,9 +20,3 @@ featuredImage: "./images/treasureIsland.jpg"
 ImageCredit: "Sandy Crole"
 Client:  "Westminster School"
 ---
-
-# Treasure Island
-
-![Image by Sandy Crole](./images/treasureIsland.jpg)
-*Image Credit: Sandy Crole*
-

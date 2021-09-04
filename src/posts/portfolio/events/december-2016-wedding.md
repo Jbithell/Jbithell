@@ -20,5 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: ""
 ---
-
-# Wedding

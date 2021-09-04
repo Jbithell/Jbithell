@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: ""
 ---
-
-# Woman in Black
-

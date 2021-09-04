@@ -20,9 +20,3 @@ featuredImage: "./images/legallyBlonde.jpg"
 ImageCredit: "CHMS York"
 Client: "CHMS York"
 ---
-
-# Legally Blonde
-
-![Image by CHMS York](./images/legallyBlonde.jpg)
-*Image Credit: CHMS York*
-

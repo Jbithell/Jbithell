@@ -21,5 +21,4 @@ ImageCredit: ""
 Client: ""
 ---
 
-# O2 Silver Clef Awards
-
+On Work Experience with Hawthorne

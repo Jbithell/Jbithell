@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "University of York Dance Society"
 ---
-
-# Dance Society Competition
-

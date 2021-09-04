@@ -19,7 +19,3 @@ featuredImage: "./images/loveYork.jpg"
 ImageCredit: "James Bithell"
 Client:  "University of York Student's Union"
 ---
-
-# Love York Awards
-
-![Image by James Bithell](./images/loveYork.jpg)

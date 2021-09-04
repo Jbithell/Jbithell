@@ -20,10 +20,4 @@ ImageCredit: "Sandy Crole"
 Client: ""
 ---
 
-# Oklahoma!
-
 Live line by line mixing of musical
-
-![Image by Sandy Crole](./images/oklahoma.jpg)
-*Image Credit: Sandy Crole*
-

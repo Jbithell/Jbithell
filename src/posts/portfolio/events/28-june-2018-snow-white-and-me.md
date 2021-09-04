@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: ""
 ---
-
-# Snow White and Me
-

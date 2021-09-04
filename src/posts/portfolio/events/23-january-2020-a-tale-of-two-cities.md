@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "University of York Drama Society"
 ---
-
-# A Tale of Two Cities
-

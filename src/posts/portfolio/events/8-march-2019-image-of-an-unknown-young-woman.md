@@ -20,8 +20,3 @@ featuredImage: "./images/imageOfAnUnknown.jpg"
 ImageCredit: "Greg Tiani"
 Client: "University of York Drama Society"
 ---
-
-# Image of an Unknown Young Woman
-
-![Image by Greg Tiani](./images/imageOfAnUnknown.jpg)
-

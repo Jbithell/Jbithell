@@ -20,5 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "Westminster School"
 ---
-
-# Renaissance Festival 2014

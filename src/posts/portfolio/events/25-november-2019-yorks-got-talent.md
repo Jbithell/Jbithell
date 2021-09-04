@@ -20,7 +20,3 @@ featuredImage: "./images/yorks-got-talent-2019.jpg"
 ImageCredit: "James Bithell"
 Client: "University of York Student's Union"
 ---
-
-# York's Got Talent
-
-![Image by James Bithell](./images/yorks-got-talent-2019.jpg)

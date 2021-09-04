@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: ""
 ---
-
-# A Midsummer Night's Dream
-

@@ -21,5 +21,3 @@ ImageCredit: ""
 Client: "Westminster School"
 ---
 
-# The Birds
-

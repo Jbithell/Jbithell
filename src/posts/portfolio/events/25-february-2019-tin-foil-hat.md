@@ -20,8 +20,3 @@ featuredImage: "./images/tinFoilHat.jpg"
 ImageCredit: "James Bithell"
 Client: "University of York Drama Society"
 ---
-
-# Tin foil hat
-
-ODN
-![Image by James Bithell](./images/tinFoilHat.jpg)

@@ -20,9 +20,3 @@ featuredImage: "./images/midsummers.jpg"
 ImageCredit: "Sandy Crole"
 Client:  "Westminster School"
 ---
-
-# A Midsummer Night's Dream
-
-![Image by Sandy Crole](./images/midsummers.jpg)
-*Image Credit: Sandy Crole*
-

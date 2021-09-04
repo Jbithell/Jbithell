@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "Westminster School"
 ---
-
-# The Prince of Denmark
-

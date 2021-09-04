@@ -20,9 +20,3 @@ featuredImage: "./images/hercules.jpg"
 ImageCredit: "Kat Johnston"
 Client: "University of York Pantomime Society"
 ---
-
-# Hercules The Pantomime
-
-![Image by Kat Johnston](./images/hercules.jpg)
-*Image Credit: Kat Johnston*
-

@@ -7,7 +7,7 @@ const BlogPostsPage = ({data}) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <Template>
-      <div className="mt-10 py-10 text-center">
+      <div className="px-6 mt-10 py-10 text-center">
         <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
         Blog Posts
         </h3>

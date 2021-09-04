@@ -20,5 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: 
 ---
-
-# Renaissance Festival 2016

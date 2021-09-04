@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: ""
 ---
-
-# TakeOver Festival 2019
-

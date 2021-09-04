@@ -20,8 +20,3 @@ featuredImage: "./images/chicago.jpg"
 ImageCredit: "James Bithell"
 Client: ""
 ---
-
-# Chicago
-
-CHMS York
-![Image by James Bithell](./images/chicago.jpg)

@@ -20,5 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "University of York Drama Society"
 ---
-
-# Spaced Out and Ready to Die

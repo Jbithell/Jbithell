@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client:  "Westminster School"
 ---
-
-# Norvil and Josephine Magic at PHAB 2016
-

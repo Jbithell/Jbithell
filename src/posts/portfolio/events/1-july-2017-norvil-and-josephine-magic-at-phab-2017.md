@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: ""
 ---
-
-# Norvil and Josephine Magic at PHAB 2017
-

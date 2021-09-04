@@ -20,5 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "Westminster School"
 ---
-
-# Sir Adrian Boult Memorial Concert - Jacob Collier

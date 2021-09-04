@@ -20,9 +20,3 @@ featuredImage: "./images/fromUpHere.jpg"
 ImageCredit: "Anna Bunch"
 Client:  "University of York Drama Society"
 ---
-
-# From Up Here
-
-![Image by Anna Bunch](./images/fromUpHere.jpg)
-*Image Credit: Anna Bunch*
-

@@ -20,9 +20,3 @@ featuredImage: "./images/mediumReadings.jpg"
 ImageCredit: "Greg Tiani"
 Client:  "University of York Drama Society"
 ---
-
-# Medium Readings and Oracle Healings
-
-![Image by Greg Tiani](./images/mediumReadings.jpg)
-*Image Credit: Greg Tiani*
-

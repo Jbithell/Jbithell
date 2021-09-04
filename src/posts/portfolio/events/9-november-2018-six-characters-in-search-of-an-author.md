@@ -20,7 +20,3 @@ featuredImage: "./images/sixCharacters.jpg"
 ImageCredit: "Greg Tiani"
 Client: "University of York Drama Society"
 ---
-
-# Six Characters in Search of an Author
-
-![Image by Greg Tiani](./images/sixCharacters.jpg)

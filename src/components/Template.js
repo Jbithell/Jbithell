@@ -32,7 +32,7 @@ export default function Template(props) {
       />        
       <Navbar transparent />
       <main className="profile-page">
-        <section className="relative block" style={{ height: "600px" }}>
+        <section className="relative block" style={{ height: props.smallBanner ? "300px" : "600px" }}>
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
@@ -67,7 +67,7 @@ export default function Template(props) {
         <section className="relative py-16 bg-gray-300">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
-              <div className="px-6">
+              <div>
                 {props.children}
               </div>
             </div>

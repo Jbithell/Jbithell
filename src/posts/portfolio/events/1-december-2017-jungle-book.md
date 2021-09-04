@@ -20,8 +20,3 @@ featuredImage: "./images/jungleBook.jpg"
 ImageCredit: "James Bithell"
 Client: ""
 ---
-
-# Jungle Book
-
-![Image by James Bithell](./images/jungleBook.jpg)
-

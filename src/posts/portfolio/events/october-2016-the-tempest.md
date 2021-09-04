@@ -20,9 +20,3 @@ featuredImage: "./images/tempest.jpg"
 ImageCredit: "Sandy Crole"
 Client: 
 ---
-
-# The Tempest
-
-![Image by Sandy Crole](./images/tempest.jpg)
-*Image Credit: Sandy Crole*
-

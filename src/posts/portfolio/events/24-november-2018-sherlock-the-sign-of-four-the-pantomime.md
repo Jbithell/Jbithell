@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "University of York Pantomime Society"
 ---
-
-# Sherlock: The Sign of Four. The Pantomime
-

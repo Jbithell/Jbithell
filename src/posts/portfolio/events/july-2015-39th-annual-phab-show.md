@@ -20,6 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "Westminster School"
 ---
-
-# 39th Annual PHAB Show
-

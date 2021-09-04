@@ -20,9 +20,3 @@ featuredImage: "./images/election-results-night-2020.jpg"
 ImageCredit: "Jacob Dicker"
 Client: "University of York Students' Union"
 ---
-
-# Election Results Night
-
-![Image by Jacob Dicker](./images/election-results-night-2020.jpg)
-*Image Credit: Jacob Dicker*
-

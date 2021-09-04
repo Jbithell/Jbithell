@@ -21,6 +21,4 @@ ImageCredit: ""
 Client:  "Westminster School"
 ---
 
-# Tis Pity She's A Whore
-
 Rigaud's/Liddel's House Play

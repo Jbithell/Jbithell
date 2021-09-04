@@ -8,7 +8,7 @@ import { FaTwitter, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 const IndexPage = () => {
   return (
     <Template>
-      <div className="py-10 text-center">
+      <div className="px-6 py-10 text-center">
         <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
         Contact
         </h3>

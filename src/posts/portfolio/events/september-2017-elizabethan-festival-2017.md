@@ -20,5 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "Westminster School"
 ---
-
-# Elizabethan Festival 2017

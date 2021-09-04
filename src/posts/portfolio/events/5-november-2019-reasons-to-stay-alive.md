@@ -19,6 +19,3 @@ featuredImage: null
 ImageCredit: ""
 Client: ""
 ---
-
-# Reasons to Stay Alive
-

@@ -20,9 +20,3 @@ featuredImage: "./images/autumn-showcase-2019.jpg"
 ImageCredit: "Nathan Billis"
 Client: "CHMS York"
 ---
-
-# CHMS Showcase
-
-![Image by Nathan Billis](./images/autumn-showcase-2019.jpg)
-*Image Credit: Nathan Billis*
-

@@ -21,10 +21,4 @@ ImageCredit: "James Bithell"
 Client: "Westminster School"
 ---
 
-# Cabaret
-
 Mixed on 02r96 | 8 radio mics | 11 band channels
-
-![Image by James Bithell](./images/cabaret02r96.jpg)
-*Image Credit: James Bithell*
-

@@ -20,5 +20,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "University of York Drama Society"
 ---
-
-# Sunday roast & Tiger who Came to Tea

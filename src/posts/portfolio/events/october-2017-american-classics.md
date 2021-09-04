@@ -21,6 +21,4 @@ ImageCredit: ""
 Client: "Westminster School"
 ---
 
-# American Classics
-
 Formerly "Renaissance Festival"

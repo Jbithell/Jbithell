@@ -20,9 +20,3 @@ featuredImage: "./images/guysAndDolls.jpg"
 ImageCredit: "Sandy Crole"
 Client:  "Westminster School"
 ---
-
-# Guys & Dolls
-
-![Image by Sandy Crole](./images/guysAndDolls.jpg)
-*Image Credit: Sandy Crole*
-

@@ -19,5 +19,3 @@ featuredImage: null
 ImageCredit: ""
 Client: "CHMS York"
 ---
-
-# Dogfight

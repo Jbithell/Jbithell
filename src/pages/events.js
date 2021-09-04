@@ -37,12 +37,19 @@ const skills = [
 const CreditsPage = ({data}) => {
   const { edges: posts } = data.allMarkdownRemark
   const [skillFilter, setSkillFilter] = React.useState(null);
-  const thesePosts = posts.filter(post => post.node.frontmatter.type === "liveEvent" && post.node.frontmatter.example !== true && (skillFilter ? post.node.frontmatter.Tags.includes(skillFilter) : true));
+  const [showImagePostsOnly, setShowImagePostsOnly] = React.useState(true);
+  const allPosts = posts.filter(post => post.node.frontmatter.type === "liveEvent" && post.node.frontmatter.example !== true && (skillFilter ? post.node.frontmatter.Tags.includes(skillFilter) : true));
+  let thesePosts = []
+  if (showImagePostsOnly) thesePosts = allPosts.filter(post => post.node.frontmatter.featuredImage);
+  else thesePosts = allPosts
+
   const handleSkillClick = tag => {
     if (skillFilter === tag) {
-      setSkillFilter(null)
+      setSkillFilter(null);
+      setShowImagePostsOnly(true);
     } else {
       setSkillFilter(tag);
+      setShowImagePostsOnly(false);
     }    
   }
   return (
@@ -63,7 +70,10 @@ const CreditsPage = ({data}) => {
             )
           })}
         </div>
-        <p className="my-2 text-right font-light">{`${thesePosts.length} event${thesePosts.length !== 1 ? "s":""}`}</p>
+        <p className="my-2 text-right font-light">
+          { showImagePostsOnly ? (<>{`Showcasing ${thesePosts.length} event${thesePosts.length !== 1 ? "s":""} of ${allPosts.length} in total. `}<div className="inline" onClick={() => setShowImagePostsOnly(false)}>Show all</div></>) : `${thesePosts.length} event${thesePosts.length !== 1 ? "s":""}`}
+          {}
+        </p>
         <div class="grid md:grid-cols-3 auto-rows-min gap-4">
           {thesePosts.map(({ node: post }) => {
             let image = post.frontmatter.featuredImage ? getImage(post.frontmatter.featuredImage) : false

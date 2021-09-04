@@ -83,7 +83,7 @@ const CreditsPage = ({data}) => {
                   { image ? (<GatsbyImage class="rounded-t-lg max-h-80" image={image} alt={`${post.frontmatter.Name} | Credit: ${post.frontmatter.ImageCredit}`} />) : null }
                   <div class="py-4 px-8">
                     <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">{post.frontmatter.Name}</h1>
-                    <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">{(post.frontmatter.Date).replaceAll("-"," ")}</p>
+                    <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">{(post.frontmatter.Date).split("-").join(' ')}</p>
                   </div>
                 </Link>
               </div>

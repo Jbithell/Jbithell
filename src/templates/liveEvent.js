@@ -14,7 +14,7 @@ export default function PostTemplate({ data }) {
       <div className="px-6 my-10 text-center">
         <h3 className="text-5xl font-semibold leading-normal text-gray-800">{post.frontmatter.Name}</h3>
         <h4 className="text-3xl mb-2 text-gray-800">{post.frontmatter.Client}</h4>
-        <h4 className="text-2xl mb-2 text-gray-800">{post.frontmatter.Venue}, {(post.frontmatter.Date).replaceAll("-"," ")}</h4>
+        <h4 className="text-2xl mb-2 text-gray-800">{post.frontmatter.Venue}, {(post.frontmatter.Date).split("-").join(' ')}</h4>
         <h5 className="text-xl mb-2 text-gray-800">{
           post.frontmatter.Roles.map((role, i) => {  
             return (i > 0 ? " | " : "") + role

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .h-112 {
+    height: 30rem;
+  }
+  .h-128 {
+    height: 34rem;
+  }
+  .h-136 {
+    height: 36rem;
+  }
+}

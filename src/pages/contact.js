@@ -50,7 +50,7 @@ const IndexPage = () => {
               <FaGithub className="flex" />
             </a>
             <p className="mt-3 text-lg leading-relaxed text-gray-800">
-                Alternativley, send me an email at hi@jbithell.com
+                Alternatively, send me an email at hi@jbithell.com. <a style={{ "font-style": "italic" }} target="_blank" rel="noreferrer" href="https://pgp.mit.edu/pks/lookup?op=vindex&search=0x5E8B434F3337DAA4">Public Key</a>
             </p>
           </div>
         </div>

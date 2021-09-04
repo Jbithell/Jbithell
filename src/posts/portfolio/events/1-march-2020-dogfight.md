@@ -15,7 +15,7 @@ PerformancesAttended: 4
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: null
-ImageCredit: ""
+featuredImage: "./images/dogfight.jpg"
+ImageCredit: "CHMS York"
 Client: "CHMS York"
 ---

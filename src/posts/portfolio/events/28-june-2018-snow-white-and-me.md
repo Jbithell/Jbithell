@@ -20,3 +20,5 @@ featuredImage: null
 ImageCredit: ""
 Client: ""
 ---
+
+Work experience with Orbital Sound

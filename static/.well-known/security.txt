@@ -1,0 +1,3 @@
+Contact: mailto:hi@jbithell.com
+Expires: 2025-01-01T09:00:00.000Z
+Canonical: https://jbithell.com/.well-known/security.txt

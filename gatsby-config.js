@@ -39,6 +39,13 @@ module.exports = {
         cache_busting_mode: "none",
       },
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        globPatterns: ["**/static/*"],
+        precachePages: ["**/events/*","**/blog/*","**/contact/*"],
+      },
+    },
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

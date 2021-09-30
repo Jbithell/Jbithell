@@ -3,7 +3,7 @@
 A theatre lover who's worked as a Full Stack Engineer, currently taking some time out of the industry. 
 
 - 🔭 I’m currently working as a Civil Servant for the UK Government.
-- 📫 Reach me at **hi@jbithell.com**s
+- 📫 Reach me at **hi@jbithell.com**
 - 📄 Visit my website [jbithell.com](https://jbithell.com)
 
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=jbithell&count_private=true&show_icons=true)

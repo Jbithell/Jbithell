@@ -3,7 +3,7 @@ example: false
 type: "liveEvent"
 slug: "9-december-2021-johnny-and-the-bomb"
 date: 2021-12-09
-Date: "9-december-2021"
+Date: "9-December-2021"
 EndDate: ""
 Name: "Johnny and the Bomb"
 Author: ""

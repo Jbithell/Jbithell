@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
-    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.3",
     "babel-eslint": "^10.1.0",
     "gatsby": "^3.14.6",
     "gatsby-plugin-google-analytics": "^3.14.0",

@@ -38,7 +38,7 @@
     "autoprefixer": "^10.3.4",
     "eslint-config-react-app": "^6.0.0",
     "gatsby-plugin-postcss": "^4.13.0",
-    "postcss": "^8.3.6",
+    "postcss": "^8.4.14",
     "tailwindcss": "^2.2.9"
   }
 }

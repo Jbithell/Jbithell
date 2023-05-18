@@ -16,7 +16,7 @@ PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: true
-featuredImage: ""
-ImageCredit: ""
+featuredImage: "./images/piratesOfCurryBean.jpg"
+ImageCredit: "@westminsterus on Instagram: https://www.instagram.com/p/Cl7BgQKoEW4/"
 Client: ""
 ---

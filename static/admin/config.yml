@@ -1,0 +1,126 @@
+backend:
+  repo: "jbithell/jbithell"
+  api_root: "https://api.github.com"
+  name: github
+  branch: main
+publish_mode: editorial_workflow
+media_folder: "src/assets/img/"
+site_url: https://jbithell.com
+collections:
+  - name: "events" # Used in routes, e.g., /admin/collections/blog
+    label: "Events Portfolio" # Used in the UI
+    label_singular: "Event"
+    delete: true
+    editor:
+      preview: false
+    folder: "src/posts/portfolio/events" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{day}}-{{month}}-{{year}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: "Name"
+    sortable_fields: ["Date"]
+    view_groups:
+      - label: Year
+        field: date
+        # groups items based on the value matched by the pattern
+        pattern: \d{4}
+      - label: Type
+        field: EventType
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["liveEvent"]
+        required: true
+      - label: "Name"
+        name: "Name"
+        widget: "string"
+        required: true
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        required: true
+      - label: "Date to display"
+        name: "Date"
+        widget: "string"
+        required: true
+      - label: "Date for sorting"
+        name: "date"
+        widget: "datetime"
+        date_format: "Do MMMM YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
+        picker_utc: true
+        required: true
+      - label: "End Date"
+        name: "EndDate"
+        widget: "datetime"
+        date_format: "Do MMMM YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
+        picker_utc: true
+        required: false
+      - label: "Author"
+        hint: "Author of the work performed"
+        name: "Author"
+        widget: "string"
+        required: false
+      - label: "Director"
+        name: "Director"
+        widget: "string"
+        required: false
+      - label: "Venue"
+        name: "Venue"
+        widget: "string"
+        required: false
+      - label: "Roles"
+        hint: "Roles you performed in the production"
+        name: "Roles"
+        widget: "list"
+        label_singular: "Role"
+        default: [""]
+        required: false
+      - label: "Tags"
+        name: "Tags"
+        widget: "select"
+        multiple: true
+        options: ["Sound","Lighting","Automation","Video","Projection","Stage Management","Production Management","Production","Front of House"]
+        required: false
+      - label: "Event Type"
+        name: "EventType"
+        widget: "select"
+        options: ["Theatre"]
+        required: true
+      - label: "Performances Attended"
+        name: "PerformancesAttended"
+        widget: "number"
+        required: false
+        hint: "Number of performances physically attended"
+      - label: "Professional"
+        hint: "Were the cast performing paid?"
+        name: "Professional"
+        widget: "boolean"
+        required: false
+      - label: "Paid"
+        hint: "Were you paid?"
+        name: "Paid"
+        widget: "boolean"
+        required: false
+      - label: "Fee"
+        name: "Fee"
+        hint: "How much were you paid?"
+        widget: "string"
+        required: false
+      - label: "Featured Image"
+        name: "featuredImage"
+        widget: "image"
+        required: false
+      - label: "Image Credit"
+        hint: "Who took the photo?"
+        name: "ImageCredit"
+        widget: "string"
+        required: false
+      - label: "Client"
+        name: "Client"
+        widget: "string"
+        required: false

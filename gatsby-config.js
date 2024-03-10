@@ -36,8 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        globPatterns: ["**/static/*"],
-        precachePages: ["**/events/*","**/blog/*","**/contact/*"],
+        precachePages: ["**/events/*","**/blog/*","**/contact/*","**/static/*"],
       },
     },
     "gatsby-transformer-remark",

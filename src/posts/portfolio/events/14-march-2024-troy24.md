@@ -16,7 +16,7 @@ PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: true
-featuredImage: ""
-ImageCredit: ""
+featuredImage: "./images/troy24-2.jpg"
+ImageCredit: "@westminsterus on Instagram: https://www.instagram.com/p/C4xOZzAg_lY/"
 Client: ""
 ---

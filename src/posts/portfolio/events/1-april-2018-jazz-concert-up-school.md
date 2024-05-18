@@ -20,7 +20,7 @@ Professional: false
 Fee: ""
 example: false
 Paid: false
-featuredImage: /src/assets/img/screenshot-2024-05-18-at-10.34.59 am.png
+featuredImage: ../../../assets/img/test3.png
 ImageCredit: ""
 Client: ""
 ---

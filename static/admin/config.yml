@@ -1,6 +1,5 @@
 backend:
   repo: "jbithell/jbithell"
-  api_root: "https://api.github.com"
   name: github
   branch: main
 publish_mode: editorial_workflow

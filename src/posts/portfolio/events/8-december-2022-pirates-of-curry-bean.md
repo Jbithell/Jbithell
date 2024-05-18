@@ -9,14 +9,20 @@ Name: "Pirates of the Curry Bean"
 Author: ""
 Director: "Hayley Wellman"
 Venue: "Main Hall | Westminster Under School"
-Roles: ["Lighting Designer","Lighting Rigging Assistant", "Sound Designer", "Sound Mixer"]
+Roles:
+  [
+    "Lighting Designer",
+    "Lighting Rigging Assistant",
+    "Sound Designer",
+    "Sound Mixer",
+  ]
 Tags: ["Lighting", "Sound"]
 EventType: "Theatre"
 PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: true
-featuredImage: "./images/piratesOfCurryBean.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/piratesOfCurryBean.jpg"
 ImageCredit: "@westminsterus on Instagram: https://www.instagram.com/p/Cl7BgQKoEW4/"
 Client: ""
 ---

@@ -9,14 +9,14 @@ Name: "Jungle Book"
 Author: ""
 Director: "Hannah Verney"
 Venue: "Main Hall | Westminster Under School"
-Roles: ["Lighting Operator","Lighting Rigging Assistant"]
+Roles: ["Lighting Operator", "Lighting Rigging Assistant"]
 Tags: ["Lighting"]
 EventType: "Theatre"
 PerformancesAttended: 2
 Fee: "£206.42"
 Professional: false
 Paid: true
-featuredImage: "./images/jungleBook.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/jungleBook.jpg"
 ImageCredit: "James Bithell"
 Client: ""
 ---

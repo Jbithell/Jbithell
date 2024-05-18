@@ -9,15 +9,14 @@ Name: "Drinking Companions & A Talk in the Park"
 Author: "Alan Ayckbourn"
 Director: "James Bithell"
 Venue: "Millicent Fawcett Hall | Westminster School"
-Roles: ["Director","Programme Designer"]
-Tags: ["Direction","Production"]
+Roles: ["Director", "Programme Designer"]
+Tags: ["Direction", "Production"]
 EventType: "Theatre"
 PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/drinkingCompanions.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/drinkingCompanions.jpg"
 ImageCredit: "James Bithell"
-Client:  "Westminster School"
+Client: "Westminster School"
 ---
-

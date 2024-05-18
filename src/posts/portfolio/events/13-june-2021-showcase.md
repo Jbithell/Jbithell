@@ -16,7 +16,7 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/chmsSummerShowcase.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/chmsSummerShowcase.jpg"
 ImageCredit: "CHMS York"
 Client: "CHMS York"
 ---

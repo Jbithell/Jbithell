@@ -9,14 +9,14 @@ Name: "Legally Blonde"
 Author: "Heather Hach"
 Director: "Immy Wood"
 Venue: "Joseph Rowntree Theatre"
-Roles: ["Sound Mixer","Operator"]
+Roles: ["Sound Mixer", "Operator"]
 Tags: ["Sound"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/legallyBlonde.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/legallyBlonde.jpg"
 ImageCredit: "CHMS York"
 Client: "CHMS York"
 ---

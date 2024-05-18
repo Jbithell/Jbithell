@@ -9,14 +9,20 @@ Name: "Oliver! JR"
 Author: "Lionel Bart"
 Director: "Lindsay Tricker"
 Venue: "Main Hall | Westminster Under School"
-Roles: ["Lighting Designer","Lighting Rigging Assistant", "Sound Designer", "Sound Mixer"]
+Roles:
+  [
+    "Lighting Designer",
+    "Lighting Rigging Assistant",
+    "Sound Designer",
+    "Sound Mixer",
+  ]
 Tags: ["Lighting", "Sound"]
 EventType: "Theatre"
 PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: true
-featuredImage: "./images/oliver.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/oliver.jpg"
 ImageCredit: "@westminsterus on Instagram: https://www.instagram.com/p/C0MnAlgtoT8"
 Client: ""
 ---

@@ -9,14 +9,14 @@ Name: "Tin foil hat"
 Author: "Eloise Curtis"
 Director: "Eloise Curtis"
 Venue: "Drama Barn | University of York"
-Roles: ["Sound Operator","Lighting Designer","Lighting Operator"]
-Tags: ["Sound","Lighting"]
+Roles: ["Sound Operator", "Lighting Designer", "Lighting Operator"]
+Tags: ["Sound", "Lighting"]
 EventType: "Theatre"
 PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/tinFoilHat.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/tinFoilHat.jpg"
 ImageCredit: "James Bithell"
 Client: "University of York Drama Society"
 ---

@@ -9,14 +9,14 @@ Name: "Cabaret"
 Author: ""
 Director: "Peter Chequer"
 Venue: "Millicent Fawcett Hall | Westminster School"
-Roles: ["Sound Designer","Sound Mixer","Operator","Programme Designer"]
-Tags: ["Sound","Production"]
+Roles: ["Sound Designer", "Sound Mixer", "Operator", "Programme Designer"]
+Tags: ["Sound", "Production"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/cabaret02r96.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/cabaret02r96.jpg"
 ImageCredit: "James Bithell"
 Client: "Westminster School"
 ---

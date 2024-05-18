@@ -9,14 +9,14 @@ Name: "Guys & Dolls"
 Author: ""
 Director: "Peter Chequer"
 Venue: "Up School | Westminster School"
-Roles: ["Head flyman (hemp)","Stage Manager"]
-Tags: ["Automation","Stage Management"]
+Roles: ["Head flyman (hemp)", "Stage Manager"]
+Tags: ["Automation", "Stage Management"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/guysAndDolls.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/guysAndDolls.jpg"
 ImageCredit: "Sandy Crole"
-Client:  "Westminster School"
+Client: "Westminster School"
 ---

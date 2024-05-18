@@ -9,14 +9,14 @@ Name: "Black Comedy"
 Author: "Peter Shaffer"
 Director: "James Bithell & Laura de Lisle"
 Venue: "Millicent Fawcett Hall Studio | Westminster School"
-Roles: ["Co-Director","Producer","Programme Designer"]
-Tags: ["Direction","Production"]
+Roles: ["Co-Director", "Producer", "Programme Designer"]
+Tags: ["Direction", "Production"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/blackComedy.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/blackComedy.jpg"
 ImageCredit: "Sandy Crole"
 Client: "Westminster School"
 ---

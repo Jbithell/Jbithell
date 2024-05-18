@@ -9,14 +9,14 @@ Name: "Medium Readings and Oracle Healings"
 Author: "Ashley Milne"
 Director: "Lucia Rimini"
 Venue: "Drama Barn | University of York"
-Roles: ["Sound Operator","Lighting Designer","Lighting Operator"]
-Tags: ["Sound","Lighting"]
+Roles: ["Sound Operator", "Lighting Designer", "Lighting Operator"]
+Tags: ["Sound", "Lighting"]
 EventType: "Theatre"
 PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/mediumReadings.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/mediumReadings.jpg"
 ImageCredit: "Greg Tiani"
-Client:  "University of York Drama Society"
+Client: "University of York Drama Society"
 ---

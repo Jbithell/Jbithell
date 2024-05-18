@@ -9,14 +9,20 @@ Name: "Private Peaceful"
 Author: "Michael Morpurgo adapted for the stage by Simon Reade"
 Director: "Lindsay Tricker"
 Venue: "Main Hall | Westminster Under School"
-Roles: ["Lighting Designer","Lighting Rigging Assistant", "Sound Designer", "Sound Mixer"]
+Roles:
+  [
+    "Lighting Designer",
+    "Lighting Rigging Assistant",
+    "Sound Designer",
+    "Sound Mixer",
+  ]
 Tags: ["Lighting", "Sound"]
 EventType: "Theatre"
 PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: true
-featuredImage: "./images/privatePeaceful.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/privatePeaceful.jpg"
 ImageCredit: "James Bithell"
 Client: ""
 ---

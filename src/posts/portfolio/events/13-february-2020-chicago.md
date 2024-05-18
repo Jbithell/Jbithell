@@ -9,14 +9,14 @@ Name: "Chicago"
 Author: "Fred Ebb & Bob Fosse"
 Director: "Joe Spence"
 Venue: "Joseph Rowntree Theatre"
-Roles: ["Sound Designer","Sound Mixer","Operator"]
+Roles: ["Sound Designer", "Sound Mixer", "Operator"]
 Tags: ["Sound"]
 EventType: "Theatre"
 PerformancesAttended: 4
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/chicago.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/chicago.jpg"
 ImageCredit: "James Bithell"
 Client: ""
 ---

@@ -9,14 +9,14 @@ Name: "Johnny and the Bomb"
 Author: ""
 Director: "Hayley Wellman"
 Venue: "Main Hall | Westminster Under School"
-Roles: ["Lighting Designer","Lighting Rigging Assistant"]
+Roles: ["Lighting Designer", "Lighting Rigging Assistant"]
 Tags: ["Lighting"]
 EventType: "Theatre"
 PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: true
-featuredImage: "./images/johnnyAndTheBomb.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/johnnyAndTheBomb.jpg"
 ImageCredit: "James Bithell"
 Client: ""
 ---

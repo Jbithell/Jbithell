@@ -9,14 +9,21 @@ Name: "RENT"
 Author: "Jonathan Larson"
 Director: "Jess Field"
 Venue: "John Cooper Studio"
-Roles: ["Sound Mixer","Operator","Lighting Designer","Lighting Programmer","Technical Manager"]
-Tags: ["Sound","Lighting","Production"]
+Roles:
+  [
+    "Sound Mixer",
+    "Operator",
+    "Lighting Designer",
+    "Lighting Programmer",
+    "Technical Manager",
+  ]
+Tags: ["Sound", "Lighting", "Production"]
 EventType: "Theatre"
 PerformancesAttended: 4
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/rent.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/rent.jpg"
 ImageCredit: "Katherine Johnston"
 Client: "CHMS York"
 ---

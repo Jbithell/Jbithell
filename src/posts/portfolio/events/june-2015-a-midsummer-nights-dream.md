@@ -9,14 +9,14 @@ Name: "A Midsummer Night's Dream"
 Author: ""
 Director: "Peter Chequer"
 Venue: "Millicent Fawcett Hall | Westminster School"
-Roles: ["Sound Designer","Sound Mixer","Operator","Technical Manager"]
-Tags: ["Sound","Production"]
+Roles: ["Sound Designer", "Sound Mixer", "Operator", "Technical Manager"]
+Tags: ["Sound", "Production"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/midsummers.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/midsummers.jpg"
 ImageCredit: "Sandy Crole"
-Client:  "Westminster School"
+Client: "Westminster School"
 ---

@@ -16,8 +16,9 @@ PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/desperateMeasures.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/desperateMeasures.jpg"
 ImageCredit: "Sandy Crole"
-Client:  "Westminster School"
+Client: "Westminster School"
 ---
+
 Responsible for emergency cover & repairs. Mixed sound on last night. Repaired cans link on first night

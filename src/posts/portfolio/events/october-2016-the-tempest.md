@@ -9,14 +9,14 @@ Name: "The Tempest"
 Author: ""
 Director: "Peter Chequer"
 Venue: "Millicent Fawcett Hall | Westminster School"
-Roles: ["Lighting Programmer","Set build assistant"]
-Tags: ["Lighting","Set"]
+Roles: ["Lighting Programmer", "Set build assistant"]
+Tags: ["Lighting", "Set"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/tempest.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/tempest.jpg"
 ImageCredit: "Sandy Crole"
-Client: 
+Client:
 ---

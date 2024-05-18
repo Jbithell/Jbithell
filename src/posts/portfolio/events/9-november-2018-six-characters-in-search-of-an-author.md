@@ -9,14 +9,20 @@ Name: "Six Characters in Search of an Author"
 Author: "Luigi Pirandello"
 Director: "Valeria Di Pasquale"
 Venue: "Drama Barn | University of York"
-Roles: ["Sound Operator","Lighting Designer","Lighting Operator","Lighting Programmer"]
-Tags: ["Sound","Lighting"]
+Roles:
+  [
+    "Sound Operator",
+    "Lighting Designer",
+    "Lighting Operator",
+    "Lighting Programmer",
+  ]
+Tags: ["Sound", "Lighting"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/sixCharacters.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/sixCharacters.jpg"
 ImageCredit: "Greg Tiani"
 Client: "University of York Drama Society"
 ---

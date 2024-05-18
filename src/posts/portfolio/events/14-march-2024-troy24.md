@@ -9,14 +9,20 @@ Name: "Troy24"
 Author: "David Calcutt"
 Director: "Lindsay Tricker"
 Venue: "Main Hall | Westminster Under School"
-Roles: ["Lighting Designer","Lighting Rigging Assistant", "Sound Designer", "Video Designer"]
+Roles:
+  [
+    "Lighting Designer",
+    "Lighting Rigging Assistant",
+    "Sound Designer",
+    "Video Designer",
+  ]
 Tags: ["Lighting", "Sound", "Video"]
 EventType: "Theatre"
 PerformancesAttended: 2
 Fee: ""
 Professional: false
 Paid: true
-featuredImage: "./images/troy24-2.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/troy24-2.jpg"
 ImageCredit: "@westminsterus on Instagram: https://www.instagram.com/p/C4xOZzAg_lY/"
 Client: ""
 ---

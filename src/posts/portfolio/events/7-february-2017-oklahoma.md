@@ -8,14 +8,14 @@ Name: "Oklahoma!"
 Author: ""
 Director: "Peter Chequer"
 Venue: "M"
-Roles: ["Sound Mixer","Operator"]
+Roles: ["Sound Mixer", "Operator"]
 Tags: ["Sound"]
 EventType: "Theatre"
-PerformancesAttended: 
+PerformancesAttended:
 Fee: "Up School | Westminster School"
 Professional: false
 Paid: false
-featuredImage: "./images/oklahoma.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/oklahoma.jpg"
 ImageCredit: "Sandy Crole"
 Client: ""
 ---

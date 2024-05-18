@@ -9,13 +9,13 @@ Author: ""
 Director: ""
 Venue: "The Forest | University of York"
 Roles: ["Technical Manager", "Sound Designer"]
-Tags: ["Production","Sound"]
+Tags: ["Production", "Sound"]
 EventType: "Theatre"
 PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/loveYork2021.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/loveYork2021.jpg"
 ImageCredit: "Luke Snell"
-Client:  "University of York Student's Union"
+Client: "University of York Student's Union"
 ---

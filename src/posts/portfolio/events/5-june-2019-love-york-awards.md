@@ -8,14 +8,14 @@ Name: "Love York Awards"
 Author: ""
 Director: ""
 Venue: "Joseph Rowntree Theatre"
-Roles: ["Lighting Designer","Lighting Operator"]
+Roles: ["Lighting Designer", "Lighting Operator"]
 Tags: ["Lighting"]
 EventType: "Theatre"
 PerformancesAttended: 0
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/loveYork.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/loveYork.jpg"
 ImageCredit: "James Bithell"
-Client:  "University of York Student's Union"
+Client: "University of York Student's Union"
 ---

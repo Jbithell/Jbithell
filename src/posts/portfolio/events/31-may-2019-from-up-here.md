@@ -9,14 +9,20 @@ Name: "From Up Here"
 Author: "Aron Lee Lambert"
 Director: "David Charter"
 Venue: "Drama Barn | University of York"
-Roles: ["Sound Operator","Lighting Designer","Lighting Operator","Lighting Programmer"]
-Tags: ["Sound","Lighting"]
+Roles:
+  [
+    "Sound Operator",
+    "Lighting Designer",
+    "Lighting Operator",
+    "Lighting Programmer",
+  ]
+Tags: ["Sound", "Lighting"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/fromUpHere.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/fromUpHere.jpg"
 ImageCredit: "Anna Bunch"
-Client:  "University of York Drama Society"
+Client: "University of York Drama Society"
 ---

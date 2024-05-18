@@ -9,14 +9,14 @@ Name: "Hercules The Pantomime"
 Author: ""
 Director: "Holly Taylor"
 Venue: "Central Hall | University of York"
-Roles: ["Sound Mixer","Operator"]
+Roles: ["Sound Mixer", "Operator"]
 Tags: ["Sound"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/hercules.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/hercules.jpg"
 ImageCredit: "Kat Johnston"
 Client: "University of York Pantomime Society"
 ---

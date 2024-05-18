@@ -9,14 +9,14 @@ Name: "CHMS Showcase"
 Author: ""
 Director: ""
 Venue: "Central Hall | University of York"
-Roles: ["Sound Designer","Sound Mixer","Operator"]
+Roles: ["Sound Designer", "Sound Mixer", "Operator"]
 Tags: ["Sound"]
 EventType: "Theatre"
 PerformancesAttended: 3
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/autumn-showcase-2019.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/autumn-showcase-2019.jpg"
 ImageCredit: "Nathan Billis"
 Client: "CHMS York"
 ---

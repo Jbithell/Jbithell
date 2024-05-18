@@ -15,7 +15,7 @@ PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/queerCabaret.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/queerCabaret.jpg"
 ImageCredit: "Queer Cabaret"
 Client: "University of York LGBTQ Network"
 ---

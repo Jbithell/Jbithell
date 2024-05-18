@@ -9,14 +9,14 @@ Name: "Election Results Night"
 Author: ""
 Director: ""
 Venue: "Roger Kirk Centre | University of York"
-Roles: ["Sound Designer","Lighting Designer","Technical Manager"]
-Tags: ["Sound","Lighting","Production"]
+Roles: ["Sound Designer", "Lighting Designer", "Technical Manager"]
+Tags: ["Sound", "Lighting", "Production"]
 EventType: "Theatre"
 PerformancesAttended: 1
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/election-results-night-2020.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/election-results-night-2020.jpg"
 ImageCredit: "Jacob Dicker"
 Client: "University of York Students' Union"
 ---

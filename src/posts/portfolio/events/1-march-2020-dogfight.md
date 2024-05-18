@@ -8,14 +8,14 @@ Name: "Dogfight"
 Author: "Peter Duchan"
 Director: "Anna Gallon"
 Venue: "John Cooper Studio"
-Roles: ["Sound Designer","Lighting Designer","Technical Manager"]
-Tags: ["Sound","Lighting","Production"]
+Roles: ["Sound Designer", "Lighting Designer", "Technical Manager"]
+Tags: ["Sound", "Lighting", "Production"]
 EventType: "Theatre"
 PerformancesAttended: 4
 Fee: ""
 Professional: false
 Paid: false
-featuredImage: "./images/dogfight.jpg"
+featuredImage: "./../../../assets/img/portfolioImages/dogfight.jpg"
 ImageCredit: "CHMS York"
 Client: "CHMS York"
 ---

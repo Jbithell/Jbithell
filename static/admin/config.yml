@@ -1,9 +1,10 @@
 backend:
-  repo: jbithell/jbithell
   name: github
+  repo: jbithell/jbithell
   branch: main
 publish_mode: editorial_workflow
 media_folder: "src/assets/img/"
+public_folder: "./../../../assets/img/"
 site_url: https://jbithell.com
 collections:
   - name: "events" # Used in routes, e.g., /admin/collections/blog
@@ -25,11 +26,14 @@ collections:
       - label: Type
         field: EventType
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "blog"
       - label: "Type"
         name: "type"
         widget: "select"
-        options: ["liveEvent"]
+        options: [{ label: "Live Event", value: "liveEvent" }]
         required: true
       - label: "Name"
         name: "Name"
@@ -41,14 +45,18 @@ collections:
         required: true
       - label: "Date to display"
         name: "Date"
-        widget: "string"
+        widget: "datetime"
+        date_format: "Do MMMM YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
+        picker_utc: true
         required: true
       - label: "Date for sorting"
         name: "date"
         widget: "datetime"
         date_format: "Do MMMM YYYY"
         time_format: false
-        format: "YYYY-MM-DD"
+        format: "DD-MMMM-YYYY"
         picker_utc: true
         required: true
       - label: "End Date"
@@ -56,8 +64,9 @@ collections:
         widget: "datetime"
         date_format: "Do MMMM YYYY"
         time_format: false
-        format: "YYYY-MM-DD"
+        format: "DD-MMMM-YYYY"
         picker_utc: true
+        default: ""
         required: false
       - label: "Author"
         hint: "Author of the work performed"
@@ -75,15 +84,43 @@ collections:
       - label: "Roles"
         hint: "Roles you performed in the production"
         name: "Roles"
-        widget: "list"
+        widget: "select"
+        multiple: true
         label_singular: "Role"
+        options:
+          [
+            "Sound Designer",
+            "Sound Operator",
+            "Lighting Designer",
+            "Lighting Operator",
+            "Video Designer",
+            "Video Operator",
+            "Projection Designer",
+            "Projection Operator",
+            "Stage Manager",
+            "Production Manager",
+            "Production Assistant",
+            "Front of House",
+            "Other",
+          ]
         default: [""]
         required: false
       - label: "Tags"
         name: "Tags"
         widget: "select"
         multiple: true
-        options: ["Sound","Lighting","Automation","Video","Projection","Stage Management","Production Management","Production","Front of House"]
+        options:
+          [
+            "Sound",
+            "Lighting",
+            "Automation",
+            "Video",
+            "Projection",
+            "Stage Management",
+            "Production Management",
+            "Production",
+            "Front of House",
+          ]
         required: false
       - label: "Event Type"
         name: "EventType"

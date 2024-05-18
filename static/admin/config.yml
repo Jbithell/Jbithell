@@ -1,5 +1,5 @@
 backend:
-  repo: "jbithell/jbithell"
+  repo: jbithell/jbithell
   name: github
   branch: main
 publish_mode: editorial_workflow

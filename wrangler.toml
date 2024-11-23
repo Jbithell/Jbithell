@@ -1,0 +1,15 @@
+workers_dev = true
+name = "jbithellcom"
+compatibility_date = "2024-11-18"
+compatibility_flags = ["nodejs_compat"]
+main = "./build/server/index.js"
+# assets = { directory = "./build/client/" }
+
+[[d1_databases]]
+binding = "DB"
+migrations_dir = "databaseMigrations"
+migrations_table = "migrations"
+database_name = "jbithellcom-prod"
+
+database_id = "18f9753e-a38c-46db-8ede-bc1c3ad6a799"
+preview_database_id = "d781d6a6-f7b5-424b-924d-883669dd1dd9"

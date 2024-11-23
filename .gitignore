@@ -19,7 +19,9 @@ yarn-error.log*
 
 .cache/
 public
+.wrangler
 
 /build
 .env
-.wrangler
+.wrangler/
+

@@ -9,7 +9,7 @@ export default defineConfig(({ isSsrBuild }) => ({
   build: {
     rollupOptions: isSsrBuild
       ? {
-          input: "./functions/app.ts",
+          input: "./workers/app.ts",
         }
       : undefined,
   },
@@ -38,7 +38,7 @@ export default defineConfig(({ isSsrBuild }) => ({
   },
   plugins: [
     vitePluginViteNodeMiniflare({
-      entry: "./functions/app.ts",
+      entry: "./workers/app.ts",
       miniflareOptions: (options) => {
         options.compatibilityDate = "2024-11-18";
         options.compatibilityFlags = ["nodejs_compat"];

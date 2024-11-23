@@ -16,6 +16,7 @@
     "typecheck": "react-router typegen && tsc --build --noEmit"
   },
   "dependencies": {
+    "@react-router/cloudflare": "^7.0.1",
     "@react-router/node": "^7.0.1",
     "@react-router/serve": "^7.0.1",
     "drizzle-orm": "~0.36.3",

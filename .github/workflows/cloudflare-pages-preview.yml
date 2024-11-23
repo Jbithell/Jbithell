@@ -32,7 +32,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: "."
           packageManager: npm
-          command: pages deploy ./build --project-name=jbithellcom --commit-dirty=true
+          command: pages deploy ./build/client --project-name=jbithellcom --commit-dirty=true
       - uses: actions/github-script@v6
         with:
           script: |

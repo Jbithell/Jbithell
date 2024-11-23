@@ -5,7 +5,7 @@
     "app/**/.server/**/*",
     "app/**/.client/**/*",
     "database/**/*",
-    "functions/**/*"
+    "workers/**/*"
   ],
   "compilerOptions": {
     "composite": true,

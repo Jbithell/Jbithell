@@ -1,6 +1,10 @@
 {
-  "name": "my-react-router-app",
-  "private": true,
+  "name": "jbithell",
+  "version": "7.0.0",
+  "private": false,
+  "description": "James Bithell",
+  "author": "James Bithell",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "react-router build",

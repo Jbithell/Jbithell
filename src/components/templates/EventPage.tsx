@@ -52,6 +52,7 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
               <Image
                 src={"/images/compressed/portfolio/" + event.featuredImage}
                 width={imageWidth}
+                loading="eager"
                 style={{ width: imageWidth }}
               />
             </a>

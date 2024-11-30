@@ -19,3 +19,7 @@ yarn-error.log*
 
 .cache/
 public
+
+src/gatsby-types.d.ts
+
+# local files

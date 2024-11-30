@@ -39,12 +39,12 @@ const optimiseImage = async function (sourcePath: string, outputPath: string) {
   const QUALITY = 70;
   const stream = sharp(sourcePath);
   const info = await stream.metadata();
-
+  let width = MAX_WIDTH;
   if (info.width && info.width < MAX_WIDTH) {
-    return;
+    width = info.width;
   }
 
-  await stream.resize(MAX_WIDTH).jpeg({ quality: QUALITY }).toFile(outputPath);
+  await stream.resize(width).jpeg({ quality: QUALITY }).toFile(outputPath);
 };
 
 export const onPreInit = async function ({ reporter }: BuildArgs) {

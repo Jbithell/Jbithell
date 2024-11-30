@@ -1743,7 +1743,7 @@
     ],
     "tags": ["Lighting", "Sound"],
     "performancesAttended": 1,
-    "professional": false,
+    "professional": true,
     "paid": true,
     "featuredImage": "a-night-at-the-musicals.jpg",
     "imageCredit": null,
@@ -1765,10 +1765,31 @@
     ],
     "tags": ["Lighting", "Sound"],
     "performancesAttended": 1,
-    "professional": false,
+    "professional": true,
     "paid": true,
     "featuredImage": "louis-dowdeswell-big-band.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/DCEUl0iIhpm/",
+    "client": null
+  },
+  {
+    "slug": "20-november-2024-playhouse-apprentice",
+    "date": "20 November 2024",
+    "endDate": null,
+    "name": "The Playhouse Apprentice",
+    "author": "Jessica Swale",
+    "director": "Lindsay Tricker",
+    "venue": "Main Hall | Westminster Under School",
+    "roles": [
+      "Lighting Designer",
+      "Lighting Rigging Assistant",
+      "Sound Designer"
+    ],
+    "tags": ["Lighting", "Sound", "Video"],
+    "performancesAttended": 2,
+    "professional": false,
+    "paid": true,
+    "featuredImage": "playhouse-apprentice.jpg",
+    "imageCredit": null,
     "client": null
   }
 ]

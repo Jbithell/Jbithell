@@ -1,5 +1,6 @@
 import {
   AppShell,
+  BackgroundImage,
   Box,
   Center,
   Container,
@@ -29,7 +30,7 @@ export default function Layout({
     <AppShell
       header={{ height: showHeader ? 60 : 0 }}
       footer={{ height: showFooter ? 60 : 0 }}
-      padding="md"
+      padding={0}
     >
       {backButtonUrl && title ? (
         <AppShell.Header>
@@ -45,16 +46,18 @@ export default function Layout({
         </AppShell.Header>
       ) : null}
       <AppShell.Main>
-        <Container size="xl">
-          <Center
-            style={{
-              minHeight:
-                height - ((showHeader ? 60 : 0) + (showFooter ? 60 : 0) + 32), // 32 accounts for some padding
-            }}
-          >
-            {children}
-          </Center>
-        </Container>
+        <BackgroundImage src={"/images/background.jpg"} radius={0}>
+          <Container size="xl" p={"md"}>
+            <Center
+              style={{
+                minHeight:
+                  height - ((showHeader ? 60 : 0) + (showFooter ? 60 : 0) + 32), // 32 accounts for some padding
+              }}
+            >
+              {children}
+            </Center>
+          </Container>
+        </BackgroundImage>
       </AppShell.Main>
       {footer ? (
         <AppShell.Footer>

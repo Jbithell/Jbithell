@@ -7,7 +7,6 @@ import {
 } from "@tabler/icons-react";
 import { Link, type HeadFC, type PageProps } from "gatsby";
 import * as React from "react";
-import jamesImage from "../assets/img/james.jpg";
 import { SEO } from "../components/SEO";
 import Layout from "../components/navigation/Layout";
 const Page: React.FC<PageProps> = () => {
@@ -15,7 +14,13 @@ const Page: React.FC<PageProps> = () => {
     <Layout footer={false}>
       <Center>
         <Card withBorder padding="xl" radius="md">
-          <Avatar src={jamesImage} size={120} radius={80} mx="auto" />
+          <Avatar
+            src={"/images/james.jpg"}
+            size={120}
+            radius={80}
+            mx="auto"
+            alt="Profile Image of James Bithell smiling"
+          />
           <Text ta="center" fz="xl" fw={500} mt="sm">
             James Bithell
           </Text>
@@ -40,6 +45,7 @@ const Page: React.FC<PageProps> = () => {
           </Link>
           <Link
             to="https://www.linkedin.com/in/jbithell/"
+            target="_blank"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <Button
@@ -56,6 +62,7 @@ const Page: React.FC<PageProps> = () => {
           </Link>
           <Link
             to="https://github.com/jbithell"
+            target="_blank"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <Button

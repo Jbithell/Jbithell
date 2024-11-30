@@ -3,20 +3,18 @@ import {
   Button,
   Card,
   Flex,
-  Grid,
   Image,
-  SimpleGrid,
   Text,
   useMatches,
 } from "@mantine/core";
+import { useViewportSize } from "@mantine/hooks";
+import { IconArrowLeft } from "@tabler/icons-react";
 import { Link, type HeadFC, type PageProps } from "gatsby";
 import * as React from "react";
-import { SEO } from "../SEO";
 import { EventPortolioObject } from "../../types";
-import * as classes from "./EventsPage.module.css";
 import Layout from "../navigation/Layout";
-import { useViewportSize } from "@mantine/hooks";
-import { IconArrowLeft, IconArrowLeftSquare } from "@tabler/icons-react";
+import { SEO } from "../SEO";
+import * as classes from "./EventsPage.module.css";
 const Page: React.FC<PageProps> = ({ pageContext }) => {
   const { events } = pageContext as { events: EventPortolioObject[] };
   const { width } = useViewportSize();
@@ -56,7 +54,8 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
     >
       <Flex gap="md" justify="center" direction="row" wrap="wrap">
         {events
-          .toReversed()
+          .slice()
+          .reverse()
           .filter((event) => (showAllEvents ? true : event.featuredImage))
           .map((event) => (
             <Link

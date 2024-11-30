@@ -1,14 +1,110 @@
-import { Text } from "@mantine/core";
-import { type HeadFC, type PageProps } from "gatsby";
+import {
+  Avatar,
+  Badge,
+  Button,
+  Card,
+  Group,
+  Image,
+  Text,
+  useMatches,
+} from "@mantine/core";
+import {
+  IconArrowLeft,
+  IconMapPin,
+  IconUser,
+  IconUserCircle,
+} from "@tabler/icons-react";
+import { Link, type HeadFC, type PageProps } from "gatsby";
 import * as React from "react";
 import { SEO } from "../../components/SEO";
 import { EventPortolioObject } from "../../types";
 import Layout from "../navigation/Layout";
+import { useViewportSize } from "@mantine/hooks";
 const Page: React.FC<PageProps> = ({ pageContext }) => {
   const { event } = pageContext as { event: EventPortolioObject };
+  const { width } = useViewportSize();
+  const imageWidth = useMatches({
+    base: "100%",
+    sm: width * 0.6,
+    md: width * 0.5,
+  });
   return (
-    <Layout footer={true}>
-      <Text>{event.date}</Text>
+    <Layout
+      footer={true}
+      background={false}
+      headerTitle={event.name}
+      headerLeftSection={
+        <Link
+          to="/events/"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <Button
+            radius="md"
+            variant="default"
+            justify="space-between"
+            leftSection={<IconArrowLeft size={18} />}
+            rightSection={<span />}
+          >
+            Back
+          </Button>
+        </Link>
+      }
+      headerRightSection={
+        <Text size="lg" mr="sm" fw={600}>
+          {event.date}
+        </Text>
+      }
+    >
+      <Card withBorder radius="md" style={{ maxWidth: imageWidth }}>
+        {event.featuredImage && (
+          <Card.Section>
+            <a>
+              <Image
+                src={"/images/compressed/portfolio/" + event.featuredImage}
+                width={imageWidth}
+                style={{ width: imageWidth }}
+              />
+            </a>
+          </Card.Section>
+        )}
+        {event.imageCredit && (
+          <Text fz="sm" c="dimmed" mt="xs">
+            Image Credit: {event.imageCredit}
+          </Text>
+        )}
+        <Text mt="xs">
+          {event.client && `For: ${event.client}`}
+          Roles:{" "}
+          {event.roles.map((role, i) => {
+            return (i > 0 ? " | " : "") + role;
+          })}
+        </Text>
+
+        {event.venue && (
+          <Group justify="left" mt="xs">
+            <IconMapPin size={24} />
+            <Text fz="sm" inline>
+              {event.venue}
+            </Text>
+          </Group>
+        )}
+        {event.director && (
+          <Group justify="left" mt="xs">
+            <IconUserCircle size={24} />
+            <Text fz="sm" inline>
+              Directed by {event.director}
+            </Text>
+          </Group>
+        )}
+        {event.author && (
+          <Group justify="left" mt="xs">
+            <IconUserCircle size={24} />
+            <Text fz="sm" inline>
+              Written by {event.author}
+            </Text>
+          </Group>
+        )}
+      </Card>
     </Layout>
   );
 };

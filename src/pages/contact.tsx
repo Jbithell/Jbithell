@@ -21,7 +21,7 @@ const Page: React.FC<PageProps> = () => {
         </Text>
 
         <Link
-          to="https://facebook.com/bithellj"
+          to="https://m.me/bithellj"
           target="_blank"
           style={{ textDecoration: "none", color: "inherit" }}
         >

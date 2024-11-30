@@ -34,38 +34,42 @@ export const createPages = async function ({
   reporter.success(`Generated live events portfolio listing page`);
 };
 
+const optimiseImage = async function (sourcePath: string, outputPath: string) {
+  const MAX_WIDTH = 1920;
+  const QUALITY = 70;
+  const stream = sharp(sourcePath);
+  const info = await stream.metadata();
+
+  if (info.width && info.width < MAX_WIDTH) {
+    return;
+  }
+
+  await stream.resize(MAX_WIDTH).jpeg({ quality: QUALITY }).toFile(outputPath);
+};
+
 export const onPreInit = async function ({ reporter }: BuildArgs) {
   reporter.info(`Generating optimised images`);
   const sourceDir = path.join(__dirname, "src/images");
-  const staticDir = path.join(__dirname, "static/images");
+  const staticDir = path.join(__dirname, "static/images/compressed");
   const matches = globSync(sourceDir + "/**/*.{png,jpg,jpeg}");
   const MAX_WIDTH = 1920;
   const QUALITY = 70;
-
+  const conversions = [];
+  for (const match of matches) {
+    // Create the directories first syncronosly to avoid race condition
+    const optimizedName = match.replace(/(\..+)$/, (match, ext) => `${ext}`);
+    const optimizedPath = optimizedName.replace(sourceDir, staticDir);
+    if (!fs.existsSync(path.dirname(optimizedPath))) {
+      fs.mkdirSync(path.dirname(optimizedPath), { recursive: true });
+    }
+    conversions.push([match, optimizedPath]);
+  }
   await Promise.all(
-    matches.map(async (match) => {
-      const stream = sharp(match);
-      const info = await stream.metadata();
-
-      if (info.width && info.width < MAX_WIDTH) {
-        return;
-      }
-
-      const optimizedName = match.replace(
-        /(\..+)$/,
-        (match, ext) => `-min${ext}`
+    conversions.map(([sourcePath, outputPath]) => {
+      reporter.info(
+        `Optimising image: ${sourcePath} to be placed at ${outputPath}`
       );
-
-      const optimizedPath = optimizedName.replace(sourceDir, staticDir);
-      await stream
-        .resize(MAX_WIDTH)
-        .jpeg({ quality: QUALITY })
-        .toFile(optimizedPath);
-      reporter.success(`Optimised image ${match} to ${optimizedPath}`);
-      return fs.rename(
-        optimizedPath,
-        path.join(staticDir, path.relative(__dirname, match))
-      );
+      return optimiseImage(sourcePath, outputPath);
     })
   );
   reporter.success(`Successfully optimised all images`);

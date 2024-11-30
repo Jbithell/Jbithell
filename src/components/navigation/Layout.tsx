@@ -46,7 +46,10 @@ export default function Layout({
         </AppShell.Header>
       ) : null}
       <AppShell.Main>
-        <BackgroundImage src={"/images/background.jpg"} radius={0}>
+        <BackgroundImage
+          src={"/images/compressed/backgrounds/wales1.jpg"}
+          radius={0}
+        >
           <Container size="xl" p={"md"}>
             <Center
               style={{

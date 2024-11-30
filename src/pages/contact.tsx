@@ -5,7 +5,7 @@ import { SEO } from "../components/SEO";
 import Layout from "../components/navigation/Layout";
 const Page: React.FC<PageProps> = () => {
   return (
-    <Layout footer={true} title="Contact" backButtonUrl="/">
+    <Layout footer={true}>
       <Center>
         <Card withBorder padding="xl" radius="md">
           <Text ta="center" fz="xl" fw={500} mt="sm">

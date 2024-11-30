@@ -7,7 +7,7 @@ import Layout from "../navigation/Layout";
 const Page: React.FC<PageProps> = ({ pageContext }) => {
   const { event } = pageContext as { event: EventPortolioObject };
   return (
-    <Layout footer={true} title={event.name} backButtonUrl="/events/">
+    <Layout footer={true}>
       <Text>{event.date}</Text>
     </Layout>
   );

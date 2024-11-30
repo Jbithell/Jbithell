@@ -71,7 +71,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/guysAndDolls.jpg",
+    "featuredImage": "guysAndDolls.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -90,7 +90,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/treasureIsland.jpg",
+    "featuredImage": "treasureIsland.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -109,7 +109,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/midsummers.jpg",
+    "featuredImage": "midsummers.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -147,7 +147,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/blackComedy.jpg",
+    "featuredImage": "blackComedy.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -228,7 +228,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/desperateMeasures.jpg",
+    "featuredImage": "desperateMeasures.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -333,7 +333,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/tempest.jpg",
+    "featuredImage": "tempest.jpg",
     "imageCredit": "Sandy Crole",
     "client": null
   },
@@ -427,7 +427,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/oklahoma.jpg",
+    "featuredImage": "oklahoma.jpg",
     "imageCredit": "Sandy Crole",
     "client": null
   },
@@ -464,7 +464,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/drinkingCompanions.jpg",
+    "featuredImage": "drinkingCompanions.jpg",
     "imageCredit": "James Bithell",
     "client": "Westminster School"
   },
@@ -658,7 +658,7 @@
     "performancesAttended": 2,
     "professional": false,
     "paid": true,
-    "featuredImage": "./images/jungleBook.jpg",
+    "featuredImage": "jungleBook.jpg",
     "imageCredit": "James Bithell",
     "client": null
   },
@@ -682,7 +682,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/cabaret02r96.jpg",
+    "featuredImage": "cabaret02r96.jpg",
     "imageCredit": "James Bithell",
     "client": "Westminster School"
   },
@@ -842,7 +842,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/sixCharacters.jpg",
+    "featuredImage": "sixCharacters.jpg",
     "imageCredit": "Greg Tiani",
     "client": "University of York Drama Society"
   },
@@ -940,7 +940,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/hercules.jpg",
+    "featuredImage": "hercules.jpg",
     "imageCredit": "Kat Johnston",
     "client": "University of York Pantomime Society"
   },
@@ -997,7 +997,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/legallyBlonde.jpg",
+    "featuredImage": "legallyBlonde.jpg",
     "imageCredit": "CHMS York",
     "client": "CHMS York"
   },
@@ -1016,7 +1016,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/tinFoilHat.jpg",
+    "featuredImage": "tinFoilHat.jpg",
     "imageCredit": "James Bithell",
     "client": "University of York Drama Society"
   },
@@ -1041,7 +1041,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/imageOfAnUnknown.jpg",
+    "featuredImage": "imageOfAnUnknown.jpg",
     "imageCredit": "Greg Tiani",
     "client": "University of York Drama Society"
   },
@@ -1078,7 +1078,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/mediumReadings.jpg",
+    "featuredImage": "mediumReadings.jpg",
     "imageCredit": "Greg Tiani",
     "client": "University of York Drama Society"
   },
@@ -1102,7 +1102,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/fromUpHere.jpg",
+    "featuredImage": "fromUpHere.jpg",
     "imageCredit": "Anna Bunch",
     "client": "University of York Drama Society"
   },
@@ -1120,7 +1120,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/loveYork.jpg",
+    "featuredImage": "loveYork.jpg",
     "imageCredit": "James Bithell",
     "client": "University of York Student's Union"
   },
@@ -1145,7 +1145,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/rent.jpg",
+    "featuredImage": "rent.jpg",
     "imageCredit": "Katherine Johnston",
     "client": "CHMS York"
   },
@@ -1182,7 +1182,7 @@
 
     "professional": true,
     "paid": false,
-    "featuredImage": "./images/yusu-comedy-night-2019.jpeg",
+    "featuredImage": "yusu-comedy-night-2019.jpeg",
     "imageCredit": "James Bithell",
     "client": "University of York Student's Union"
   },
@@ -1276,7 +1276,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/yorks-got-talent-2019.jpg",
+    "featuredImage": "yorks-got-talent-2019.jpg",
     "imageCredit": "James Bithell",
     "client": "University of York Student's Union"
   },
@@ -1295,7 +1295,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/autumn-showcase-2019.jpg",
+    "featuredImage": "autumn-showcase-2019.jpg",
     "imageCredit": "Nathan Billis",
     "client": "CHMS York"
   },
@@ -1370,7 +1370,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/chicago.jpg",
+    "featuredImage": "chicago.jpg",
     "imageCredit": "James Bithell",
     "client": null
   },
@@ -1389,7 +1389,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/election-results-night-2020.jpg",
+    "featuredImage": "election-results-night-2020.jpg",
     "imageCredit": "Jacob Dicker",
     "client": "University of York Students' Union"
   },
@@ -1426,7 +1426,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/dogfight.jpg",
+    "featuredImage": "dogfight.jpg",
     "imageCredit": "CHMS York",
     "client": "CHMS York"
   },
@@ -1444,7 +1444,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/queerCabaret.jpg",
+    "featuredImage": "queerCabaret.jpg",
     "imageCredit": "Queer Cabaret",
     "client": "University of York LGBTQ Network"
   },
@@ -1499,7 +1499,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/loveYork2021.jpg",
+    "featuredImage": "loveYork2021.jpg",
     "imageCredit": "Luke Snell",
     "client": "University of York Student's Union"
   },
@@ -1518,7 +1518,7 @@
 
     "professional": false,
     "paid": false,
-    "featuredImage": "./images/chmsSummerShowcase.jpg",
+    "featuredImage": "chmsSummerShowcase.jpg",
     "imageCredit": "CHMS York",
     "client": "CHMS York"
   },
@@ -1555,7 +1555,7 @@
 
     "professional": false,
     "paid": true,
-    "featuredImage": "./images/johnnyAndTheBomb.jpg",
+    "featuredImage": "johnnyAndTheBomb.jpg",
     "imageCredit": "James Bithell",
     "client": null
   },
@@ -1627,7 +1627,7 @@
 
     "professional": false,
     "paid": true,
-    "featuredImage": "./images/piratesOfCurryBean.jpg",
+    "featuredImage": "piratesOfCurryBean.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/Cl7BgQKoEW4/",
     "client": null
   },
@@ -1651,7 +1651,7 @@
 
     "professional": false,
     "paid": true,
-    "featuredImage": "./images/privatePeaceful.jpg",
+    "featuredImage": "privatePeaceful.jpg",
     "imageCredit": "James Bithell",
     "client": null
   },
@@ -1675,7 +1675,7 @@
 
     "professional": false,
     "paid": true,
-    "featuredImage": "./images/oliver.jpg",
+    "featuredImage": "oliver.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/C0MnAlgtoT8",
     "client": null
   },
@@ -1699,7 +1699,7 @@
 
     "professional": false,
     "paid": true,
-    "featuredImage": "./images/aristocats.jpeg",
+    "featuredImage": "aristocats.jpeg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/C0y8Hg2IBR2",
     "client": null
   },
@@ -1723,7 +1723,7 @@
 
     "professional": false,
     "paid": true,
-    "featuredImage": "./images/troy24-2.jpg",
+    "featuredImage": "troy24-2.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/C4xOZzAg_lY/",
     "client": null
   },

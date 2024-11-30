@@ -9,7 +9,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Assistant Stage Manager"],
     "tags": ["Stage Management"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -28,7 +28,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer", "Sound Operator", "Stage Manager"],
     "tags": ["Sound", "Stage Management"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -39,7 +39,7 @@
   },
   {
     "slug": "1-september-2014-doggs-hamlet--cahoots-macbeth",
-    "date": "1-September-2014",
+    "date": "1 September 2014",
     "endDate": null,
     "name": "Dogg's Hamlet & Cahoot's Macbeth",
     "author": null,
@@ -47,7 +47,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer", "Sound Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -58,7 +58,7 @@
   },
   {
     "slug": "march-2015-guys--dolls",
-    "date": "March-2015",
+    "date": "March 2015",
     "endDate": null,
     "name": "Guys & Dolls",
     "author": null,
@@ -66,7 +66,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Head flyman (hemp)", "Stage Manager"],
     "tags": ["Automation", "Stage Management"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -77,7 +77,7 @@
   },
   {
     "slug": "may-2015-treasure-island",
-    "date": "May-2015",
+    "date": "May 2015",
     "endDate": null,
     "name": "Treasure Island",
     "author": null,
@@ -85,7 +85,7 @@
     "venue": "Millicent Fawcett Hall Studio | Westminster School",
     "roles": ["Lighting Operator"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -96,7 +96,7 @@
   },
   {
     "slug": "june-2015-a-midsummer-nights-dream",
-    "date": "June-2015",
+    "date": "June 2015",
     "endDate": null,
     "name": "A Midsummer Night's Dream",
     "author": null,
@@ -104,7 +104,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer", "Sound Mixer", "Operator", "Technical Manager"],
     "tags": ["Sound", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -115,7 +115,7 @@
   },
   {
     "slug": "july-2015-39th-annual-phab-show",
-    "date": "July-2015",
+    "date": "July 2015",
     "endDate": null,
     "name": "39th Annual PHAB Show",
     "author": null,
@@ -123,7 +123,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Designer", "Sound Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -134,7 +134,7 @@
   },
   {
     "slug": "21-september-2015-black-comedy",
-    "date": "21-September-2015",
+    "date": "21 September 2015",
     "endDate": null,
     "name": "Black Comedy",
     "author": "Peter Shaffer",
@@ -142,7 +142,7 @@
     "venue": "Millicent Fawcett Hall Studio | Westminster School",
     "roles": ["Co-Director", "Producer", "Programme Designer"],
     "tags": ["Direction", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -153,7 +153,7 @@
   },
   {
     "slug": "october-2015-renaissance-festival-2015",
-    "date": "October-2015",
+    "date": "October 2015",
     "endDate": null,
     "name": "Renaissance Festival 2015",
     "author": null,
@@ -161,7 +161,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -172,7 +172,7 @@
   },
   {
     "slug": "12-february-2016-wesmun-2016",
-    "date": "12-February-2016",
+    "date": "12 February 2016",
     "endDate": "15-February-2016",
     "name": "WesMUN 2016",
     "author": null,
@@ -185,7 +185,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -196,7 +196,7 @@
   },
   {
     "slug": "march-2016-hippolytus",
-    "date": "March-2016",
+    "date": "March 2016",
     "endDate": null,
     "name": "Hippolytus",
     "author": null,
@@ -204,7 +204,7 @@
     "venue": "Millicent Fawcett Hall Studio | Westminster School",
     "roles": ["Sound Designer", "Camera Operator"],
     "tags": ["Sound", "Video"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -215,7 +215,7 @@
   },
   {
     "slug": "may-2016-desperate-measures",
-    "date": "May-2016",
+    "date": "May 2016",
     "endDate": null,
     "name": "Desperate Measures",
     "author": null,
@@ -223,7 +223,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Standby Technician"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -234,7 +234,7 @@
   },
   {
     "slug": "july-2016-40th-annual-phab-show",
-    "date": "July-2016",
+    "date": "July 2016",
     "endDate": null,
     "name": "40th Annual PHAB Show",
     "author": null,
@@ -242,7 +242,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Designer", "Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -253,7 +253,7 @@
   },
   {
     "slug": "july-2016-norvil-and-josephine-magic-at-phab-2016",
-    "date": "July-2016",
+    "date": "July 2016",
     "endDate": null,
     "name": "Norvil and Josephine Magic at PHAB 2016",
     "author": null,
@@ -266,7 +266,7 @@
       "Head flyman (hemp)"
     ],
     "tags": ["Sound", "Lighting", "Automation"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -277,7 +277,7 @@
   },
   {
     "slug": "september-2016-elizabethan-festival",
-    "date": "September-2016",
+    "date": "September 2016",
     "endDate": null,
     "name": "Elizabethan Festival",
     "author": null,
@@ -285,7 +285,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -296,7 +296,7 @@
   },
   {
     "slug": "october-2016-renaissance-festival-2016",
-    "date": "October-2016",
+    "date": "October 2016",
     "endDate": null,
     "name": "Renaissance Festival 2016",
     "author": null,
@@ -309,7 +309,7 @@
       "Programme Designer"
     ],
     "tags": ["Sound", "Lighting", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -320,7 +320,7 @@
   },
   {
     "slug": "october-2016-the-tempest",
-    "date": "October-2016",
+    "date": "October 2016",
     "endDate": null,
     "name": "The Tempest",
     "author": null,
@@ -328,7 +328,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Lighting Programmer", "Set build assistant"],
     "tags": ["Lighting", "Set"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -339,7 +339,7 @@
   },
   {
     "slug": "october-2016-wedding",
-    "date": "October-2016",
+    "date": "October 2016",
     "endDate": null,
     "name": "Wedding",
     "author": null,
@@ -347,7 +347,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -358,7 +358,7 @@
   },
   {
     "slug": "december-2016-wedding",
-    "date": "December-2016",
+    "date": "December 2016",
     "endDate": null,
     "name": "Wedding",
     "author": null,
@@ -366,7 +366,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Designer", "Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -385,7 +385,7 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -396,7 +396,7 @@
   },
   {
     "slug": "january-2017-miles-gloriosus",
-    "date": "January-2017",
+    "date": "January 2017",
     "endDate": null,
     "name": "Miles Gloriosus",
     "author": null,
@@ -404,7 +404,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Production Sound Engineer"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -422,7 +422,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": null,
 
     "professional": false,
@@ -441,7 +441,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Lighting Operator"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
     "professional": true,
     "paid": false,
@@ -451,7 +451,7 @@
   },
   {
     "slug": "march-2017-drinking-companions--a-talk-in-the-park",
-    "date": "March-2017",
+    "date": "March 2017",
     "endDate": null,
     "name": "Drinking Companions & A Talk in the Park",
     "author": "Alan Ayckbourn",
@@ -459,7 +459,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Director", "Programme Designer"],
     "tags": ["Direction", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -470,7 +470,7 @@
   },
   {
     "slug": "march-2017-tis-pity-shes-a-whore",
-    "date": "March-2017",
+    "date": "March 2017",
     "endDate": null,
     "name": "Tis Pity She's A Whore",
     "author": "John Ford",
@@ -483,7 +483,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -494,7 +494,7 @@
   },
   {
     "slug": "may-2017-wedding",
-    "date": "May-2017",
+    "date": "May 2017",
     "endDate": null,
     "name": "Wedding",
     "author": null,
@@ -502,7 +502,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Designer", "Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -526,7 +526,7 @@
       "Head flyman (hemp)"
     ],
     "tags": ["Sound", "Lighting", "Automation"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -537,7 +537,7 @@
   },
   {
     "slug": "july-2017-41st-annual-phab-show",
-    "date": "July-2017",
+    "date": "July 2017",
     "endDate": null,
     "name": "41st annual PHAB Show",
     "author": null,
@@ -550,7 +550,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -573,7 +573,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -584,7 +584,7 @@
   },
   {
     "slug": "september-2017-elizabethan-festival-2017",
-    "date": "September-2017",
+    "date": "September 2017",
     "endDate": null,
     "name": "Elizabethan Festival 2017",
     "author": null,
@@ -592,7 +592,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Production Sound Engineer"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -603,7 +603,7 @@
   },
   {
     "slug": "october-2017-american-classics",
-    "date": "October-2017",
+    "date": "October 2017",
     "endDate": null,
     "name": "American Classics",
     "author": null,
@@ -616,7 +616,7 @@
       "Front of House Manager"
     ],
     "tags": ["Sound", "Lighting", "Production", "Front of House"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -627,7 +627,7 @@
   },
   {
     "slug": "november-2017-the-birds",
-    "date": "November-2017",
+    "date": "November 2017",
     "endDate": null,
     "name": "The Birds",
     "author": "Aristophanes",
@@ -635,7 +635,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Technical Manager"],
     "tags": ["Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -654,7 +654,7 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Operator", "Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
     "professional": false,
     "paid": true,
@@ -664,7 +664,7 @@
   },
   {
     "slug": "january-2018-cabaret",
-    "date": "January-2018",
+    "date": "January 2018",
     "endDate": null,
     "name": "Cabaret",
     "author": null,
@@ -677,7 +677,7 @@
       "Programme Designer"
     ],
     "tags": ["Sound", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -700,7 +700,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -711,7 +711,7 @@
   },
   {
     "slug": "may-2018-a-midsummer-nights-dream",
-    "date": "May-2018",
+    "date": "May 2018",
     "endDate": null,
     "name": "A Midsummer Night's Dream",
     "author": "William Shakespere",
@@ -719,7 +719,7 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Designer", "Lighting Programmer"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -730,7 +730,7 @@
   },
   {
     "slug": "28-june-2018-snow-white-and-me",
-    "date": "28-June-2018",
+    "date": "28 June 2018",
     "endDate": null,
     "name": "Snow White and Me",
     "author": "Philip LaZebnik/Ronald Kruschak/Pippa Cleary",
@@ -738,7 +738,7 @@
     "venue": "Prince of Wales Theatre Bar",
     "roles": ["Production Sound Engineer (work experience)"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -749,7 +749,7 @@
   },
   {
     "slug": "july-2018-42nd-annual-phab-show",
-    "date": "July-2018",
+    "date": "July 2018",
     "endDate": null,
     "name": "42nd annual PHAB Show",
     "author": null,
@@ -757,7 +757,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Designer", "Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -768,7 +768,7 @@
   },
   {
     "slug": "7-july-2018-o2-silver-clef-awards",
-    "date": "7-July-2018",
+    "date": "7 July 2018",
     "endDate": null,
     "name": "O2 Silver Clef Awards",
     "author": null,
@@ -776,7 +776,7 @@
     "venue": "Grosvenor House Hotel",
     "roles": ["Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -787,7 +787,7 @@
   },
   {
     "slug": "12-october-2018-sir-adrian-boult-memorial-concert---jacob-collier",
-    "date": "12-October-2018",
+    "date": "12 October 2018",
     "endDate": null,
     "name": "Sir Adrian Boult Memorial Concert - Jacob Collier",
     "author": null,
@@ -795,7 +795,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Designer", "Lighting Operator", "Lighting Programmer"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
     "professional": false,
     "paid": true,
@@ -805,7 +805,7 @@
   },
   {
     "slug": "20-october-2018-wedding",
-    "date": "20-October-2018",
+    "date": "20 October 2018",
     "endDate": null,
     "name": "Wedding",
     "author": null,
@@ -813,7 +813,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Advisor"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -824,7 +824,7 @@
   },
   {
     "slug": "9-november-2018-six-characters-in-search-of-an-author",
-    "date": "9-November-2018",
+    "date": "9 November 2018",
     "endDate": null,
     "name": "Six Characters in Search of an Author",
     "author": "Luigi Pirandello",
@@ -837,7 +837,7 @@
       "Lighting Programmer"
     ],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -848,7 +848,7 @@
   },
   {
     "slug": "16-november-2018-antigone",
-    "date": "16-November-2018",
+    "date": "16 November 2018",
     "endDate": null,
     "name": "Antigone",
     "author": null,
@@ -856,7 +856,7 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Front of House Assistant"],
     "tags": ["Front of House"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -867,7 +867,7 @@
   },
   {
     "slug": "24-november-2018-sherlock-the-sign-of-four-the-pantomime",
-    "date": "24-November-2018",
+    "date": "24 November 2018",
     "endDate": null,
     "name": "Sherlock: The Sign of Four. The Pantomime",
     "author": "Una Hogan",
@@ -880,7 +880,7 @@
       "Lighting Programmer"
     ],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -899,7 +899,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator", "Lighting Programmer"],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -917,7 +917,7 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Operator"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
     "professional": false,
     "paid": true,
@@ -927,7 +927,7 @@
   },
   {
     "slug": "24-january-2019-hercules-the-pantomime",
-    "date": "24-January-2019",
+    "date": "24 January 2019",
     "endDate": null,
     "name": "Hercules The Pantomime",
     "author": null,
@@ -935,7 +935,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -946,7 +946,7 @@
   },
   {
     "slug": "11-february-2019-sunday-roast--tiger-who-came-to-tea",
-    "date": "11-February-2019",
+    "date": "11 February 2019",
     "endDate": "11-February-2019",
     "name": "Sunday roast & Tiger who Came to Tea",
     "author": "Aisling Lally",
@@ -954,7 +954,7 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -965,7 +965,7 @@
   },
   {
     "slug": "15-february-2019-wesmun-2019",
-    "date": "15-February-2019",
+    "date": "15 February 2019",
     "endDate": "16-February-2019",
     "name": "WesMUN 2019",
     "author": null,
@@ -973,7 +973,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -984,7 +984,7 @@
   },
   {
     "slug": "21-february-2019-legally-blonde",
-    "date": "21-February-2019",
+    "date": "21 February 2019",
     "endDate": null,
     "name": "Legally Blonde",
     "author": "Heather Hach",
@@ -992,7 +992,7 @@
     "venue": "Joseph Rowntree Theatre",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -1003,7 +1003,7 @@
   },
   {
     "slug": "25-february-2019-tin-foil-hat",
-    "date": "25-February-2019",
+    "date": "25 February 2019",
     "endDate": "25-February-2019",
     "name": "Tin foil hat",
     "author": "Eloise Curtis",
@@ -1011,7 +1011,7 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1036,7 +1036,7 @@
       "Technical Manager"
     ],
     "tags": ["Sound", "Lighting", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -1047,7 +1047,7 @@
   },
   {
     "slug": "27-march-2019-macbeth",
-    "date": "27-March-2019",
+    "date": "27 March 2019",
     "endDate": "27-March-2019",
     "name": "Macbeth",
     "author": "William Shakespere",
@@ -1055,7 +1055,7 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
     "professional": false,
     "paid": true,
@@ -1065,7 +1065,7 @@
   },
   {
     "slug": "26-april-2019-medium-readings-and-oracle-healings",
-    "date": "26-April-2019",
+    "date": "26 April 2019",
     "endDate": "26-April-2019",
     "name": "Medium Readings and Oracle Healings",
     "author": "Ashley Milne",
@@ -1073,7 +1073,7 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1084,7 +1084,7 @@
   },
   {
     "slug": "31-may-2019-from-up-here",
-    "date": "31-May-2019",
+    "date": "31 May 2019",
     "endDate": "2-June-2019",
     "name": "From Up Here",
     "author": "Aron Lee Lambert",
@@ -1097,7 +1097,7 @@
       "Lighting Programmer"
     ],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -1115,7 +1115,7 @@
     "venue": "Joseph Rowntree Theatre",
     "roles": ["Lighting Designer", "Lighting Operator"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -1126,7 +1126,7 @@
   },
   {
     "slug": "20-june-2019-rent",
-    "date": "20-June-2019",
+    "date": "20 June 2019",
     "endDate": "22-June-2019",
     "name": "RENT",
     "author": "Jonathan Larson",
@@ -1140,7 +1140,7 @@
       "Technical Manager"
     ],
     "tags": ["Sound", "Lighting", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 4,
 
     "professional": false,
@@ -1159,7 +1159,7 @@
     "venue": "The Other Palace",
     "roles": ["Production Sound Engineer (work experience)"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": true,
@@ -1177,7 +1177,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": true,
@@ -1188,7 +1188,7 @@
   },
   {
     "slug": "14-october-2019-spaced-out-and-ready-to-die",
-    "date": "14-October-2019",
+    "date": "14 October 2019",
     "endDate": "14-October-2019",
     "name": "Spaced Out and Ready to Die",
     "author": "Emily Wood",
@@ -1196,7 +1196,7 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1207,7 +1207,7 @@
   },
   {
     "slug": "28-october-2019-takeover-festival-2019",
-    "date": "28-October-2019",
+    "date": "28 October 2019",
     "endDate": "3-November-2019",
     "name": "TakeOver Festival 2019",
     "author": null,
@@ -1215,7 +1215,7 @@
     "venue": "Main House | York Theatre Royal",
     "roles": ["Production Manager"],
     "tags": ["Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": true,
@@ -1226,14 +1226,14 @@
   },
   {
     "slug": "5-november-2019-reasons-to-stay-alive",
-    "date": "5-November-2019",
+    "date": "5 November 2019",
     "name": "Reasons to Stay Alive",
     "author": "April De Angelis",
     "director": "Jonathan Watkins",
     "venue": "Main House | York Theatre Royal",
     "roles": ["House Casual LX"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": true,
@@ -1244,7 +1244,7 @@
   },
   {
     "slug": "12-november-2019-woman-in-black",
-    "date": "12-November-2019",
+    "date": "12 November 2019",
     "endDate": "16-November-2019",
     "name": "Woman in Black",
     "author": "Stephen Mallatratt",
@@ -1252,7 +1252,7 @@
     "venue": "Main House | York Theatre Royal",
     "roles": ["House Casual LX"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": true,
@@ -1263,7 +1263,7 @@
   },
   {
     "slug": "25-november-2019-yorks-got-talent",
-    "date": "25-November-2019",
+    "date": "25 November 2019",
     "endDate": "25-November-2019",
     "name": "York's Got Talent",
     "author": null,
@@ -1271,7 +1271,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1282,7 +1282,7 @@
   },
   {
     "slug": "28-november-2019-chms-showcase",
-    "date": "28-November-2019",
+    "date": "28 November 2019",
     "endDate": "30-November-2019",
     "name": "CHMS Showcase",
     "author": null,
@@ -1290,7 +1290,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Designer", "Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -1308,7 +1308,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1319,7 +1319,7 @@
   },
   {
     "slug": "16-january-2020-rapunzel-the-pantomime",
-    "date": "16-January-2020",
+    "date": "16 January 2020",
     "endDate": "18-January-2020",
     "name": "Rapunzel The Pantomime",
     "author": null,
@@ -1327,7 +1327,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -1338,7 +1338,7 @@
   },
   {
     "slug": "23-january-2020-a-tale-of-two-cities",
-    "date": "23-January-2020",
+    "date": "23 January 2020",
     "endDate": "25-January-2020",
     "name": "A Tale of Two Cities",
     "author": "Matthew Francis",
@@ -1346,7 +1346,7 @@
     "venue": "Dixon Drama Studio | University of York",
     "roles": ["Financial Producer"],
     "tags": ["Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 4,
 
     "professional": false,
@@ -1357,7 +1357,7 @@
   },
   {
     "slug": "13-february-2020-chicago",
-    "date": "13-February-2020",
+    "date": "13 February 2020",
     "endDate": "15-February-2020",
     "name": "Chicago",
     "author": "Fred Ebb & Bob Fosse",
@@ -1365,7 +1365,7 @@
     "venue": "Joseph Rowntree Theatre",
     "roles": ["Sound Designer", "Sound Mixer", "Operator"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 4,
 
     "professional": false,
@@ -1376,7 +1376,7 @@
   },
   {
     "slug": "22-february-2020-election-results-night",
-    "date": "22-February-2020",
+    "date": "22 February 2020",
     "endDate": "22-February-2020",
     "name": "Election Results Night",
     "author": null,
@@ -1384,7 +1384,7 @@
     "venue": "Roger Kirk Centre | University of York",
     "roles": ["Sound Designer", "Lighting Designer", "Technical Manager"],
     "tags": ["Sound", "Lighting", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1395,7 +1395,7 @@
   },
   {
     "slug": "29-february-2020-dance-society-showcase",
-    "date": "29-February-2020",
+    "date": "29 February 2020",
     "endDate": "1-March-2020",
     "name": "Dance Society Showcase",
     "author": null,
@@ -1403,7 +1403,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Lighting Designer", "Lighting Operator", "Technical Manager"],
     "tags": ["Lighting", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1421,7 +1421,7 @@
     "venue": "John Cooper Studio",
     "roles": ["Sound Designer", "Lighting Designer", "Technical Manager"],
     "tags": ["Sound", "Lighting", "Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 4,
 
     "professional": false,
@@ -1432,14 +1432,14 @@
   },
   {
     "slug": "24-oct-2020-queer-cabaret.md",
-    "date": "24-October-2021",
+    "date": "24 October 2021",
     "name": "Queer Cabaret",
     "author": null,
     "director": null,
     "venue": "The Forest | University of York",
     "roles": ["Technical Manager", "Sound Operator", "Sound Designer"],
     "tags": ["Production", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1450,14 +1450,14 @@
   },
   {
     "slug": "15-april-2021-high-note",
-    "date": "15-April-2021",
+    "date": "15 April 2021",
     "name": "High Note",
     "author": null,
     "director": null,
     "venue": "Dixon Drama Studio | University of York",
     "roles": ["Technical Manager"],
     "tags": ["Production"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1468,7 +1468,7 @@
   },
   {
     "slug": "27-may-2021-midsummer",
-    "date": "27-May-2021",
+    "date": "27 May 2021",
     "endDate": "30-May-2021",
     "name": "A Midsummer Night's Dream",
     "author": "William Shakespere",
@@ -1476,7 +1476,7 @@
     "venue": "Rowntree Park Stage",
     "roles": ["Crew"],
     "tags": ["Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 0,
 
     "professional": false,
@@ -1487,14 +1487,14 @@
   },
   {
     "slug": "12-june-2021-love-york-awards",
-    "date": "12-June-2021",
+    "date": "12 June 2021",
     "name": "Love York Awards",
     "author": null,
     "director": null,
     "venue": "The Forest | University of York",
     "roles": ["Technical Manager", "Sound Designer"],
     "tags": ["Production", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1505,7 +1505,7 @@
   },
   {
     "slug": "13-june-2021-showcase",
-    "date": "13-June-2021",
+    "date": "13 June 2021",
     "endDate": "19-June-2021",
     "name": "Summer Showcase",
     "author": null,
@@ -1513,7 +1513,7 @@
     "venue": "Dixon Drama Studio | University of York",
     "roles": ["Lighting Designer"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 3,
 
     "professional": false,
@@ -1524,14 +1524,14 @@
   },
   {
     "slug": "20-june-2021-colors-ball",
-    "date": "20-June-2021",
+    "date": "20 June 2021",
     "name": "Colours Ball",
     "author": null,
     "director": null,
     "venue": "The Forest | University of York",
     "roles": ["Crew Chief", "Sound Supervisor"],
     "tags": ["Production", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 1,
 
     "professional": false,
@@ -1542,7 +1542,7 @@
   },
   {
     "slug": "9-december-2021-johnny-and-the-bomb",
-    "date": "9-December-2021",
+    "date": "9 December 2021",
     "endDate": null,
     "name": "Johnny and the Bomb",
     "author": null,
@@ -1550,7 +1550,7 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Designer", "Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -1561,7 +1561,7 @@
   },
   {
     "slug": "15-march-2022-guys-and-dolls",
-    "date": "15-March-2022",
+    "date": "15 March 2022",
     "endDate": null,
     "name": "Guys & Dolls",
     "author": null,
@@ -1574,7 +1574,7 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -1585,7 +1585,7 @@
   },
   {
     "slug": "11-october-2022-beanstalk",
-    "date": "11-October-2022",
+    "date": "11 October 2022",
     "endDate": null,
     "name": "Beanstalk!",
     "author": null,
@@ -1598,7 +1598,7 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -1609,7 +1609,7 @@
   },
   {
     "slug": "8-december-2022-pirates-of-curry-bean",
-    "date": "08-December-2022",
+    "date": "8 December 2022",
     "endDate": null,
     "name": "Pirates of the Curry Bean",
     "author": null,
@@ -1622,7 +1622,7 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -1633,7 +1633,7 @@
   },
   {
     "slug": "15-march-2023-private-peaceful",
-    "date": "15-March-2023",
+    "date": "15 March 2023",
     "endDate": null,
     "name": "Private Peaceful",
     "author": "Michael Morpurgo adapted for the stage by Simon Reade",
@@ -1646,7 +1646,7 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -1657,7 +1657,7 @@
   },
   {
     "slug": "23-november-2023-oliver",
-    "date": "23-November-2023",
+    "date": "23 November 2023",
     "endDate": null,
     "name": "Oliver! JR",
     "author": "Lionel Bart",
@@ -1670,7 +1670,7 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -1681,7 +1681,7 @@
   },
   {
     "slug": "7-december-2023-aristocats",
-    "date": "7-December-2023",
+    "date": "7 December 2023",
     "endDate": null,
     "name": "Disney's The Aristocats Kids",
     "author": "Michael Bernard",
@@ -1694,7 +1694,7 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -1705,7 +1705,7 @@
   },
   {
     "slug": "14-march-2024-troy24",
-    "date": "14-March-2024",
+    "date": "14 March 2024",
     "endDate": null,
     "name": "Troy24",
     "author": "David Calcutt",
@@ -1718,7 +1718,7 @@
       "Video Designer"
     ],
     "tags": ["Lighting", "Sound", "Video"],
-    "eventType": "Theatre",
+
     "performancesAttended": 2,
 
     "professional": false,
@@ -1729,7 +1729,7 @@
   },
   {
     "slug": "21-march-2024-night-at-the-musicals",
-    "date": "21-March-2024",
+    "date": "21 March 2024",
     "endDate": null,
     "name": "A Night at the Musicals",
     "author": null,
@@ -1742,13 +1742,33 @@
       "Sound Operator"
     ],
     "tags": ["Lighting", "Sound"],
-    "eventType": "Theatre",
     "performancesAttended": 1,
-
     "professional": false,
     "paid": true,
-    "featuredImage": null,
+    "featuredImage": "a-night-at-the-musicals.jpg",
     "imageCredit": null,
+    "client": null
+  },
+  {
+    "slug": "6-november-2024-louis-dowdeswell-big-band",
+    "date": "6 November 2024",
+    "endDate": null,
+    "name": "Louis Dowdeswell Big Band",
+    "author": null,
+    "director": "Rebecca Thorn",
+    "venue": "Main Hall | Westminster Under School",
+    "roles": [
+      "Lighting Designer",
+      "Lighting Rigging Assistant",
+      "Sound Designer",
+      "Sound Operator"
+    ],
+    "tags": ["Lighting", "Sound"],
+    "performancesAttended": 1,
+    "professional": false,
+    "paid": true,
+    "featuredImage": "louis-dowdeswell-big-band.jpg",
+    "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/DCEUl0iIhpm/",
     "client": null
   }
 ]

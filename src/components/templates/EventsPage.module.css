@@ -8,8 +8,3 @@
     box-shadow: var(--mantine-shadow-md);
   }
 }
-
-.title {
-  font-family: 'Greycliff CF', var(--mantine-font-family);
-  font-weight: bold;
-}

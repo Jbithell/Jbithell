@@ -3,7 +3,7 @@ import { BuildArgs, CreatePagesArgs } from "gatsby";
 import { globSync } from "glob";
 import path from "path";
 import sharp from "sharp";
-import EventsPortfolio from "./src/portfolio/events.json";
+import EventsPortfolio from "./eventPortfolio.json";
 import { EventPortolioObject } from "./src/types";
 
 export const createPages = async function ({

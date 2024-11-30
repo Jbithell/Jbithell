@@ -15,8 +15,8 @@ const Page: React.FC<PageProps> = () => {
       <Center>
         <Card withBorder padding="xl" radius="md">
           <Avatar
-            src={"/images/james.jpg"}
-            size={120}
+            src={"/images/james-bithell-profile.jpg"}
+            size={140}
             radius={80}
             mx="auto"
             alt="Profile Image of James Bithell smiling"

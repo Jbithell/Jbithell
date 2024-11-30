@@ -22,6 +22,9 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
   const cardSize = useMatches({
     base: width * 0.8,
     sm: width * 0.4,
+    md: width * 0.3,
+    lg: width * 0.3,
+    xl: width * 0.3,
   });
   return (
     <Layout

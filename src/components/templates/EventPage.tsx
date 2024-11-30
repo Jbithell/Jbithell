@@ -27,6 +27,8 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
     base: "100%",
     sm: width * 0.6,
     md: width * 0.5,
+    lg: width * 0.5,
+    xl: width * 0.5,
   });
   return (
     <Layout

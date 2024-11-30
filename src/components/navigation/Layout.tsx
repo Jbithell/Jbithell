@@ -74,7 +74,7 @@ export default function Layout({
       <AppShell.Main style={{ background: "whitesmoke" }}>
         {background !== false ? (
           <BackgroundImage
-            src={"/images/compressed/backgrounds/wales1.jpg"}
+            src={"/images/compressed/backgrounds/wales3.jpg"}
             radius={0}
           >
             <ScrollAreaElement scrollAreaHeight={scrollAreaHeight}>

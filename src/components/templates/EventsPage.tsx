@@ -9,7 +9,7 @@ import {
 } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 import { IconArrowLeft } from "@tabler/icons-react";
-import { Link, type HeadFC, type PageProps } from "gatsby";
+import { Link, navigate, type HeadFC, type PageProps } from "gatsby";
 import * as React from "react";
 import { EventPortolioObject } from "../../types";
 import Layout from "../navigation/Layout";
@@ -32,17 +32,17 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
       background={false}
       headerTitle="Event Portfolio"
       headerLeftSection={
-        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-          <Button
-            radius="md"
-            variant="default"
-            justify="space-between"
-            leftSection={<IconArrowLeft size={18} />}
-            rightSection={<span />}
-          >
-            Back
-          </Button>
-        </Link>
+        <Button
+          visibleFrom="sm"
+          radius="md"
+          variant="default"
+          onClick={() => navigate(-1)}
+          justify="space-between"
+          leftSection={<IconArrowLeft size={18} />}
+          rightSection={<span />}
+        >
+          Back
+        </Button>
       }
       headerRightSection={
         <Button

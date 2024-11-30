@@ -1,25 +1,11 @@
-import {
-  Avatar,
-  Badge,
-  Button,
-  Card,
-  Group,
-  Image,
-  Text,
-  useMatches,
-} from "@mantine/core";
-import {
-  IconArrowLeft,
-  IconMapPin,
-  IconUser,
-  IconUserCircle,
-} from "@tabler/icons-react";
-import { Link, type HeadFC, type PageProps } from "gatsby";
+import { Button, Card, Group, Image, Text, useMatches } from "@mantine/core";
+import { useViewportSize } from "@mantine/hooks";
+import { IconArrowLeft, IconMapPin, IconUserCircle } from "@tabler/icons-react";
+import { navigate, type HeadFC, type PageProps } from "gatsby";
 import * as React from "react";
 import { SEO } from "../../components/SEO";
 import { EventPortolioObject } from "../../types";
 import Layout from "../navigation/Layout";
-import { useViewportSize } from "@mantine/hooks";
 const Page: React.FC<PageProps> = ({ pageContext }) => {
   const { event } = pageContext as { event: EventPortolioObject };
   const { width } = useViewportSize();
@@ -36,23 +22,20 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
       background={false}
       headerTitle={event.name}
       headerLeftSection={
-        <Link
-          to="/events/"
-          style={{ textDecoration: "none", color: "inherit" }}
+        <Button
+          visibleFrom="sm"
+          radius="md"
+          variant="default"
+          onClick={() => navigate(-1)}
+          justify="space-between"
+          leftSection={<IconArrowLeft size={18} />}
+          rightSection={<span />}
         >
-          <Button
-            radius="md"
-            variant="default"
-            justify="space-between"
-            leftSection={<IconArrowLeft size={18} />}
-            rightSection={<span />}
-          >
-            Back
-          </Button>
-        </Link>
+          Back
+        </Button>
       }
       headerRightSection={
-        <Text size="lg" mr="sm" fw={600}>
+        <Text size="lg" mr="sm" fw={600} visibleFrom="sm">
           {event.date}
         </Text>
       }
@@ -74,6 +57,9 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
             Image Credit: {event.imageCredit}
           </Text>
         )}
+        <Text size="lg" mr="sm" fw={600} hiddenFrom="sm" mt="sm">
+          {event.date}
+        </Text>
         <Text mt="xs">
           {event.client && `For: ${event.client}`}
           Roles:{" "}

@@ -1,6 +1,11 @@
 import { Button, Card, Group, Image, Text, useMatches } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
-import { IconArrowLeft, IconMapPin, IconUserCircle } from "@tabler/icons-react";
+import {
+  IconArrowLeft,
+  IconBuildingBank,
+  IconMapPin,
+  IconUserCircle,
+} from "@tabler/icons-react";
 import { navigate, type HeadFC, type PageProps } from "gatsby";
 import * as React from "react";
 import { SEO } from "../../components/SEO";
@@ -57,11 +62,10 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
             Image Credit: {event.imageCredit}
           </Text>
         )}
-        <Text size="lg" mr="sm" fw={600} hiddenFrom="sm" mt="sm">
+        <Text size="lg" hiddenFrom="sm" mt="sm">
           {event.date}
         </Text>
         <Text mt="xs">
-          {event.client && `For: ${event.client}`}
           Roles:{" "}
           {event.roles.map((role, i) => {
             return (i > 0 ? " | " : "") + role;
@@ -73,6 +77,14 @@ const Page: React.FC<PageProps> = ({ pageContext }) => {
             <IconMapPin size={24} />
             <Text fz="sm" inline>
               {event.venue}
+            </Text>
+          </Group>
+        )}
+        {event.client && (
+          <Group justify="left" mt="xs">
+            <IconBuildingBank size={24} />
+            <Text fz="sm" inline>
+              For {event.client}
             </Text>
           </Group>
         )}

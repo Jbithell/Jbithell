@@ -9,9 +9,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Assistant Stage Manager"],
     "tags": ["Stage Management"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -28,9 +26,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer", "Sound Operator", "Stage Manager"],
     "tags": ["Sound", "Stage Management"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -47,9 +43,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer", "Sound Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -66,12 +60,10 @@
     "venue": "Up School | Westminster School",
     "roles": ["Head flyman (hemp)", "Stage Manager"],
     "tags": ["Automation", "Stage Management"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "guysAndDolls.jpg",
+    "featuredImage": "march-2015-guys--dolls.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -85,12 +77,10 @@
     "venue": "Millicent Fawcett Hall Studio | Westminster School",
     "roles": ["Lighting Operator"],
     "tags": ["Lighting"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "treasureIsland.jpg",
+    "featuredImage": "may-2015-treasure-island.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -104,12 +94,10 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer", "Sound Mixer", "Operator", "Technical Manager"],
     "tags": ["Sound", "Production"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "midsummers.jpg",
+    "featuredImage": "june-2015-a-midsummer-nights-dream.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -123,9 +111,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Designer", "Sound Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -142,12 +128,10 @@
     "venue": "Millicent Fawcett Hall Studio | Westminster School",
     "roles": ["Co-Director", "Producer", "Programme Designer"],
     "tags": ["Direction", "Production"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "blackComedy.jpg",
+    "featuredImage": "21-september-2015-black-comedy.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -161,9 +145,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer"],
     "tags": ["Sound"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -185,9 +167,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -204,9 +184,7 @@
     "venue": "Millicent Fawcett Hall Studio | Westminster School",
     "roles": ["Sound Designer", "Camera Operator"],
     "tags": ["Sound", "Video"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -223,12 +201,10 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Standby Technician"],
     "tags": ["Sound"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "desperateMeasures.jpg",
+    "featuredImage": "may-2016-desperate-measures.jpg",
     "imageCredit": "Sandy Crole",
     "client": "Westminster School"
   },
@@ -242,9 +218,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Designer", "Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -266,9 +240,7 @@
       "Head flyman (hemp)"
     ],
     "tags": ["Sound", "Lighting", "Automation"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -285,9 +257,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Sound Designer"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -309,9 +279,7 @@
       "Programme Designer"
     ],
     "tags": ["Sound", "Lighting", "Production"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -328,12 +296,10 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Lighting Programmer", "Set build assistant"],
     "tags": ["Lighting", "Set"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "tempest.jpg",
+    "featuredImage": "october-2016-the-tempest.jpg",
     "imageCredit": "Sandy Crole",
     "client": null
   },
@@ -347,9 +313,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -366,9 +330,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Designer", "Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -385,9 +347,7 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -404,9 +364,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Production Sound Engineer"],
     "tags": ["Sound"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -422,12 +380,10 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": null,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "oklahoma.jpg",
+    "featuredImage": "7-february-2017-oklahoma.jpg",
     "imageCredit": "Sandy Crole",
     "client": null
   },
@@ -441,7 +397,6 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Lighting Operator"],
     "tags": ["Lighting"],
-
     "performancesAttended": 2,
     "professional": true,
     "paid": false,
@@ -459,12 +414,10 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Director", "Programme Designer"],
     "tags": ["Direction", "Production"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "drinkingCompanions.jpg",
+    "featuredImage": "march-2017-drinking-companions--a-talk-in-the-park.jpg",
     "imageCredit": "James Bithell",
     "client": "Westminster School"
   },
@@ -483,9 +436,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -502,9 +453,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Designer", "Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -526,9 +475,7 @@
       "Head flyman (hemp)"
     ],
     "tags": ["Sound", "Lighting", "Automation"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -550,9 +497,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -573,9 +518,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -592,9 +535,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Production Sound Engineer"],
     "tags": ["Sound"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -616,9 +557,7 @@
       "Front of House Manager"
     ],
     "tags": ["Sound", "Lighting", "Production", "Front of House"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -635,9 +574,7 @@
     "venue": "Millicent Fawcett Hall | Westminster School",
     "roles": ["Technical Manager"],
     "tags": ["Production"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -654,11 +591,10 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Operator", "Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-
     "performancesAttended": 2,
     "professional": false,
     "paid": true,
-    "featuredImage": "jungleBook.jpg",
+    "featuredImage": "1-december-2017-jungle-book.jpg",
     "imageCredit": "James Bithell",
     "client": null
   },
@@ -677,12 +613,10 @@
       "Programme Designer"
     ],
     "tags": ["Sound", "Production"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "cabaret02r96.jpg",
+    "featuredImage": "january-2018-cabaret.jpg",
     "imageCredit": "James Bithell",
     "client": "Westminster School"
   },
@@ -700,9 +634,7 @@
       "Lighting Rigging Assistant"
     ],
     "tags": ["Lighting"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -719,9 +651,7 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Designer", "Lighting Programmer"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -738,9 +668,7 @@
     "venue": "Prince of Wales Theatre Bar",
     "roles": ["Production Sound Engineer (work experience)"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -757,9 +685,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Designer", "Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -776,9 +702,7 @@
     "venue": "Grosvenor House Hotel",
     "roles": ["Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -795,7 +719,6 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Designer", "Lighting Operator", "Lighting Programmer"],
     "tags": ["Lighting"],
-
     "performancesAttended": 1,
     "professional": false,
     "paid": true,
@@ -813,9 +736,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Lighting Advisor"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -837,12 +758,10 @@
       "Lighting Programmer"
     ],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "sixCharacters.jpg",
+    "featuredImage": "9-november-2018-six-characters-in-search-of-an-author.jpg",
     "imageCredit": "Greg Tiani",
     "client": "University of York Drama Society"
   },
@@ -856,9 +775,7 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Front of House Assistant"],
     "tags": ["Front of House"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -880,9 +797,7 @@
       "Lighting Programmer"
     ],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -899,9 +814,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator", "Lighting Programmer"],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -917,7 +830,6 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Operator"],
     "tags": ["Lighting"],
-
     "performancesAttended": 2,
     "professional": false,
     "paid": true,
@@ -935,12 +847,10 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "hercules.jpg",
+    "featuredImage": "24-january-2019-hercules-the-pantomime.jpg",
     "imageCredit": "Kat Johnston",
     "client": "University of York Pantomime Society"
   },
@@ -954,9 +864,7 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -973,9 +881,7 @@
     "venue": "Up School | Westminster School",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -992,12 +898,10 @@
     "venue": "Joseph Rowntree Theatre",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "legallyBlonde.jpg",
+    "featuredImage": "21-february-2019-legally-blonde.jpg",
     "imageCredit": "CHMS York",
     "client": "CHMS York"
   },
@@ -1011,12 +915,10 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "tinFoilHat.jpg",
+    "featuredImage": "25-february-2019-tin-foil-hat.jpg",
     "imageCredit": "James Bithell",
     "client": "University of York Drama Society"
   },
@@ -1036,12 +938,10 @@
       "Technical Manager"
     ],
     "tags": ["Sound", "Lighting", "Production"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "imageOfAnUnknown.jpg",
+    "featuredImage": "8-march-2019-image-of-an-unknown-young-woman.jpg",
     "imageCredit": "Greg Tiani",
     "client": "University of York Drama Society"
   },
@@ -1055,7 +955,6 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
     "professional": false,
     "paid": true,
@@ -1073,12 +972,10 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "mediumReadings.jpeg",
+    "featuredImage": "26-april-2019-medium-readings-and-oracle-healings.jpeg",
     "imageCredit": "Greg Tiani",
     "client": "University of York Drama Society"
   },
@@ -1097,12 +994,10 @@
       "Lighting Programmer"
     ],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "fromUpHere.jpg",
+    "featuredImage": "31-may-2019-from-up-here.jpg",
     "imageCredit": "Anna Bunch",
     "client": "University of York Drama Society"
   },
@@ -1115,12 +1010,10 @@
     "venue": "Joseph Rowntree Theatre",
     "roles": ["Lighting Designer", "Lighting Operator"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "loveYork.jpg",
+    "featuredImage": "5-june-2019-love-york-awards.jpg",
     "imageCredit": "James Bithell",
     "client": "University of York Student's Union"
   },
@@ -1140,12 +1033,10 @@
       "Technical Manager"
     ],
     "tags": ["Sound", "Lighting", "Production"],
-
     "performancesAttended": 4,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "rent.jpg",
+    "featuredImage": "20-june-2019-rent.jpg",
     "imageCredit": "Katherine Johnston",
     "client": "CHMS York"
   },
@@ -1159,9 +1050,7 @@
     "venue": "The Other Palace",
     "roles": ["Production Sound Engineer (work experience)"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": true,
     "paid": false,
     "featuredImage": null,
@@ -1177,12 +1066,10 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": true,
     "paid": false,
-    "featuredImage": "yusu-comedy-night-2019.jpeg",
+    "featuredImage": "6-october-2019-yusu-comedy-night-2019.jpeg",
     "imageCredit": "James Bithell",
     "client": "University of York Student's Union"
   },
@@ -1196,9 +1083,7 @@
     "venue": "Drama Barn | University of York",
     "roles": ["Sound Operator", "Lighting Designer", "Lighting Operator"],
     "tags": ["Sound", "Lighting"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -1215,9 +1100,7 @@
     "venue": "Main House | York Theatre Royal",
     "roles": ["Production Manager"],
     "tags": ["Production"],
-
     "performancesAttended": 0,
-
     "professional": true,
     "paid": false,
     "featuredImage": null,
@@ -1233,9 +1116,7 @@
     "venue": "Main House | York Theatre Royal",
     "roles": ["House Casual LX"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": true,
     "paid": true,
     "featuredImage": null,
@@ -1252,9 +1133,7 @@
     "venue": "Main House | York Theatre Royal",
     "roles": ["House Casual LX"],
     "tags": ["Lighting"],
-
     "performancesAttended": 0,
-
     "professional": true,
     "paid": true,
     "featuredImage": null,
@@ -1271,12 +1150,10 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "yorks-got-talent-2019.jpg",
+    "featuredImage": "25-november-2019-yorks-got-talent.jpg",
     "imageCredit": "James Bithell",
     "client": "University of York Student's Union"
   },
@@ -1290,12 +1167,10 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Designer", "Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "autumn-showcase-2019.jpg",
+    "featuredImage": "28-november-2019-chms-showcase.jpg",
     "imageCredit": "Nathan Billis",
     "client": "CHMS York"
   },
@@ -1308,9 +1183,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -1327,9 +1200,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -1346,9 +1217,7 @@
     "venue": "Dixon Drama Studio | University of York",
     "roles": ["Financial Producer"],
     "tags": ["Production"],
-
     "performancesAttended": 4,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -1365,12 +1234,10 @@
     "venue": "Joseph Rowntree Theatre",
     "roles": ["Sound Designer", "Sound Mixer", "Operator"],
     "tags": ["Sound"],
-
     "performancesAttended": 4,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "chicago.jpg",
+    "featuredImage": "13-february-2020-chicago.jpg",
     "imageCredit": "James Bithell",
     "client": null
   },
@@ -1384,12 +1251,10 @@
     "venue": "Roger Kirk Centre | University of York",
     "roles": ["Sound Designer", "Lighting Designer", "Technical Manager"],
     "tags": ["Sound", "Lighting", "Production"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "election-results-night-2020.jpg",
+    "featuredImage": "22-february-2020-election-results-night.jpg",
     "imageCredit": "Jacob Dicker",
     "client": "University of York Students' Union"
   },
@@ -1403,9 +1268,7 @@
     "venue": "Central Hall | University of York",
     "roles": ["Lighting Designer", "Lighting Operator", "Technical Manager"],
     "tags": ["Lighting", "Production"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -1421,12 +1284,10 @@
     "venue": "John Cooper Studio",
     "roles": ["Sound Designer", "Lighting Designer", "Technical Manager"],
     "tags": ["Sound", "Lighting", "Production"],
-
     "performancesAttended": 4,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "dogfight.jpg",
+    "featuredImage": "1-march-2020-dogfight.jpg",
     "imageCredit": "CHMS York",
     "client": "CHMS York"
   },
@@ -1439,12 +1300,10 @@
     "venue": "The Forest | University of York",
     "roles": ["Technical Manager", "Sound Operator", "Sound Designer"],
     "tags": ["Production", "Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "queerCabaret.jpg",
+    "featuredImage": "24-oct-2020-queer-cabaret.md.jpg",
     "imageCredit": "Queer Cabaret",
     "client": "University of York LGBTQ Network"
   },
@@ -1457,9 +1316,7 @@
     "venue": "Dixon Drama Studio | University of York",
     "roles": ["Technical Manager"],
     "tags": ["Production"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -1476,9 +1333,7 @@
     "venue": "Rowntree Park Stage",
     "roles": ["Crew"],
     "tags": ["Sound"],
-
     "performancesAttended": 0,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -1494,12 +1349,10 @@
     "venue": "The Forest | University of York",
     "roles": ["Technical Manager", "Sound Designer"],
     "tags": ["Production", "Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "loveYork2021.jpg",
+    "featuredImage": "12-june-2021-love-york-awards.jpg",
     "imageCredit": "Luke Snell",
     "client": "University of York Student's Union"
   },
@@ -1513,12 +1366,10 @@
     "venue": "Dixon Drama Studio | University of York",
     "roles": ["Lighting Designer"],
     "tags": ["Lighting"],
-
     "performancesAttended": 3,
-
     "professional": false,
     "paid": false,
-    "featuredImage": "chmsSummerShowcase.jpg",
+    "featuredImage": "13-june-2021-showcase.jpg",
     "imageCredit": "CHMS York",
     "client": "CHMS York"
   },
@@ -1531,9 +1382,7 @@
     "venue": "The Forest | University of York",
     "roles": ["Crew Chief", "Sound Supervisor"],
     "tags": ["Production", "Sound"],
-
     "performancesAttended": 1,
-
     "professional": false,
     "paid": false,
     "featuredImage": null,
@@ -1550,12 +1399,10 @@
     "venue": "Main Hall | Westminster Under School",
     "roles": ["Lighting Designer", "Lighting Rigging Assistant"],
     "tags": ["Lighting"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": true,
-    "featuredImage": "johnnyAndTheBomb.jpg",
+    "featuredImage": "9-december-2021-johnny-and-the-bomb.jpg",
     "imageCredit": "James Bithell",
     "client": null
   },
@@ -1574,9 +1421,7 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": true,
     "featuredImage": null,
@@ -1598,9 +1443,7 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": true,
     "featuredImage": null,
@@ -1622,12 +1465,10 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": true,
-    "featuredImage": "piratesOfCurryBean.jpg",
+    "featuredImage": "8-december-2022-pirates-of-curry-bean.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/Cl7BgQKoEW4/",
     "client": null
   },
@@ -1646,12 +1487,10 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": true,
-    "featuredImage": "privatePeaceful.jpg",
+    "featuredImage": "15-march-2023-private-peaceful.jpg",
     "imageCredit": "James Bithell",
     "client": null
   },
@@ -1670,12 +1509,10 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": true,
-    "featuredImage": "oliver.jpg",
+    "featuredImage": "23-november-2023-oliver.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/C0MnAlgtoT8",
     "client": null
   },
@@ -1694,12 +1531,10 @@
       "Sound Mixer"
     ],
     "tags": ["Lighting", "Sound"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": true,
-    "featuredImage": "aristocats.jpeg",
+    "featuredImage": "7-december-2023-aristocats.jpeg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/C0y8Hg2IBR2",
     "client": null
   },
@@ -1718,12 +1553,10 @@
       "Video Designer"
     ],
     "tags": ["Lighting", "Sound", "Video"],
-
     "performancesAttended": 2,
-
     "professional": false,
     "paid": true,
-    "featuredImage": "troy24-2.jpg",
+    "featuredImage": "14-march-2024-troy24.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/C4xOZzAg_lY/",
     "client": null
   },
@@ -1745,7 +1578,7 @@
     "performancesAttended": 1,
     "professional": true,
     "paid": true,
-    "featuredImage": "a-night-at-the-musicals.jpg",
+    "featuredImage": "21-march-2024-night-at-the-musicals.jpg",
     "imageCredit": null,
     "client": null
   },
@@ -1767,7 +1600,7 @@
     "performancesAttended": 1,
     "professional": true,
     "paid": true,
-    "featuredImage": "louis-dowdeswell-big-band.jpg",
+    "featuredImage": "6-november-2024-louis-dowdeswell-big-band.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/DCEUl0iIhpm/",
     "client": null
   },
@@ -1788,7 +1621,7 @@
     "performancesAttended": 2,
     "professional": false,
     "paid": true,
-    "featuredImage": "playhouse-apprentice.jpg",
+    "featuredImage": "20-november-2024-playhouse-apprentice.jpg",
     "imageCredit": null,
     "client": null
   }

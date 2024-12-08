@@ -1621,7 +1621,29 @@
     "performancesAttended": 2,
     "professional": false,
     "paid": true,
-    "featuredImage": "20-november-2024-playhouse-apprentice.jpg",
+    "featuredImage": "20-november-2024-playhouse-apprentice-2.jpg",
+    "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/DDFN42loX5u/",
+    "client": null
+  },
+  {
+    "slug": "4-december-2024-rats",
+    "date": "4 December 2024",
+    "endDate": null,
+    "name": "Rats!",
+    "author": "Nigel Hess",
+    "director": "Lindsay Tricker",
+    "venue": "Main Hall | Westminster Under School",
+    "roles": [
+      "Lighting Designer",
+      "Lighting Rigging Assistant",
+      "Sound Designer",
+      "Sound Operator"
+    ],
+    "tags": ["Lighting", "Sound", "Video"],
+    "performancesAttended": 1,
+    "professional": false,
+    "paid": true,
+    "featuredImage": null,
     "imageCredit": null,
     "client": null
   }

@@ -1646,5 +1646,27 @@
     "featuredImage": "4-december-2024-rats.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/DDZW0nPIliF/",
     "client": null
+  },
+  {
+    "slug": "18-march-2025-frankie-builds-androids",
+    "date": "18 March 2025",
+    "endDate": null,
+    "name": "Frankie Builds Androids",
+    "author": "Kerry Kazmierowicztrimm",
+    "director": "Lindsay Tricker",
+    "venue": "Main Hall | Westminster Under School",
+    "roles": [
+      "Lighting Designer",
+      "Lighting Rigging Assistant",
+      "Sound Designer",
+      "Sound Operator"
+    ],
+    "tags": ["Lighting", "Sound", "Video"],
+    "performancesAttended": 2,
+    "professional": false,
+    "paid": true,
+    "featuredImage": "",
+    "imageCredit": "",
+    "client": null
   }
 ]

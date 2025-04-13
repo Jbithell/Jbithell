@@ -12,7 +12,7 @@ export default {
       "/",
       "/contact",
       "/events",
-      ...events.map((event) => `/event/${event.slug}`),
+      ...events.map((event) => `/events/${event.slug}`),
     ];
   },
 } satisfies Config;

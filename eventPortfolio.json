@@ -1702,5 +1702,27 @@
     "featuredImage": "18-march-2025-frankie-builds-androids.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/DHtBg_1Ic89/",
     "client": null
+  },
+  {
+    "slug": "14-october-2025-newsies",
+    "date": "14 October 2025",
+    "endDate": null,
+    "name": "Newsies JR.",
+    "author": "Harvey Fierstein",
+    "director": "Lindsay Tricker",
+    "venue": "Main Hall | Westminster Under School",
+    "roles": [
+      "Lighting Designer",
+      "Lighting Rigging Assistant",
+      "Sound Designer",
+      "Sound Operator"
+    ],
+    "tags": ["Lighting", "Sound"],
+    "performancesAttended": 2,
+    "professional": false,
+    "paid": true,
+    "featuredImage": "14-october-2025-newsies.jpg",
+    "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/DQbc0CxDEKq/",
+    "client": null
   }
 ]

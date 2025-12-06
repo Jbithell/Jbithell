@@ -1707,7 +1707,7 @@
     "slug": "14-october-2025-newsies",
     "date": "14 October 2025",
     "endDate": null,
-    "name": "Newsies JR.",
+    "name": "Newsies JR",
     "author": "Harvey Fierstein",
     "director": "Lindsay Tricker",
     "venue": "Main Hall | Westminster Under School",
@@ -1723,6 +1723,50 @@
     "paid": true,
     "featuredImage": "14-october-2025-newsies.jpg",
     "imageCredit": "@westminsterus on Instagram: https://www.instagram.com/p/DQbc0CxDEKq/",
+    "client": null
+  },
+  {
+    "slug": "27-november-2025-winter-bonanza-concert",
+    "date": "27 November 2025",
+    "endDate": null,
+    "name": "Winter Bonanza Concert",
+    "author": null,
+    "director": "Rebecca Thorn",
+    "venue": "Main Hall | Westminster Under School",
+    "roles": [
+      "Lighting Designer",
+      "Lighting Rigging Assistant",
+      "Sound Designer",
+      "Sound Operator"
+    ],
+    "tags": ["Lighting", "Sound"],
+    "performancesAttended": 1,
+    "professional": false,
+    "paid": true,
+    "featuredImage": null,
+    "imageCredit": null,
+    "client": null
+  },
+  {
+    "slug": "3-december-2025-leap-day",
+    "date": "3 December 2025",
+    "endDate": null,
+    "name": "Leap Day",
+    "author": "Denver Casado",
+    "director": "Lindsay Tricker",
+    "venue": "Main Hall | Westminster Under School",
+    "roles": [
+      "Lighting Designer",
+      "Lighting Rigging Assistant",
+      "Sound Designer",
+      "Sound Operator"
+    ],
+    "tags": ["Lighting", "Sound"],
+    "performancesAttended": 3,
+    "professional": false,
+    "paid": true,
+    "featuredImage": null,
+    "imageCredit": null,
     "client": null
   }
 ]

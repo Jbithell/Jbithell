@@ -1768,5 +1768,22 @@
     "featuredImage": null,
     "imageCredit": null,
     "client": null
+  },
+  {
+    "slug": "17-march-2026-demon-headmaster",
+    "date": "17 March 2026",
+    "endDate": null,
+    "name": "Demon Headmaster",
+    "author": "Gillian Cross",
+    "director": "Lindsay Tricker",
+    "venue": "Millicent Fawcett Hall | Westminster School",
+    "roles": ["Sound Designer", "Sound Operator"],
+    "tags": ["Lighting", "Sound"],
+    "performancesAttended": 2,
+    "professional": false,
+    "paid": true,
+    "featuredImage": null,
+    "imageCredit": null,
+    "client": null
   }
 ]

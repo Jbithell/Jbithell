@@ -194,6 +194,29 @@
     ],
     "og": "/images/portfolio/15-march-2023-private-peaceful.eb67ad1b.jpg"
   },
+  "portfolio/17-march-2026-demon-headmaster.jpg": {
+    "width": 1440,
+    "height": 1799,
+    "variants": [
+      {
+        "src": "/images/portfolio/17-march-2026-demon-headmaster-640.8af16cb2.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/portfolio/17-march-2026-demon-headmaster-960.aadaec77.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/portfolio/17-march-2026-demon-headmaster-1280.35b07f4f.webp",
+        "width": 1280
+      },
+      {
+        "src": "/images/portfolio/17-march-2026-demon-headmaster-1440.c7406161.webp",
+        "width": 1440
+      }
+    ],
+    "og": "/images/portfolio/17-march-2026-demon-headmaster.7fd81aa3.jpg"
+  },
   "portfolio/18-march-2025-frankie-builds-androids.jpg": {
     "width": 1080,
     "height": 1350,

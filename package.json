@@ -11,6 +11,7 @@
     "types:generate": "wrangler types",
     "dev": "react-router dev",
     "preview": "npm run build && vite preview",
+    "images": "node optimiseImages.ts",
     "typecheck": "npm run cf-typegen && react-router typegen && tsc -b"
   },
   "dependencies": {
@@ -28,11 +29,12 @@
     "@types/node": "^20",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "postcss": "^8.4.49",
+    "postcss-preset-mantine": "1.18.0",
+    "sharp": "^0.35.5",
     "typescript": "^5.9.3",
     "vite": "^6.4.1",
     "vite-tsconfig-paths": "^5.1.4",
-    "wrangler": "^4.46.0",
-    "postcss": "^8.4.49",
-    "postcss-preset-mantine": "1.18.0"
+    "wrangler": "^4.46.0"
   }
 }

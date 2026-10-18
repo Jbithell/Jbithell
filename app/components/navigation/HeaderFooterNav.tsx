@@ -1,36 +1,11 @@
-import {
-  AppShell,
-  BackgroundImage,
-  Center,
-  Container,
-  ScrollArea,
-} from "@mantine/core";
-import { useViewportSize } from "@mantine/hooks";
+import { AppShell, Center, Container } from "@mantine/core";
 import React from "react";
+import { getImage } from "../../images";
+import classes from "./HeaderFooterNav.module.css";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
-const ScrollAreaElement = ({
-  children,
-  scrollAreaHeight,
-}: {
-  children: React.ReactNode;
-  scrollAreaHeight: number;
-}) => {
-  return (
-    <ScrollArea h={scrollAreaHeight + 32} type="auto" offsetScrollbars>
-      <Container size="xl" p={"md"}>
-        <Center
-          style={{
-            minHeight: scrollAreaHeight - 32,
-          }}
-        >
-          {children}
-        </Center>
-      </Container>{" "}
-    </ScrollArea>
-  );
-};
+const backgroundImage = getImage("backgrounds/wales3.jpg");
 
 export function HeaderFooterNav({
   children,
@@ -47,18 +22,14 @@ export function HeaderFooterNav({
   headerLeftSection?: React.ReactNode;
   headerRightSection?: React.ReactNode;
 }) {
-  const { height } = useViewportSize();
   const showHeader = headerTitle || headerLeftSection || headerRightSection;
-  const showFooter = footer;
-  const scrollAreaHeight =
-    height - ((showHeader ? 60 : 0) + (showFooter ? 60 : 0) + 32); // 32 accounts for some padding
   return (
     <AppShell
-      header={{ height: showHeader ? 60 : 0 }}
-      footer={{ height: showFooter ? 60 : 0 }}
+      header={showHeader ? { height: 60 } : undefined}
+      footer={footer ? { height: 60 } : undefined}
       padding={0}
     >
-      {headerTitle || headerLeftSection || headerRightSection ? (
+      {showHeader ? (
         <AppShell.Header>
           <Header
             title={headerTitle ?? ""}
@@ -67,21 +38,21 @@ export function HeaderFooterNav({
           />
         </AppShell.Header>
       ) : null}
-      <AppShell.Main style={{ background: "whitesmoke" }}>
+      <AppShell.Main className={classes.main}>
         {background !== false ? (
-          <BackgroundImage
-            src={"/images/backgrounds/wales3-comp.jpg"}
-            radius={0}
-          >
-            <ScrollAreaElement scrollAreaHeight={scrollAreaHeight}>
-              {children}
-            </ScrollAreaElement>
-          </BackgroundImage>
-        ) : (
-          <ScrollAreaElement scrollAreaHeight={scrollAreaHeight}>
-            {children}
-          </ScrollAreaElement>
-        )}
+          <img
+            className={classes.background}
+            src={backgroundImage.src}
+            srcSet={backgroundImage.srcSet}
+            sizes="100vw"
+            width={backgroundImage.width}
+            height={backgroundImage.height}
+            alt=""
+          />
+        ) : null}
+        <Container size="xl" p="md" className={classes.content}>
+          <Center className={classes.center}>{children}</Center>
+        </Container>
       </AppShell.Main>
       {footer ? (
         <AppShell.Footer>

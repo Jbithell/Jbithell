@@ -1,5 +1,4 @@
-import { Button, Card, Group, Image, Text, useMatches } from "@mantine/core";
-import { useViewportSize } from "@mantine/hooks";
+import { Button, Card, Group, Image, Text } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBuildingBank,
@@ -10,7 +9,9 @@ import * as React from "react";
 import { Link } from "react-router";
 import eventPortfolio from "../../eventPortfolio.json";
 import { HeaderFooterNav } from "../components/navigation/HeaderFooterNav";
-import { EventPortfolioObject } from "../types.d";
+import { getPortfolioImage } from "../portfolioImages.server";
+import { breadcrumbs, pageMeta, SITE_NAME } from "../seo";
+import type { EventPortfolioObject } from "../types.d";
 import type { Route } from "./+types/event";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -19,29 +20,33 @@ export async function loader({ params }: Route.LoaderArgs) {
   if (!event) {
     throw new Response("Not Found", { status: 404 });
   }
-  return { event };
+  return { event, image: getPortfolioImage(event.featuredImage) };
 }
 
 export function meta({ data }: Route.MetaArgs) {
-  return [
-    { title: `${data.event.name} | James Bithell` },
-    {
-      name: "description",
-      content: `Details of the event ${data.event.name} in James Bithell's live events Portfolio`,
-    },
-  ];
+  if (!data) return [];
+  const { event, image } = data;
+  const path = `/events/${event.slug}`;
+  const roles = event.roles.join(", ");
+  const venue = event.venue ? `. Venue: ${event.venue}` : "";
+  return pageMeta({
+    title: `${event.name} | ${SITE_NAME}`,
+    description: `${event.name} (${event.date}) in James Bithell's live events portfolio. Roles: ${roles}${venue}`,
+    path,
+    image: image?.og,
+    imageAlt: image ? `Photo from ${event.name}` : undefined,
+    jsonLd: [
+      breadcrumbs([
+        { name: SITE_NAME, path: "/" },
+        { name: "Event Portfolio", path: "/events" },
+        { name: event.name, path },
+      ]),
+    ],
+  });
 }
 
 export default function Page({ loaderData }: Route.ComponentProps) {
-  const { event } = loaderData;
-  const { width } = useViewportSize();
-  const imageWidth = useMatches({
-    base: "100%",
-    sm: width * 0.6,
-    md: width * 0.5,
-    lg: width * 0.5,
-    xl: width * 0.5,
-  });
+  const { event, image } = loaderData;
   return (
     <HeaderFooterNav
       footer={true}
@@ -67,17 +72,19 @@ export default function Page({ loaderData }: Route.ComponentProps) {
         </Text>
       }
     >
-      <Card withBorder radius="md" style={{ maxWidth: imageWidth }}>
-        {event.featuredImage && (
+      <Card withBorder radius="md" w={{ base: "100%", sm: "60%", md: "50%" }}>
+        {image && (
           <Card.Section>
-            <a>
-              <Image
-                src={"/images/portfolio/" + event.featuredImage}
-                width={imageWidth}
-                loading="eager"
-                style={{ width: imageWidth }}
-              />
-            </a>
+            <Image
+              src={image.src}
+              srcSet={image.srcSet}
+              sizes="(min-width: 62em) 50vw, (min-width: 48em) 60vw, 100vw"
+              width={image.width}
+              height={image.height}
+              h="auto"
+              fetchPriority="high"
+              alt={`Photo from ${event.name}`}
+            />
           </Card.Section>
         )}
         {event.imageCredit && (

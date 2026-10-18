@@ -1,4 +1,4 @@
-import { Button, Card, Text } from "@mantine/core";
+import { Button, Card, Text, Title } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBrandMessenger,
@@ -7,21 +7,24 @@ import {
 import React from "react";
 import { href, Link } from "react-router";
 import { HeaderFooterNav } from "../components/navigation/HeaderFooterNav";
+import { pageMeta, SITE_NAME } from "../seo";
 import type { Route } from "./+types/contact";
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "Contact" },
-    { name: "description", content: "Contact James Bithell" },
-  ];
+  return pageMeta({
+    title: `Contact | ${SITE_NAME}`,
+    description:
+      "Contact James Bithell by email at hi@jbithell.com or on Facebook Messenger",
+    path: "/contact",
+  });
 }
 export default function Page({ loaderData }: Route.ComponentProps) {
   return (
     <HeaderFooterNav footer={false}>
       <Card withBorder padding="xl" radius="md">
-        <Text ta="center" fz="xl" fw={500} mt="sm">
+        <Title order={1} ta="center" fz="xl" fw={500} mt="sm">
           James Bithell
-        </Text>
+        </Title>
         <Text ta="center" fz="md" c="dimmed">
           Contact
         </Text>

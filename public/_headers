@@ -1,4 +1,5 @@
-# Headers for static assets served by Cloudflare. Keep in sync with src/middleware.ts
+# Headers for static assets served by Cloudflare, including the prerendered pages. Keep in sync with
+# src/middleware.ts, which sets them for pages rendered by the Worker
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
@@ -13,3 +14,22 @@
   Cache-Control: public, max-age=31536000, immutable
 /images/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Lets agents discover the machine-readable versions of the site without parsing HTML
+/
+  Link: </llms.txt>; rel="describedby"; type="text/markdown", </sitemap.xml>; rel="sitemap"; type="application/xml"
+/contact
+  Link: </llms.txt>; rel="describedby"; type="text/markdown", </sitemap.xml>; rel="sitemap"; type="application/xml"
+/portfolio
+  Link: </llms.txt>; rel="describedby"; type="text/markdown", </sitemap.xml>; rel="sitemap"; type="application/xml"
+/portfolio/*
+  Link: </llms.txt>; rel="describedby"; type="text/markdown", </sitemap.xml>; rel="sitemap"; type="application/xml"
+
+# Markdown versions of pages
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
+/llms-full.txt
+  Content-Type: text/markdown; charset=utf-8
+/portfolio/:slug.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: </portfolio/:slug>; rel="canonical"

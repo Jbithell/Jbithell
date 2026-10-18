@@ -4,6 +4,8 @@ import { ContactCard } from "../components/ContactCard";
 import Base from "../layouts/Base.astro";
 import { EMAIL, socialLinks } from "../lib/site";
 
+export const prerender = true;
+
 const settings = await getSiteSettings();
 ---
 

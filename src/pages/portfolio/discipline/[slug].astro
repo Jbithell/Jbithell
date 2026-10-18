@@ -1,12 +1,22 @@
 ---
-import { decodeSlug } from "emdash";
 import PortfolioListing from "../../../components/PortfolioListing.astro";
 import { getEvents, getTerms } from "../../../lib/portfolio";
 
-const slug = decodeSlug(Astro.params.slug);
-const term = slug ? (await getTerms(Astro, "discipline")).find((t) => t.slug === slug) : undefined;
-if (!term) return Astro.rewrite("/404");
-const events = await getEvents(Astro, { taxonomy: "discipline", term: term.slug });
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const terms = await getTerms("discipline");
+  return terms
+    .filter((term) => term.count)
+    .map((term) => ({ params: { slug: term.slug }, props: { term } }));
+}
+
+interface Props {
+  term: Awaited<ReturnType<typeof getTerms>>[number];
+}
+
+const { term } = Astro.props;
+const events = await getEvents({ taxonomy: "discipline", term: term.slug });
 ---
 
 <PortfolioListing

@@ -5,12 +5,14 @@ import { markdownResponse } from "../lib/markdown";
 import { getEvents } from "../lib/portfolio";
 import { EMAIL, socialLinks } from "../lib/site";
 
+export const prerender = true;
+
 export const GET: APIRoute = async (context) => {
   const settings = await getSiteSettings();
   const siteUrl = (settings.url || context.url.origin).replace(/\/$/, "");
   const name = settings.title || "James Bithell";
   const links = socialLinks(settings.social);
-  const events = await getEvents(context);
+  const events = await getEvents();
   return markdownResponse(`# ${name}
 
 > Personal website of ${name}, based in London, United Kingdom, with contact details, CV and an Event Portfolio of ${events.length} live events worked on since 2014.

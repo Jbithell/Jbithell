@@ -6,12 +6,11 @@ const site = new URL(import.meta.env.SITE);
 
 /**
  * Runs before EmDash (see `middleware.outer` in astro.config.mjs), so www requests are redirected,
- * admin pages included, without starting EmDash or querying the database
+ * admin pages included, without starting EmDash or querying the database. Prerendered pages are
+ * served without running the Worker, so a Redirect Rule redirects those (see DEVELOPMENT.md)
  */
 export const onRequest = defineMiddleware((context, next) => {
   if (context.url.host !== `www.${site.host}`) return next();
-  // Not cached, so the redirect can't be served for the apex domain
-  context.cache?.set(false);
   return new Response(null, {
     status: 301,
     headers: {

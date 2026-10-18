@@ -33,7 +33,10 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "jbithellcom"
+      "database_name": "jbithellcom",
+      // Workers Builds prerenders the site from the production database. Only builds there use it
+      // (see `remoteBindings` in astro.config.mjs). Local builds and `npm run dev` use a local database
+      "remote": true
     }
   ],
   "r2_buckets": [
@@ -42,11 +45,12 @@
       "bucket_name": "jbithellcom-media"
     }
   ],
-  // Resizes CMS images into responsive WebP/AVIF variants
+  // Resizes images for the EmDash admin. The public site's images are resized while building
   "images": {
     "binding": "IMAGES"
   },
-  // EmDash scheduled publishing and maintenance
+  // EmDash scheduled publishing and maintenance. Scheduled posts rebuild the site through
+  // src/plugins/rebuild.ts when they're published
   "triggers": {
     "crons": ["* * * * *"]
   },

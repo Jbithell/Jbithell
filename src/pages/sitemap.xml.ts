@@ -2,14 +2,15 @@ import type { APIRoute } from "astro";
 import { getSiteSettings } from "emdash";
 import { getEvents } from "../lib/portfolio";
 
+export const prerender = true;
+
 /**
- * Replaces EmDash's sitemap index, which only lists collection entries, to add the site's other pages.
- * EmDash still serves /sitemap-events.xml (one file holds up to 2,000 events)
+ * Replaces EmDash's sitemap index, which only lists collection entries, to add the site's other pages
  */
 export const GET: APIRoute = async (context) => {
   const settings = await getSiteSettings();
   const siteUrl = (settings.url || context.url.origin).replace(/\/$/, "");
-  const events = await getEvents(context);
+  const events = await getEvents();
   const lastmod = events
     .map((event) => new Date(event.data.updatedAt).getTime())
     .reduce((a, b) => Math.max(a, b), 0);

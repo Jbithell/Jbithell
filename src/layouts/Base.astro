@@ -48,10 +48,21 @@ interface Props {
   content?: { collection: string; id: string; slug?: string | null };
   /** Extra <link rel="alternate"> versions of this page */
   alternates?: { href: string; type: string; title?: string }[];
+  /** A page that must not be indexed, such as the private CV */
+  noCache?: boolean;
 }
 
-const { title, description, image, imageAlt, breadcrumbs = [], jsonLd = [], content, alternates = [] } =
-  Astro.props;
+const {
+  title,
+  description,
+  image,
+  imageAlt,
+  breadcrumbs = [],
+  jsonLd = [],
+  content,
+  alternates = [],
+  noCache = false,
+} = Astro.props;
 
 const settings = await getSiteSettings();
 
@@ -76,7 +87,7 @@ const page = createPublicPageContext({
   siteName: siteTitle,
   siteUrl,
   breadcrumbs: breadcrumbs.map((crumb) => ({ name: crumb.label, url: siteUrl + crumb.href })),
-  seo: { ogImage, ogTitle: title ?? siteTitle },
+  seo: { ogImage, ogTitle: title ?? siteTitle, ...(noCache ? { robots: "noindex, nofollow" } : {}) },
 });
 
 const structuredData = [

@@ -4,7 +4,7 @@ import { getTerms } from "../lib/portfolio";
 
 export const prerender = true;
 
-/** Pages that aren't EmDash entries: the home page, portfolio listings and contact page */
+/** Pages that aren't EmDash entries: the home page, portfolio listings, CV and contact page */
 export const GET: APIRoute = async (context) => {
   const settings = await getSiteSettings();
   const siteUrl = (settings.url || context.url.origin).replace(/\/$/, "");
@@ -15,6 +15,8 @@ export const GET: APIRoute = async (context) => {
   const paths = [
     "/",
     "/portfolio",
+    "/projects",
+    "/cv",
     "/contact",
     ...disciplines.filter((t) => t.count).map((t) => `/portfolio/discipline/${t.slug}`),
     ...roles.filter((t) => t.count).map((t) => `/portfolio/role/${t.slug}`),

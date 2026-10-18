@@ -5,11 +5,14 @@ import { definePlugin, type PluginContext, type RouteContext } from "emdash";
  * This starts a build through a Deploy Hook whenever content is published, unpublished or deleted,
  * and adds a dashboard widget to rebuild by hand, for changes such as site settings that have no hook.
  *
+ * CV share links are skipped, as they're only used by the private CV, which the Worker renders.
+ *
  * The hook URL is read from the DEPLOY_HOOK_URL secret. Workers Builds doesn't queue a second build
  * while one is still starting, so publishing several entries in a row only builds once or twice.
  */
 const WIDGET = "rebuild";
 const LAST_BUILD = "lastBuild";
+const IGNORED_COLLECTIONS = new Set(["cv_share_links"]);
 
 interface LastBuild {
   at: string;
@@ -23,6 +26,10 @@ async function deployHookUrl(): Promise<string | undefined> {
   const { env } = await import("cloudflare:workers");
   const url = (env as { DEPLOY_HOOK_URL?: string }).DEPLOY_HOOK_URL;
   return url || undefined;
+}
+
+async function rebuildFor(ctx: PluginContext, collection: string, reason: string) {
+  if (!IGNORED_COLLECTIONS.has(collection)) await rebuild(ctx, reason);
 }
 
 async function rebuild(ctx: PluginContext, reason: string): Promise<LastBuild> {
@@ -93,13 +100,15 @@ export function createPlugin() {
     allowedHosts: ["api.cloudflare.com"],
     hooks: {
       "content:afterPublish": async (event, ctx) => {
-        await rebuild(ctx, `Published ${event.collection} ${String(event.content.slug ?? "")}`.trim());
+        const slug = String(event.content.slug ?? "");
+        await rebuildFor(ctx, event.collection, `Published ${event.collection} ${slug}`.trim());
       },
       "content:afterUnpublish": async (event, ctx) => {
-        await rebuild(ctx, `Unpublished ${event.collection} ${String(event.content.slug ?? "")}`.trim());
+        const slug = String(event.content.slug ?? "");
+        await rebuildFor(ctx, event.collection, `Unpublished ${event.collection} ${slug}`.trim());
       },
       "content:afterDelete": async (event, ctx) => {
-        await rebuild(ctx, `Deleted ${event.collection}`);
+        await rebuildFor(ctx, event.collection, `Deleted ${event.collection}`);
       },
     },
     routes: {

@@ -1,0 +1,45 @@
+---
+import { PageHeader } from "../../components/PageHeader";
+import { ProjectGrid } from "../../components/ProjectGrid";
+import Base from "../../layouts/Base.astro";
+import { getProjects, toProjectCards } from "../../lib/projects";
+
+export const prerender = true;
+
+const title = "Projects Portfolio";
+const description =
+  "James Bithell's Projects Portfolio - software and hardware projects, from theatre tech to weather stations";
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: title, href: "/projects" },
+];
+const cards = await toProjectCards(Astro, await getProjects());
+const siteUrl = Astro.url.origin;
+---
+
+<Base
+  title={title}
+  description={description}
+  breadcrumbs={breadcrumbs}
+  jsonLd={[
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: title,
+      description,
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: cards.length,
+        itemListElement: cards.map((card, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: siteUrl + card.href,
+          name: card.title,
+        })),
+      },
+    },
+  ]}
+>
+  <PageHeader title={title} breadcrumbs={breadcrumbs} />
+  <ProjectGrid projects={cards} />
+</Base>

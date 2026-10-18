@@ -4,8 +4,11 @@ import { Logo } from "./Logo";
 import { Mantine } from "./Mantine";
 import classes from "./SiteHeader.module.css";
 
+// Short labels on small screens, so the navigation fits on a phone
 const links = [
-  { href: "/portfolio", label: "Event Portfolio" },
+  { href: "/portfolio", label: "Event Portfolio", short: "Events" },
+  { href: "/projects", label: "Projects Portfolio", short: "Projects" },
+  { href: "/cv", label: "CV" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -35,7 +38,18 @@ export function SiteHeader({ siteTitle, path }: { siteTitle: string; path: strin
                     aria-current={current ? "page" : undefined}
                     px={10}
                   >
-                    {link.label}
+                    {link.short ? (
+                      <>
+                        <Box component="span" visibleFrom="md">
+                          {link.label}
+                        </Box>
+                        <Box component="span" hiddenFrom="md">
+                          {link.short}
+                        </Box>
+                      </>
+                    ) : (
+                      link.label
+                    )}
                   </Button>
                 );
               })}

@@ -10,15 +10,18 @@ export interface Crumb {
 export function PageHeader({
   title,
   breadcrumbs = [],
+  size = "lg",
   children,
 }: {
   title: string;
   breadcrumbs?: Crumb[];
+  /** Container width, to line up with the page's content */
+  size?: "md" | "lg";
   children?: ReactNode;
 }) {
   return (
     <Mantine>
-      <Container size="lg" pt="xl" pb="lg">
+      <Container size={size} pt="xl" pb="lg">
         <BreadcrumbNav breadcrumbs={breadcrumbs} />
         <Title order={1}>{title}</Title>
         {children}

@@ -1,0 +1,86 @@
+---
+import { getSiteSettings } from "emdash";
+import CvSections from "../../components/CvSections.astro";
+import { ErrorPanel } from "../../components/ErrorPanel";
+import { PageHeader } from "../../components/PageHeader";
+import { PrintButton } from "../../components/PrintButton";
+import { ShareLinks, type ShareLinkData } from "../../components/ShareLinks";
+import Base from "../../layouts/Base.astro";
+import {
+  generateShareKey,
+  getCv,
+  getCvAccess,
+  getShareLinks,
+  isExpired,
+  shareLinkUrl,
+} from "../../lib/cv";
+
+// Rendered per visitor by the Worker (not prerendered), so it must never be cached
+Astro.response.headers.set("Cache-Control", "private, no-store");
+
+const access = await getCvAccess(Astro);
+if (!access) Astro.response.status = 403;
+
+const settings = await getSiteSettings();
+const name = settings.title || "James Bithell";
+const cv = access ? await getCv(Astro, "private") : undefined;
+
+const formatDate = (iso: string) =>
+  new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", dateStyle: "long" }).format(
+    new Date(iso),
+  );
+const now = new Date();
+const links: ShareLinkData[] =
+  access?.kind === "editor"
+    ? (await getShareLinks()).map(({ data }) => ({
+        title: data.title,
+        url: shareLinkUrl(Astro.url.origin, data.key),
+        editHref: `/_emdash/admin/content/cv_share_links/${data.id}`,
+        expiry: data.expires
+          ? `${isExpired(data, now) ? "Expired" : "Expires"} ${formatDate(data.expires)}`
+          : undefined,
+        expired: isExpired(data, now),
+      }))
+    : [];
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "CV", href: "/cv" },
+  { label: "Private", href: "/cv/private" },
+];
+---
+
+<Base
+  title={access ? "CV (private)" : "Private CV"}
+  description={`Full CV of ${name}.`}
+  breadcrumbs={access ? breadcrumbs : []}
+  noCache
+>
+  {
+    access && cv ? (
+      <>
+        <PageHeader title={`${name}: CV`} breadcrumbs={breadcrumbs} size="md">
+          <PrintButton />
+        </PageHeader>
+        {access.kind === "editor" && (
+          <ShareLinks
+            links={links}
+            newKey={generateShareKey()}
+            newHref="/_emdash/admin/content/cv_share_links/new"
+          />
+        )}
+        <CvSections {...cv} />
+      </>
+    ) : (
+      <ErrorPanel
+        code="403"
+        title="This CV is private"
+        message="Open it with the link you were sent. The link may have expired; if so, ask for a new one."
+      />
+    )
+  }
+  <script is:inline>
+    document.getElementById("print-cv")?.addEventListener("click", function () {
+      print();
+    });
+  </script>
+</Base>

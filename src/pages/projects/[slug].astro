@@ -1,0 +1,81 @@
+---
+import { PortableText } from "emdash/ui";
+import { ProjectDetail, type ProjectDetailData } from "../../components/ProjectDetail";
+import Base from "../../layouts/Base.astro";
+import { cmsImage, cmsOgImage } from "../../lib/images";
+import {
+  getProjects,
+  projectBadges,
+  projectPath,
+  projectSummary,
+  projectYear,
+  type ProjectEntry,
+} from "../../lib/projects";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return (await getProjects()).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+interface Props {
+  entry: ProjectEntry;
+}
+
+const { entry } = Astro.props;
+const project = entry.data;
+
+const [image, ogImage] = await Promise.all([
+  cmsImage(Astro, project.featured_image, {
+    widths: [480, 640, 960, 1280, 1600],
+    sizes: "(min-width: 75em) 650px, (min-width: 62em) 56vw, 92vw",
+  }),
+  cmsOgImage(Astro, project.featured_image),
+]);
+
+const detail: ProjectDetailData = {
+  title: project.title,
+  summary: project.summary,
+  year: projectYear(project),
+  badges: projectBadges(project),
+  image: image && { ...image, alt: image.alt || `Screenshot of ${project.title}` },
+  repoUrl: project.repo_url,
+  homepageUrl: project.homepage_url,
+};
+
+const path = projectPath(entry);
+const siteUrl = Astro.url.origin;
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Projects Portfolio", href: "/projects" },
+  { label: project.title, href: path },
+];
+const hasDescription = (project.description?.length ?? 0) > 0;
+---
+
+<Base
+  title={project.title}
+  description={projectSummary(project)}
+  image={ogImage}
+  imageAlt={ogImage ? detail.image?.alt : undefined}
+  breadcrumbs={breadcrumbs}
+  content={{ collection: "projects", id: project.id, slug: project.slug }}
+  jsonLd={[
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      name: project.title,
+      url: siteUrl + path,
+      ...(project.summary ? { description: project.summary } : {}),
+      ...(project.started ? { dateCreated: project.started.slice(0, 10) } : {}),
+      ...(project.repo_url ? { codeRepository: project.repo_url } : {}),
+      ...(project.language ? { programmingLanguage: project.language } : {}),
+      ...(ogImage ? { image: ogImage } : {}),
+      author: { "@id": `${siteUrl}/#person` },
+    },
+  ]}
+>
+  <ProjectDetail project={detail} breadcrumbs={breadcrumbs}>
+    {hasDescription && <PortableText value={project.description} />}
+  </ProjectDetail>
+</Base>

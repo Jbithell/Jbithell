@@ -1,0 +1,36 @@
+---
+import { PortableText } from "emdash/ui";
+import { CvItem } from "./CvItem";
+import { CvSection } from "./CvSection";
+import type { CvItem as CvEntry } from "../lib/cv";
+
+interface Props {
+  work: CvEntry[];
+  volunteering: CvEntry[];
+  education: CvEntry[];
+}
+
+const { work, volunteering, education } = Astro.props;
+const sections = [
+  { id: "experience", title: "Experience", items: work },
+  { id: "education", title: "Education", items: education },
+  { id: "volunteering", title: "Volunteering", items: volunteering },
+].filter((section) => section.items.length > 0);
+---
+
+{
+  sections.map((section) => (
+    <CvSection id={section.id} title={section.title}>
+      {section.items.map((item) => (
+        <CvItem item={item.card}>
+          {item.card.hasDescription && <PortableText value={item.description} />}
+          {item.card.hasPrivateDetails && (
+            <Fragment slot="privateDetails">
+              <PortableText value={item.privateDetails} />
+            </Fragment>
+          )}
+        </CvItem>
+      ))}
+    </CvSection>
+  ))
+}

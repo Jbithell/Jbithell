@@ -1,3 +1,5 @@
+<!--alex disable hook hooks-->
+
 # jbithell.com
 
 An [Astro](https://astro.build) site with the [EmDash](https://emdashcms.com) CMS, deployed to Cloudflare Workers with D1 (content) and R2 (media). The UI is built with [Mantine](https://mantine.dev), rendered to static HTML, so public pages ship no React JavaScript.

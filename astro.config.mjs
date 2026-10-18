@@ -25,9 +25,13 @@ export default defineConfig({
     "/portfolio/[slug].md": cached("events"),
     "/portfolio/discipline/[slug]": cached("events"),
     "/portfolio/role/[slug]": cached("events"),
-    "/sitemap.xml": cached("events"),
+    "/projects": cached("projects"),
+    "/projects/[slug]": cached("projects"),
+    // Only public entries. /cv/private is never cached
+    "/cv": cached("experience", "education", "projects"),
+    "/sitemap.xml": cached("events", "projects"),
     "/sitemap-site.xml": cached("events"),
-    "/llms.txt": cached("events"),
+    "/llms.txt": cached("events", "projects", "experience", "education"),
     "/llms-full.txt": cached("events"),
   },
   // URLs from the previous version of the site

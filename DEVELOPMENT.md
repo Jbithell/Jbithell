@@ -7,6 +7,9 @@ An [Astro](https://astro.build) site with the [EmDash](https://emdashcms.com) CM
 Sign in at [jbithell.com/\_emdash/admin](https://jbithell.com/_emdash/admin) with your passkey.
 
 - **Events** is the Event Portfolio. Each event has a date (with a precision of day, month or year, so "March 2015" stays "March 2015"), an optional end date, venue, client, director, writer, featured image with credit, and a rich text description. Assign **Disciplines** (Sound, Lighting…) and **Roles** (Sound Designer…) from the sidebar of the editor; both get their own filtered portfolio pages.
+- **Projects** is the Projects Portfolio. Each project has a summary, rich text description, featured image, repository and website links, language, start date and an archived flag. Projects are listed by **Sort order**, lowest first (ties go alphabetically).
+- **Experience** (jobs and volunteering, chosen with **Section**) and **Education** make up the CV. Each entry's **Visibility** decides where it appears: **Public** entries are on `/cv` and the private CV, **Private** entries only on the private CV. **Private details** are only ever shown on the private CV, as are education grades unless **Show grades publicly** is ticked. Experience can link **Related projects** from the Projects Portfolio. Unpublished entries appear nowhere.
+- **CV Share Links** open the private CV at `/cv/private` for anyone without an EmDash account. Signed in, `/cv/private` lists every link with its URL, and offers a random key to paste into a new link's **Key** field. A link stops working when it expires, or when you unpublish or delete it.
 - Saving keeps a draft; **Publish** makes it live. Published changes appear within seconds, because EmDash purges the edge cache.
 - **Settings** holds the site title, tagline and social profiles (GitHub, LinkedIn, and Facebook for the Messenger link).
 - Changing an event's slug automatically adds a redirect from the old URL. Other redirects can be managed under **Redirects**, which also logs 404s.
@@ -20,6 +23,10 @@ Sign in at [jbithell.com/\_emdash/admin](https://jbithell.com/_emdash/admin) wit
 | Event | `/portfolio/{slug}`, e.g. `/portfolio/guys-and-dolls-2015` (was `/events/march-2015-guys--dolls`) |
 | Event as Markdown | `/portfolio/{slug}.md` |
 | Filtered Event Portfolio | `/portfolio/discipline/{slug}`, `/portfolio/role/{slug}` |
+| Projects Portfolio | `/projects` |
+| Project | `/projects/{slug}` |
+| CV | `/cv` (public entries only) |
+| Private CV | `/cv/private`: for any signed-in EmDash user, or `/cv/private?key={key}` with a share link. Never cached or indexed, and has a print stylesheet for saving as PDF |
 | Contact | `/contact` |
 | Feeds and indexes | `/llms.txt`, `/llms-full.txt`, `/sitemap.xml`, `/robots.txt` |
 
@@ -34,7 +41,7 @@ npm install
 npm run dev
 ```
 
-The site runs at http://localhost:4321 with a local D1 database and R2 bucket in `.wrangler/state`. On a fresh database, open http://localhost:4321/_emdash/api/setup/dev-bypass?redirect=/_emdash/admin to load the seed (including every event and its photo) and sign in as a development admin without a passkey.
+The site runs at http://localhost:4321 with a local D1 database and R2 bucket in `.wrangler/state`. On a fresh database, open http://localhost:4321/_emdash/api/setup/dev-bypass?redirect=/_emdash/admin to apply the seed's content model and sign in as a development admin without a passkey.
 
 - `npm run preview` builds the production Worker and serves it at http://localhost:8787, for checking performance with Lighthouse.
 - `npm run typecheck` generates the Worker types and checks the TypeScript and Astro files.
@@ -50,8 +57,8 @@ npm run deploy
 
 The first deploy creates the `jbithellcom` D1 database and `jbithellcom-media` R2 bucket. Then open https://jbithell.com/_emdash/admin to run the setup wizard **on the production domain** (passkeys are tied to the domain they're created on):
 
-1. Leave **Include sample content** ticked. This imports all 97 portfolio events from [seed/seed.json](seed/seed.json), downloading their photos from this repository's history into R2. It runs in batches, so let the wizard finish.
-2. Enter your email and register a passkey.
+1. Enter your email and register a passkey. [seed/seed.json](seed/seed.json) only holds the content model, so the site starts empty.
+2. To restore content, import a backup made with `npx emdash site export` using `npx emdash site import`.
 
 Notes:
 
@@ -65,4 +72,13 @@ Notes:
 
 ## Seed
 
-[seed/seed.json](seed/seed.json) defines the content model (the `events` collection and the `discipline` and `role` taxonomies) and the initial content. EmDash only applies it to an empty database, so after the site is set up, change the model in the admin under **Content Types**, then export it with `npx emdash export-seed` so a fresh environment matches. See [Evolving a deployed site](https://docs.emdashcms.com/deployment/schema-evolution/).
+[seed/seed.json](seed/seed.json) defines the content model (the `events` collection and the `discipline` and `role` taxonomies), without any content. EmDash only applies it to an empty database, so after the site is set up, change the model in the admin under **Content Types**, then export it with `npx emdash export-seed` so a fresh environment matches. See [Evolving a deployed site](https://docs.emdashcms.com/deployment/schema-evolution/).
+
+When the seed gains a collection, field or relation that the deployed site doesn't have yet, add it with [apply-schema.ts](apply-schema.ts) rather than by hand. It only adds what's missing, never changes or deletes anything, and running it again does nothing. Create an API token with the **admin** scope under **Settings > API Tokens**, then run:
+
+```bash
+EMDASH_TOKEN=ec_pat_... npm run schema -- --dry-run
+EMDASH_TOKEN=ec_pat_... npm run schema
+```
+
+Delete the token afterwards. Pass `--url` to target another site, such as `--url http://localhost:4321`.

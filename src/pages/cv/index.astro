@@ -1,0 +1,25 @@
+---
+import { getSiteSettings } from "emdash";
+import CvSections from "../../components/CvSections.astro";
+import { PageHeader } from "../../components/PageHeader";
+import Base from "../../layouts/Base.astro";
+import { getCv } from "../../lib/cv";
+
+const settings = await getSiteSettings();
+const name = settings.title || "James Bithell";
+const cv = await getCv(Astro, "public");
+const current = cv.work.find((item) => item.card.dates.endsWith("Present"));
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "CV", href: "/cv" },
+];
+---
+
+<Base
+  title="CV"
+  description={`CV of ${name}${current ? `, ${current.card.title} at ${current.card.organisation}` : ""}: experience, education and volunteering.`}
+  breadcrumbs={breadcrumbs}
+>
+  <PageHeader title="CV" breadcrumbs={breadcrumbs} size="md" />
+  <CvSections {...cv} />
+</Base>

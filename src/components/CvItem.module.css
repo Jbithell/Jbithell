@@ -1,0 +1,33 @@
+.item {
+  break-inside: avoid;
+}
+
+.logo {
+  flex-shrink: 0;
+  background: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
+
+  & img {
+    object-fit: contain;
+  }
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Rich text paragraphs sit closer together than in an article */
+.description {
+  & p {
+    margin-block: 0 var(--mantine-spacing-xs);
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.private {
+  background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+}

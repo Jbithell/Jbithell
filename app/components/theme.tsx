@@ -1,5 +1,6 @@
 import {
   createTheme,
+  type CSSVariablesResolver,
   type MantineColorsTuple,
   MantineProvider,
 } from "@mantine/core";
@@ -28,10 +29,21 @@ const theme = createTheme({
   primaryShade: 3,
 });
 
+// The default dimmed colour (gray.6) doesn't have enough contrast against white
+const cssVariablesResolver: CSSVariablesResolver = (theme) => ({
+  variables: {},
+  light: { "--mantine-color-dimmed": theme.colors.gray[7] },
+  dark: {},
+});
+
 export const MantineProviderWrapper = (props: {
   children: React.ReactNode;
 }) => (
-  <MantineProvider theme={theme} defaultColorScheme="auto">
+  <MantineProvider
+    theme={theme}
+    defaultColorScheme="auto"
+    cssVariablesResolver={cssVariablesResolver}
+  >
     {props.children}
   </MantineProvider>
 );

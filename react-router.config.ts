@@ -1,19 +1,12 @@
 import type { Config } from "@react-router/dev/config";
-import { EventPortfolioObject } from "./app/types.d";
-import eventPortfolio from "./eventPortfolio.json";
+import { sitemapPaths } from "./app/routes/sitemap";
 export default {
   ssr: true,
   future: {
     unstable_viteEnvironmentApi: true,
   },
-  async prerender({ getStaticPaths }) {
-    const events = eventPortfolio as EventPortfolioObject[];
-    return [
-      "/",
-      "/contact",
-      "/events",
-      ...events.map((event) => `/events/${event.slug}`),
-    ];
+  async prerender() {
+    return [...sitemapPaths(), "/sitemap.xml", "/llms.txt"];
   },
 } satisfies Config;
 

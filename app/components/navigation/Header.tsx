@@ -1,4 +1,4 @@
-import { Container, Group, Text } from "@mantine/core";
+import { Container, Group, Title } from "@mantine/core";
 import React from "react";
 
 export function Header({
@@ -15,9 +15,9 @@ export function Header({
       <Container size="xl">
         <Group justify="space-between" align="center" mt="sm" mb="md">
           {leftSection ?? <span />}
-          <Text size="xl" fw={600}>
+          <Title order={1} fz="xl" fw={600}>
             {title}
-          </Text>
+          </Title>
           {rightSection ?? <span />}
         </Group>
       </Container>

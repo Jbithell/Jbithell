@@ -1,0 +1,21 @@
+{
+  "james-bithell-profile.jpg": {
+    "width": 400,
+    "height": 400,
+    "variants": [
+      {
+        "src": "/images/james-bithell-profile-140.fc78f961.webp",
+        "width": 140
+      },
+      {
+        "src": "/images/james-bithell-profile-280.3952be3b.webp",
+        "width": 280
+      },
+      {
+        "src": "/images/james-bithell-profile-400.8b5930ca.webp",
+        "width": 400
+      }
+    ],
+    "og": "/images/james-bithell-profile.f3907c87.jpg"
+  }
+}

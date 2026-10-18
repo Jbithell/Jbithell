@@ -1,4 +1,4 @@
-import { Avatar, Button, Card, Center, Text } from "@mantine/core";
+import { Avatar, Button, Card, Center, Text, Title } from "@mantine/core";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
@@ -7,11 +7,21 @@ import {
 } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router";
+import { getImage } from "../images";
+import { pageMeta, person, SITE_NAME } from "../seo";
 import type { Route } from "./+types/index";
 import { HeaderFooterNav } from "./../components/navigation/HeaderFooterNav";
 
+const profileImage = getImage("james-bithell-profile.jpg");
+
 export function meta({}: Route.MetaArgs) {
-  return [{ title: "James Bithell" }];
+  return pageMeta({
+    title: SITE_NAME,
+    description:
+      "James Bithell, based in London, United Kingdom. Contact details, CV, development portfolio and live events portfolio.",
+    path: "/",
+    jsonLd: [{ "@context": "https://schema.org", ...person }],
+  });
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
@@ -20,15 +30,20 @@ export default function Home({ loaderData }: Route.ComponentProps) {
       <Center>
         <Card withBorder padding="xl" radius="md">
           <Avatar
-            src={"/images/james-bithell-profile.jpg"}
+            src={profileImage.src}
+            imageProps={{
+              srcSet: profileImage.srcSet,
+              sizes: "140px",
+              fetchPriority: "high",
+            }}
             size={140}
             radius={80}
             mx="auto"
             alt="Profile Image of James Bithell smiling"
           />
-          <Text ta="center" fz="xl" fw={500} mt="sm">
+          <Title order={1} ta="center" fz="xl" fw={500} mt="sm">
             James Bithell
-          </Text>
+          </Title>
           <Text ta="center" fz="md" c="dimmed">
             London, United Kingdom
           </Text>

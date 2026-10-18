@@ -1,0 +1,90 @@
+{
+  "backgrounds/hesHall.jpg": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      {
+        "src": "/images/backgrounds/hesHall-768.946c3b74.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/backgrounds/hesHall-1280.6303fe2d.webp",
+        "width": 1280
+      },
+      {
+        "src": "/images/backgrounds/hesHall-1920.31296ab1.webp",
+        "width": 1920
+      },
+      {
+        "src": "/images/backgrounds/hesHall-2560.92cba798.webp",
+        "width": 2560
+      }
+    ]
+  },
+  "backgrounds/wales1.jpg": {
+    "width": 2560,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/images/backgrounds/wales1-768.05b8c817.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/backgrounds/wales1-1280.e1f8578b.webp",
+        "width": 1280
+      },
+      {
+        "src": "/images/backgrounds/wales1-1920.7f4708c9.webp",
+        "width": 1920
+      },
+      {
+        "src": "/images/backgrounds/wales1-2560.6a002de6.webp",
+        "width": 2560
+      }
+    ]
+  },
+  "backgrounds/wales2.jpg": {
+    "width": 2560,
+    "height": 3413,
+    "variants": [
+      {
+        "src": "/images/backgrounds/wales2-768.320d931a.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/backgrounds/wales2-1280.ca5a7610.webp",
+        "width": 1280
+      },
+      {
+        "src": "/images/backgrounds/wales2-1920.5afc622f.webp",
+        "width": 1920
+      },
+      {
+        "src": "/images/backgrounds/wales2-2560.91728093.webp",
+        "width": 2560
+      }
+    ]
+  },
+  "backgrounds/wales3.jpg": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      {
+        "src": "/images/backgrounds/wales3-768.72517dd6.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/backgrounds/wales3-1280.c42edfdd.webp",
+        "width": 1280
+      },
+      {
+        "src": "/images/backgrounds/wales3-1920.a5fd9884.webp",
+        "width": 1920
+      },
+      {
+        "src": "/images/backgrounds/wales3-2560.671ccc0a.webp",
+        "width": 2560
+      }
+    ]
+  }
+}

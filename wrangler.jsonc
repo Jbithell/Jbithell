@@ -20,8 +20,8 @@
     { "pattern": "www.jbithell.com", "custom_domain": true }
   ],
   "workers_dev": false,
-  // Version preview URLs would expose the setup wizard and admin on workers.dev, against the production database
-  "preview_urls": false,
+  // Preview URLs for each version and branch. They use the production database and bucket
+  "preview_urls": true,
   // Run the Worker next to the D1 primary, as each uncached page makes several D1 queries.
   // aws:eu-west-2 (London) suits a D1 database in Western Europe (WEUR): check its location under
   // Storage & databases > D1 and change this if it's elsewhere. Don't enable D1 read replicas with this

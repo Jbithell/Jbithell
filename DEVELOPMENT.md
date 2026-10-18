@@ -55,7 +55,7 @@ The first deploy creates the `jbithellcom` D1 database and `jbithellcom-media` R
 
 Notes:
 
-- The Worker serves jbithell.com and www.jbithell.com as custom domains (`routes` in `wrangler.jsonc`), and www redirects to jbithell.com (`src/outer-middleware.ts`). The `workers.dev` address and version preview URLs are turned off: previews would run against the production D1 database and R2 bucket. `EMDASH_SITE_URL` also pins sign-in to https://jbithell.com.
+- The Worker serves jbithell.com and www.jbithell.com as custom domains (`routes` in `wrangler.jsonc`), and www redirects to jbithell.com (`src/outer-middleware.ts`). The production `workers.dev` address is turned off. Preview URLs stay on for each version and branch, and use the production D1 database and R2 bucket, so publishing in a preview's admin changes the live site. `EMDASH_SITE_URL` pins sign-in to https://jbithell.com, so set up and edit content there.
 - The Worker runs next to the D1 primary (`placement` in `wrangler.jsonc`), set to London (`aws:eu-west-2`) for a database in Western Europe. Check the database's location under **Storage & databases > D1** in the dashboard and change the region if it's elsewhere. Don't enable D1 read replicas alongside this.
 
 - EmDash's Worker is about 5 MB gzipped, so it needs the [Workers Paid plan](https://developers.cloudflare.com/workers/platform/limits/#worker-size) (Workers Free allows 3 MB).

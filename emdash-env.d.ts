@@ -3,7 +3,49 @@
 
 /// <reference types="emdash/locals" />
 
-import type { BylineSummary, ContentBylineCredit, TaxonomyTerm, PortableTextBlock } from "emdash";
+import type { BylineSummary, ContentBylineCredit, TaxonomyTerm, PortableTextBlock, ReferencePage } from "emdash";
+
+export interface CvShareLink {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  key: string;
+  expires?: string;
+  notes?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  byline?: BylineSummary | null;
+  bylines?: ContentBylineCredit[];
+  terms?: Record<string, TaxonomyTerm[]>;
+}
+
+export interface Education {
+  id: string;
+  slug: string | null;
+  status: string;
+  institution: string;
+  institution_url?: string;
+  logo?: { id: string; src?: string; alt?: string; width?: number; height?: number; filename?: string; mimeType?: string; blurhash?: string; dominantColor?: string; focalX?: number; focalY?: number; provider?: string; previewUrl?: string; meta?: Record<string, unknown>; darkVariant?: { id: string; src?: string; alt?: string; width?: number; height?: number; filename?: string; mimeType?: string; blurhash?: string; dominantColor?: string; focalX?: number; focalY?: number; provider?: string; previewUrl?: string; meta?: Record<string, unknown> } };
+  qualification?: string;
+  field_of_study?: string;
+  location?: string;
+  start_date: string;
+  end_date?: string;
+  date_precision: "month" | "year";
+  visibility: "public" | "private";
+  results?: { "subject": string; "grade"?: string | null }[];
+  public_grades?: boolean;
+  description?: PortableTextBlock[];
+  private_details?: PortableTextBlock[];
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  byline?: BylineSummary | null;
+  bylines?: ContentBylineCredit[];
+  terms?: Record<string, TaxonomyTerm[]>;
+}
 
 export interface Event {
   id: string;
@@ -32,8 +74,66 @@ export interface Event {
   terms?: Record<string, TaxonomyTerm[]>;
 }
 
+export interface Experience {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  organisation: string;
+  organisation_url?: string;
+  logo?: { id: string; src?: string; alt?: string; width?: number; height?: number; filename?: string; mimeType?: string; blurhash?: string; dominantColor?: string; focalX?: number; focalY?: number; provider?: string; previewUrl?: string; meta?: Record<string, unknown>; darkVariant?: { id: string; src?: string; alt?: string; width?: number; height?: number; filename?: string; mimeType?: string; blurhash?: string; dominantColor?: string; focalX?: number; focalY?: number; provider?: string; previewUrl?: string; meta?: Record<string, unknown> } };
+  section: "work" | "volunteering";
+  employment_type?: "Full-time" | "Part-time" | "Self-employed" | "Freelance" | "Contract" | "Internship" | "Apprenticeship" | "Seasonal";
+  location?: string;
+  start_date: string;
+  end_date?: string;
+  date_precision: "month" | "year";
+  visibility: "public" | "private";
+  description?: PortableTextBlock[];
+  private_details?: PortableTextBlock[];
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  byline?: BylineSummary | null;
+  bylines?: ContentBylineCredit[];
+  terms?: Record<string, TaxonomyTerm[]>;
+}
+
+export interface Project {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  summary?: string;
+  description?: PortableTextBlock[];
+  featured_image?: { id: string; src?: string; alt?: string; width?: number; height?: number; filename?: string; mimeType?: string; blurhash?: string; dominantColor?: string; focalX?: number; focalY?: number; provider?: string; previewUrl?: string; meta?: Record<string, unknown>; darkVariant?: { id: string; src?: string; alt?: string; width?: number; height?: number; filename?: string; mimeType?: string; blurhash?: string; dominantColor?: string; focalX?: number; focalY?: number; provider?: string; previewUrl?: string; meta?: Record<string, unknown> } };
+  repo_url?: string;
+  homepage_url?: string;
+  language?: string;
+  started?: string;
+  archived?: boolean;
+  sort: number;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  byline?: BylineSummary | null;
+  bylines?: ContentBylineCredit[];
+  terms?: Record<string, TaxonomyTerm[]>;
+}
+
+export interface ExperienceReferences {
+  projects: ReferencePage<Project>;
+}
+
 declare module "emdash" {
   interface EmDashCollections {
+    cv_share_links: CvShareLink;
+    education: Education;
     events: Event;
+    experience: Experience;
+    projects: Project;
+  }
+  interface EmDashCollectionReferences {
+    experience: ExperienceReferences;
   }
 }

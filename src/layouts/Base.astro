@@ -48,13 +48,25 @@ interface Props {
   content?: { collection: string; id: string; slug?: string | null };
   /** Extra <link rel="alternate"> versions of this page */
   alternates?: { href: string; type: string; title?: string }[];
+  /** A page that must not be cached at the edge or indexed, such as the private CV */
+  noCache?: boolean;
 }
 
-const { title, description, image, imageAlt, breadcrumbs = [], jsonLd = [], content, alternates = [] } =
-  Astro.props;
+const {
+  title,
+  description,
+  image,
+  imageAlt,
+  breadcrumbs = [],
+  jsonLd = [],
+  content,
+  alternates = [],
+  noCache = false,
+} = Astro.props;
 
 const { data: settings, cacheHint } = await getSiteSettingsWithCacheHint();
-if (Astro.cache?.enabled) Astro.cache.set(cacheHint);
+// Setting a hint would turn caching back on for a page that opted out
+if (Astro.cache?.enabled && !noCache) Astro.cache.set(cacheHint);
 
 const siteTitle = settings.title || "James Bithell";
 const siteUrl = (settings.url || Astro.url.origin).replace(/\/$/, "");
@@ -77,7 +89,7 @@ const page = createPublicPageContext({
   siteName: siteTitle,
   siteUrl,
   breadcrumbs: breadcrumbs.map((crumb) => ({ name: crumb.label, url: siteUrl + crumb.href })),
-  seo: { ogImage, ogTitle: title ?? siteTitle },
+  seo: { ogImage, ogTitle: title ?? siteTitle, ...(noCache ? { robots: "noindex, nofollow" } : {}) },
 });
 
 const structuredData = [

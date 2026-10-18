@@ -46,3 +46,13 @@ astro-static-slot {
     navigation: none;
   }
 }
+
+/* Printing the CV (or any page) leaves out the site's chrome */
+@media print {
+  .skip-link,
+  body > header,
+  body > footer,
+  .no-print {
+    display: none !important;
+  }
+}

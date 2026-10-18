@@ -1,7 +1,8 @@
 import { Avatar, Button, Container, Group, Paper, Stack, Text, Title } from "@mantine/core";
 import {
   IconBrandGithub,
-  IconBrandLinkedin,
+  IconCode,
+  IconFileCv,
   IconMail,
   IconMasksTheater,
 } from "@tabler/icons-react";
@@ -73,6 +74,15 @@ export function HomeHero({
               </Button>
               <Button
                 component="a"
+                href="/projects"
+                size="md"
+                justify="space-between"
+                rightSection={<IconCode size={20} aria-hidden="true" />}
+              >
+                Projects Portfolio
+              </Button>
+              <Button
+                component="a"
                 href="/contact"
                 size="md"
                 variant="default"
@@ -84,11 +94,10 @@ export function HomeHero({
               <Group grow gap="xs">
                 <Button
                   component="a"
-                  href={links.linkedin}
-                  rel="me"
+                  href="/cv"
                   size="md"
                   variant="default"
-                  leftSection={<IconBrandLinkedin size={20} aria-hidden="true" />}
+                  leftSection={<IconFileCv size={20} aria-hidden="true" />}
                 >
                   CV
                 </Button>

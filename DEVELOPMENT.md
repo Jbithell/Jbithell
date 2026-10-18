@@ -38,7 +38,7 @@ npm run dev
 
 The site runs at http://localhost:4321 with a local D1 database and R2 bucket in `.wrangler/state`. On a fresh database, open http://localhost:4321/_emdash/api/setup/dev-bypass?redirect=/_emdash/admin to load the seed (including every event and its photo) and sign in as a development admin without a passkey.
 
-- `npm run build` prerenders the site from the local database. Photos are linked from the local media library at full size, as only Workers Builds can download them from the public bucket to resize them.
+- `npm run build` prerenders the site from the local database, so load the seed with the dev bypass above first. Photos are linked from the local media library at full size, as only Workers Builds can download them from the public bucket to resize them.
 - `npm run preview` builds the site and serves it at http://localhost:8787 as it's served in production, for checking performance with Lighthouse.
 - `npm run typecheck` generates the Worker types and checks the TypeScript and Astro files.
 - Passkeys only work on the production domain, so sign in locally with the dev bypass above, or put `EMDASH_SITE_URL=http://localhost:4321` in a `.dev.vars` file before running setup.
@@ -50,7 +50,7 @@ The site runs at http://localhost:4321 with a local D1 database and R2 bucket in
 Workers Builds builds and deploys every push to `main`, and every publish in EmDash. To set it up, in the Cloudflare dashboard under **Workers & Pages > jbithellcom > Settings**:
 
 1. Under **Builds**, connect this repository with the build command `npm run build` and the deploy command `npx wrangler deploy`.
-2. Under **Builds > Variables and secrets**, add a `CLOUDFLARE_API_TOKEN` secret, so the build can read the production D1 database (`remote` in `wrangler.jsonc`). Create the token under **My Profile > API Tokens** from the **Edit Cloudflare Workers** template, adding **D1: Edit**. If the token or its permissions are wrong, the build fails rather than deploying an empty site.
+2. Under **Builds > Variables and secrets**, add a `CLOUDFLARE_API_TOKEN` secret, so the build can read the production D1 database (`remote` in `wrangler.jsonc`). Create a custom token under **My Profile > API Tokens** for this account only, with permission to edit Workers and read D1 (wrangler connects by uploading a temporary preview Worker with the database bound). The account and database IDs are in `wrangler.jsonc`, so it needs nothing else. If the token or its permissions are wrong, the build fails rather than deploying an empty site.
 3. Under **Builds > Deploy Hooks**, create a hook for `main`, then save its URL as a Worker secret, so publishing rebuilds the site:
 
    ```bash

@@ -1,0 +1,48 @@
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1;
+}
+
+/* React component trees are rendered into wrapper elements that shouldn't affect layout */
+astro-island,
+astro-slot,
+astro-static-slot {
+  display: contents;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--mantine-spacing-xs);
+  left: var(--mantine-spacing-xs);
+  z-index: 1000;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  background: var(--mantine-color-body);
+  color: var(--mantine-color-text);
+  box-shadow: var(--mantine-shadow-md);
+  transform: translateY(-200%);
+
+  &:focus {
+    transform: none;
+  }
+}
+
+/* Cross-document view transitions between pages */
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}

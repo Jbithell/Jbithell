@@ -1,0 +1,24 @@
+{
+  "backgrounds/wales3.jpg": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      {
+        "src": "/images/backgrounds/wales3-768.72517dd6.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/backgrounds/wales3-1280.c42edfdd.webp",
+        "width": 1280
+      },
+      {
+        "src": "/images/backgrounds/wales3-1920.a5fd9884.webp",
+        "width": 1920
+      },
+      {
+        "src": "/images/backgrounds/wales3-2560.671ccc0a.webp",
+        "width": 2560
+      }
+    ]
+  }
+}

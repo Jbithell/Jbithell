@@ -20,8 +20,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-check
           locale: "UK"
-          # US spellings required by APIs and web standards, e.g. Mantine's <Center> and the color-scheme meta tag
-          ignore: color,colors,center
+          # US spellings required by APIs and web standards, e.g. the color-scheme meta tag and schema.org organizer
+          ignore: color,colors,center,organizer
   alex:
     name: Alex Language Review
     runs-on: ubuntu-latest

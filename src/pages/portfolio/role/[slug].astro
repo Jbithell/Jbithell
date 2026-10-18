@@ -1,0 +1,21 @@
+---
+import { decodeSlug } from "emdash";
+import PortfolioListing from "../../../components/PortfolioListing.astro";
+import { getEvents, getTerms } from "../../../lib/portfolio";
+
+const slug = decodeSlug(Astro.params.slug);
+const term = slug ? (await getTerms(Astro, "role")).find((t) => t.slug === slug) : undefined;
+if (!term) return Astro.rewrite("/404");
+const events = await getEvents(Astro, { taxonomy: "role", term: term.slug });
+---
+
+<PortfolioListing
+  title={term.label}
+  description={`${events.length} ${events.length === 1 ? "event" : "events"} I've worked on as ${/^[aeiou]/i.test(term.label) ? "an" : "a"} ${term.label}.`}
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: term.label, href: `/portfolio/role/${term.slug}` },
+  ]}
+  events={events}
+/>

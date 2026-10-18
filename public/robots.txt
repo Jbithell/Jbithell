@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://jbithell.com/sitemap.xml

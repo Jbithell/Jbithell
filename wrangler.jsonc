@@ -5,11 +5,29 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "jbithellcom",
-  "compatibility_date": "2025-04-04",
-  "main": "./workers/app.ts",
-  "assets": {
-    // Serve prerendered pages at /events rather than redirecting to /events/
-    "html_handling": "drop-trailing-slash"
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-02-24",
+  "compatibility_flags": ["nodejs_compat"],
+  // EmDash content and media. Wrangler creates both on the first deploy
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "jbithellcom"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "jbithellcom-media"
+    }
+  ],
+  // Resizes CMS images into responsive WebP/AVIF variants
+  "images": {
+    "binding": "IMAGES"
+  },
+  // EmDash scheduled publishing and maintenance
+  "triggers": {
+    "crons": ["* * * * *"]
   },
   "version_metadata": {
     "binding": "CF_VERSION_METADATA"

@@ -1,0 +1,54 @@
+---
+import { getSiteSettings } from "emdash";
+import { RecentWork } from "../components/EventGrid";
+import { HomeHero } from "../components/HomeHero";
+import Base from "../layouts/Base.astro";
+import { getEvents, toEventCards } from "../lib/portfolio";
+import { siteImage } from "../lib/siteImages";
+import { socialLinks } from "../lib/site";
+import { person } from "../lib/structuredData";
+
+const settings = await getSiteSettings();
+const name = settings.title || "James Bithell";
+const siteUrl = (settings.url || Astro.url.origin).replace(/\/$/, "");
+const links = socialLinks(settings.social);
+
+const events = await getEvents(Astro);
+const recent = await toEventCards(
+  Astro,
+  events.filter((event) => event.data.featured_image).slice(0, 6)
+);
+
+const profile = siteImage("james-bithell-profile.jpg", "140px", `Profile photo of ${name} smiling`);
+const background = siteImage("backgrounds/wales3.jpg", "100vw");
+---
+
+<Base
+  description={`${name}, based in London, United Kingdom. Contact details, CV, development portfolio and a portfolio of ${events.length} live events worked on since 2014.`}
+  imageAlt={profile.alt}
+  jsonLd={[
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      mainEntity: person({
+        siteUrl,
+        name,
+        image: siteUrl + profile.og,
+        sameAs: [links.linkedin, links.github],
+      }),
+    },
+  ]}
+>
+  <HomeHero
+    name={name}
+    tagline={settings.tagline}
+    profile={profile}
+    background={background}
+    links={links}
+  />
+  <RecentWork
+    events={recent}
+    description="Theatre, concerts and live events: sound, lighting, stage management and production."
+    more={{ href: "/portfolio", label: `All ${events.length} events` }}
+  />
+</Base>

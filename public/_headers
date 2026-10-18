@@ -1,14 +1,15 @@
-# Headers for static assets and prerendered pages served by Cloudflare. Keep in sync with workers/app.ts
+# Headers for static assets served by Cloudflare. Keep in sync with src/middleware.ts
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
-  Content-Security-Policy: frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
-  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  X-Frame-Options: SAMEORIGIN
   Strict-Transport-Security: max-age=31536000
+  Cross-Origin-Opener-Policy: same-origin
 
 # Build output and optimised images have a content hash in the filename, so can be cached forever
-/assets/*
+/_astro/*
   Cache-Control: public, max-age=31536000, immutable
 /images/*
   Cache-Control: public, max-age=31536000, immutable

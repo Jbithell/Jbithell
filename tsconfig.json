@@ -1,14 +1,10 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.node.json" },
-    { "path": "./tsconfig.cloudflare.json" }
-  ],
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "emdash-env.d.ts", "worker-configuration.d.ts", "**/*"],
+  "exclude": ["dist", "images"],
   "compilerOptions": {
-    "checkJs": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "resolveJsonModule": true
   }
 }

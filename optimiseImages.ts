@@ -3,10 +3,12 @@
  *
  * Run with `npm run images` whenever an image in ./images is added or changed, and commit the output.
  *
+ * These are the site's own images. Portfolio photos are uploaded to EmDash's media library instead.
+ *
  * - Every photo is resized to a set of widths and re-encoded as WebP, with a content hash in the filename so it can be cached forever
- * - Portfolio images and the profile photo also get a 1200px JPEG for Open Graph previews (not every social platform supports WebP)
+ * - The profile photo also gets a 1200px JPEG for Open Graph previews (not every social platform supports WebP)
  * - The icon SVG is copied to /icon.svg and rendered to the PNG icons used by iOS and the web app manifest
- * - app/images/<folder>.json records the dimensions and variants of every image, for use in srcset.
+ * - src/images/<folder>.json records the dimensions and variants of every image, for use in srcset.
  *   There's one file per folder (images in the root go in site.json) so pages only bundle the images they use
  */
 import { createHash } from "node:crypto";
@@ -17,18 +19,17 @@ import sharp from "sharp";
 const SOURCE_DIR = path.join(import.meta.dirname, "images");
 const PUBLIC_DIR = path.join(import.meta.dirname, "public");
 const OUTPUT_DIR = path.join(PUBLIC_DIR, "images");
-const MANIFEST_DIR = path.join(import.meta.dirname, "app", "images");
+const MANIFEST_DIR = path.join(import.meta.dirname, "src", "images");
 
 const WEBP_QUALITY = 75;
 const OG_WIDTH = 1200;
 const OG_QUALITY = 80;
 // Widths to generate for each folder. Images are never upscaled.
 const WIDTHS: Record<string, number[]> = {
-  portfolio: [640, 960, 1280, 1920],
   backgrounds: [768, 1280, 1920, 2560],
   ".": [140, 280, 420], // Profile photo, displayed at 140px
 };
-const OG_FOLDERS = ["portfolio", "."];
+const OG_FOLDERS = ["."];
 
 export interface ImageVariant {
   src: string;
@@ -65,7 +66,7 @@ const optimiseImage = async (
     .raw()
     .toBuffer({ resolveWithObject: true });
 
-  const targetWidths = WIDTHS[folder] ?? WIDTHS.portfolio;
+  const targetWidths = WIDTHS[folder] ?? WIDTHS.backgrounds;
   const widths = targetWidths.filter((width) => width < info.width);
   // Smaller than the largest target width, so use the original width instead
   if (widths.length < targetWidths.length) widths.push(info.width);

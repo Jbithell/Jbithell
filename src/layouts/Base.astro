@@ -1,0 +1,186 @@
+---
+import "@mantine/core/styles/baseline.css";
+import "@mantine/core/styles/default-css-variables.css";
+import "@mantine/core/styles/global.css";
+// Only the styles for components in use, rather than all of @mantine/core/styles.css.
+// Shared base styles must come first, see https://mantine.dev/styles/css-files-list/
+import "@mantine/core/styles/UnstyledButton.css";
+import "@mantine/core/styles/Paper.css";
+import "@mantine/core/styles/Group.css";
+import "@mantine/core/styles/ActionIcon.css";
+import "@mantine/core/styles/Anchor.css";
+import "@mantine/core/styles/Avatar.css";
+import "@mantine/core/styles/Badge.css";
+import "@mantine/core/styles/Breadcrumbs.css";
+import "@mantine/core/styles/Button.css";
+import "@mantine/core/styles/Card.css";
+import "@mantine/core/styles/Container.css";
+import "@mantine/core/styles/DataList.css";
+import "@mantine/core/styles/Grid.css";
+import "@mantine/core/styles/Image.css";
+import "@mantine/core/styles/SimpleGrid.css";
+import "@mantine/core/styles/Stack.css";
+import "@mantine/core/styles/Text.css";
+import "@mantine/core/styles/Title.css";
+import "@mantine/core/styles/Typography.css";
+import "../styles/global.css";
+import { getSiteSettingsWithCacheHint } from "emdash";
+import { createPublicPageContext } from "emdash/page";
+import { EmDashBodyEnd, EmDashBodyStart, EmDashHead } from "emdash/ui";
+import { MantineStyles } from "../components/Mantine";
+import type { Crumb } from "../components/PageHeader";
+import { SiteFooter } from "../components/SiteFooter";
+import { SiteHeader } from "../components/SiteHeader";
+import { siteImage } from "../lib/siteImages";
+import { EMAIL, socialLinks } from "../lib/site";
+import { jsonLdScript } from "../lib/structuredData";
+
+interface Props {
+  /** Page title, without the site name. Omit on the home page */
+  title?: string;
+  description: string;
+  /** Open Graph image: an absolute URL or a path on this site. Defaults to the profile photo */
+  image?: string;
+  imageAlt?: string;
+  breadcrumbs?: Crumb[];
+  jsonLd?: object[];
+  /** The EmDash entry this page renders, so its SEO panel values are applied */
+  content?: { collection: string; id: string; slug?: string | null };
+  /** Extra <link rel="alternate"> versions of this page */
+  alternates?: { href: string; type: string; title?: string }[];
+}
+
+const { title, description, image, imageAlt, breadcrumbs = [], jsonLd = [], content, alternates = [] } =
+  Astro.props;
+
+const { data: settings, cacheHint } = await getSiteSettingsWithCacheHint();
+if (Astro.cache?.enabled) Astro.cache.set(cacheHint);
+
+const siteTitle = settings.title || "James Bithell";
+const siteUrl = (settings.url || Astro.url.origin).replace(/\/$/, "");
+const fullTitle = title ? `${title}${settings.seo?.titleSeparator || " | "}${siteTitle}` : siteTitle;
+const canonical = siteUrl + (Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, ""));
+const profile = siteImage("james-bithell-profile.jpg", "140px");
+const ogImage = new URL(image ?? profile.og!, siteUrl).href;
+
+const page = createPublicPageContext({
+  Astro,
+  kind: content ? "content" : "custom",
+  // Events aren't articles, so EmDash shouldn't describe them as a BlogPosting
+  pageType: "website",
+  title: fullTitle,
+  pageTitle: title ?? siteTitle,
+  description,
+  canonical,
+  image: ogImage,
+  content,
+  siteName: siteTitle,
+  siteUrl,
+  breadcrumbs: breadcrumbs.map((crumb) => ({ name: crumb.label, url: siteUrl + crumb.href })),
+  seo: { ogImage, ogTitle: title ?? siteTitle },
+});
+
+const structuredData = [
+  ...jsonLd,
+  ...(breadcrumbs.length > 1
+    ? [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: breadcrumbs.map((crumb, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: crumb.label,
+            item: siteUrl + crumb.href,
+          })),
+        },
+      ]
+    : []),
+];
+
+const links = socialLinks(settings.social);
+const footerLinks = [
+  { href: `mailto:${EMAIL}`, label: "Email" },
+  { href: links.linkedin, label: "LinkedIn", rel: "me" },
+  { href: links.github, label: "GitHub", rel: "me" },
+  { href: "/rss.xml", label: "RSS" },
+];
+
+const speculationRules = {
+  prerender: [
+    {
+      where: { and: [{ href_matches: "/*" }, { not: { href_matches: "/_emdash/*" } }] },
+      eagerness: "moderate",
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en-GB" data-mantine-color-scheme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <script is:inline>
+      // Apply the saved or system colour scheme before first paint, as Mantine's ColorSchemeScript does
+      try {
+        var scheme = localStorage.getItem("mantine-color-scheme-value");
+        if (scheme !== "light" && scheme !== "dark")
+          scheme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-mantine-color-scheme", scheme);
+      } catch (e) {}
+    </script>
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#242424" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="describedby" type="text/markdown" href="/llms.txt" title="Site index for LLMs" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title={`${siteTitle}: event portfolio`} />
+    {alternates.map((alt) => <link rel="alternate" type={alt.type} href={alt.href} title={alt.title} />)}
+    <EmDashHead page={page} />
+    {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+    <meta property="og:locale" content="en_GB" />
+    {structuredData.map((data) => <script type="application/ld+json" set:html={jsonLdScript(data)} />)}
+    <script type="speculationrules" is:inline set:html={JSON.stringify(speculationRules)} />
+  </head>
+  <body>
+    <!-- After the stylesheets in <head>, so the theme overrides Mantine's default variables -->
+    <MantineStyles />
+    <EmDashBodyStart page={page} />
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader siteTitle={siteTitle} path={Astro.url.pathname} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <SiteFooter siteTitle={siteTitle} links={footerLinks} />
+    <EmDashBodyEnd page={page} />
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        var key = "mantine-color-scheme-value";
+        var toggle = document.getElementById("color-scheme-toggle");
+        if (toggle)
+          toggle.addEventListener("click", function () {
+            var next = root.getAttribute("data-mantine-color-scheme") === "dark" ? "light" : "dark";
+            root.setAttribute("data-mantine-color-scheme", next);
+            try {
+              localStorage.setItem(key, next);
+            } catch (e) {}
+          });
+        matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {
+          var saved = null;
+          try {
+            saved = localStorage.getItem(key);
+          } catch (e) {}
+          if (saved !== "light" && saved !== "dark")
+            root.setAttribute("data-mantine-color-scheme", event.matches ? "dark" : "light");
+        });
+      })();
+    </script>
+  </body>
+</html>

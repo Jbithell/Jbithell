@@ -1,0 +1,12 @@
+---
+import { ErrorPanel } from "../components/ErrorPanel";
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Page not found" description="The page you requested could not be found.">
+  <ErrorPanel
+    code="404"
+    title="Page not found"
+    message="The page you requested could not be found. It may have been moved, or the address may be mistyped."
+  />
+</Base>

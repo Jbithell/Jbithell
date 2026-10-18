@@ -11,10 +11,10 @@ const events = await getEvents(Astro, { taxonomy: "role", term: term.slug });
 
 <PortfolioListing
   title={term.label}
-  description={`Events in James Bithell's live events portfolio with the role ${term.label}`}
+  description={`Events in James Bithell's Event Portfolio with the role ${term.label}`}
   breadcrumbs={[
     { label: "Home", href: "/" },
-    { label: "Portfolio", href: "/portfolio" },
+    { label: "Event Portfolio", href: "/portfolio" },
     { label: term.label, href: `/portfolio/role/${term.slug}` },
   ]}
   events={events}

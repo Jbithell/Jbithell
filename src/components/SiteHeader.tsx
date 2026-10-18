@@ -5,7 +5,7 @@ import { Mantine } from "./Mantine";
 import classes from "./SiteHeader.module.css";
 
 const links = [
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/portfolio", label: "Event Portfolio" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -15,9 +15,12 @@ export function SiteHeader({ siteTitle, path }: { siteTitle: string; path: strin
       <Box component="header" className={classes.header}>
         <Container size="lg">
           <Group justify="space-between" h={64} wrap="nowrap">
-            <Anchor href="/" className={classes.brand} underline="never">
+            <Anchor href="/" className={classes.brand} underline="never" aria-label={siteTitle}>
               <Logo size={26} />
-              <span>{siteTitle}</span>
+              {/* Hidden on small phones to leave room for the navigation */}
+              <Box component="span" visibleFrom="xs">
+                {siteTitle}
+              </Box>
             </Anchor>
             <Group gap={2} wrap="nowrap" component="nav" aria-label="Main">
               {links.map((link) => {

@@ -69,7 +69,7 @@ export function HomeHero({
                 justify="space-between"
                 rightSection={<IconMasksTheater size={20} aria-hidden="true" />}
               >
-                Event portfolio
+                Event Portfolio
               </Button>
               <Button
                 component="a"

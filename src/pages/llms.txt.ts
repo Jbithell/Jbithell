@@ -13,7 +13,7 @@ export const GET: APIRoute = async (context) => {
   const events = await getEvents(context);
   return markdownResponse(`# ${name}
 
-> Personal website of ${name}, based in London, United Kingdom, with contact details, CV and a portfolio of ${events.length} live events worked on since 2014.
+> Personal website of ${name}, based in London, United Kingdom, with contact details, CV and an Event Portfolio of ${events.length} live events worked on since 2014.
 
 Every event page is also available as Markdown by adding \`.md\` to its URL. [llms-full.txt](${siteUrl}/llms-full.txt) has every event in one file.
 
@@ -23,9 +23,9 @@ Every event page is also available as Markdown by adding \`.md\` to its URL. [ll
 - [Development portfolio](${links.github}): Software projects on GitHub
 - [Sitemap](${siteUrl}/sitemap.xml)
 
-## Live events portfolio
+## Event Portfolio
 
-[Event portfolio](${siteUrl}/portfolio), most recent first:
+[Event Portfolio](${siteUrl}/portfolio), most recent first:
 
 ${events.map((event) => `- [${event.data.title}](${siteUrl}${eventPath(event)}.md): ${eventSummary(event.data)}`).join("\n")}
 `);

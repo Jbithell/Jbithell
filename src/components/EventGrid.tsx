@@ -45,7 +45,7 @@ export function RecentWork({
       <Container size="lg" component="section" py="xl" aria-labelledby="recent-work">
         <Group justify="space-between" align="center" mb="lg">
           <Title order={2} id="recent-work">
-            Event portfolio
+            Event Portfolio
           </Title>
           <Button
             component="a"

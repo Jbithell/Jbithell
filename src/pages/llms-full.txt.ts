@@ -12,7 +12,7 @@ export const GET: APIRoute = async (context) => {
   const events = await getEvents(context);
   return markdownResponse(
     [
-      `# ${name}: live events portfolio`,
+      `# ${name}: Event Portfolio`,
       "",
       `> Every live event ${name} (${settings.tagline || "London, United Kingdom"}) has worked on since 2014, most recent first. Contact: ${EMAIL}`,
       "",

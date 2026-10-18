@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "LOCAL_PREVIEW=1 astro build && wrangler dev",
+    "preview": "LOCAL_PREVIEW=1 astro build && wrangler dev --local-upstream localhost:8787",
     "deploy": "astro build && wrangler deploy",
     "typecheck": "wrangler types && astro check",
     "images": "node optimiseImages.ts",

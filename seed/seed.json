@@ -26,7 +26,7 @@
       "slug": "events",
       "label": "Events",
       "labelSingular": "Event",
-      "description": "Live events portfolio: theatre, concerts and other events worked on",
+      "description": "Event Portfolio: theatre, concerts and other events worked on",
       "icon": "mask-happy",
       "supports": [
         "drafts",

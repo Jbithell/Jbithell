@@ -6,7 +6,7 @@ An [Astro](https://astro.build) site with the [EmDash](https://emdashcms.com) CM
 
 Sign in at [jbithell.com/\_emdash/admin](https://jbithell.com/_emdash/admin) with your passkey.
 
-- **Events** is the live events portfolio. Each event has a date (with a precision of day, month or year, so "March 2015" stays "March 2015"), an optional end date, venue, client, director, writer, featured image with credit, and a rich text description. Assign **Disciplines** (Sound, Lighting…) and **Roles** (Sound Designer…) from the sidebar of the editor; both get their own filtered portfolio pages.
+- **Events** is the Event Portfolio. Each event has a date (with a precision of day, month or year, so "March 2015" stays "March 2015"), an optional end date, venue, client, director, writer, featured image with credit, and a rich text description. Assign **Disciplines** (Sound, Lighting…) and **Roles** (Sound Designer…) from the sidebar of the editor; both get their own filtered portfolio pages.
 - Saving keeps a draft; **Publish** makes it live. Published changes appear within seconds, because EmDash purges the edge cache.
 - **Settings** holds the site title, tagline and social profiles (GitHub, LinkedIn, and Facebook for the Messenger link).
 - Changing an event's slug automatically adds a redirect from the old URL. Other redirects can be managed under **Redirects**, which also logs 404s.
@@ -16,10 +16,10 @@ Sign in at [jbithell.com/\_emdash/admin](https://jbithell.com/_emdash/admin) wit
 | Page | URL |
 | --- | --- |
 | Home | `/` |
-| Portfolio | `/portfolio` (was `/events`) |
+| Event Portfolio | `/portfolio` (was `/events`) |
 | Event | `/portfolio/{slug}`, e.g. `/portfolio/guys-and-dolls-2015` (was `/events/march-2015-guys--dolls`) |
 | Event as Markdown | `/portfolio/{slug}.md` |
-| Filtered portfolio | `/portfolio/discipline/{slug}`, `/portfolio/role/{slug}` |
+| Filtered Event Portfolio | `/portfolio/discipline/{slug}`, `/portfolio/role/{slug}` |
 | Contact | `/contact` |
 | Feeds and indexes | `/llms.txt`, `/llms-full.txt`, `/sitemap.xml`, `/robots.txt` |
 

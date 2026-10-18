@@ -27,7 +27,7 @@ export function ErrorPanel({
             Home
           </Button>
           <Button component="a" href="/portfolio" size="md" variant="default">
-            Event portfolio
+            Event Portfolio
           </Button>
         </Group>
       </Container>

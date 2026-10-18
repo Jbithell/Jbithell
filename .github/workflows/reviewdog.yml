@@ -20,8 +20,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-check
           locale: "UK"
-          # US spellings required by APIs and web standards, e.g. the color-scheme meta tag and schema.org organizer
-          ignore: color,colors,center,organizer
+          # US spellings required by APIs and web standards, e.g. the color-scheme meta tag and schema.org types
+          ignore: color,colors,center,organization,organizer
+          # Generated files
+          exclude: |
+            ./package-lock.json
+            ./worker-configuration.d.ts
   alex:
     name: Alex Language Review
     runs-on: ubuntu-latest

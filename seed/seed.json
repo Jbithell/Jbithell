@@ -1074,7 +1074,7 @@
           "end_date": "2021-05-30T12:00:00.000Z",
           "venue": "Rowntree Park Stage",
           "client": "University of York Shakespeare Society",
-          "author": "William Shakespere",
+          "author": "William Shakespeare",
           "performances_attended": 0,
           "professional": false,
           "paid": false
@@ -1735,7 +1735,7 @@
           "venue": "Main Hall, Westminster Under School",
           "client": "Westminster Under School",
           "director": "Charlie Hill",
-          "author": "William Shakespere",
+          "author": "William Shakespeare",
           "performances_attended": 0,
           "professional": false,
           "paid": true
@@ -2212,7 +2212,7 @@
           "date": "2018-05-01T12:00:00.000Z",
           "date_precision": "month",
           "venue": "Main Hall, Westminster Under School",
-          "author": "William Shakespere",
+          "author": "William Shakespeare",
           "performances_attended": 0,
           "professional": false,
           "paid": false

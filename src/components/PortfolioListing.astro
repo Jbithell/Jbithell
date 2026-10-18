@@ -8,6 +8,7 @@ import { disciplineLinks, toEventCards } from "../lib/portfolio";
 
 interface Props {
   title: string;
+  /** Meta description */
   description: string;
   breadcrumbs: Crumb[];
   events: EventEntry[];
@@ -46,7 +47,7 @@ const siteUrl = Astro.url.origin;
     },
   ]}
 >
-  <PageHeader title={title} description={description} breadcrumbs={breadcrumbs}>
+  <PageHeader title={title} breadcrumbs={breadcrumbs}>
     <FilterNav label="Filter by discipline" links={filters} />
   </PageHeader>
   <EventGrid groups={groupByYear(cards)} />

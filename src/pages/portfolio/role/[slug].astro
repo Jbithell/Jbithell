@@ -11,7 +11,7 @@ const events = await getEvents(Astro, { taxonomy: "role", term: term.slug });
 
 <PortfolioListing
   title={term.label}
-  description={`${events.length} ${events.length === 1 ? "event" : "events"} I've worked on as ${/^[aeiou]/i.test(term.label) ? "an" : "a"} ${term.label}.`}
+  description={`Events in James Bithell's live events portfolio with the role ${term.label}`}
   breadcrumbs={[
     { label: "Home", href: "/" },
     { label: "Portfolio", href: "/portfolio" },

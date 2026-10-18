@@ -14,6 +14,8 @@ export function Logo({ size = 28 }: { size?: number }) {
         fill="none"
         stroke="currentColor"
         strokeWidth="4.5"
+        strokeLinejoin="round"
+        strokeLinecap="round"
       />
     </svg>
   );

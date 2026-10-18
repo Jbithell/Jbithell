@@ -9,12 +9,10 @@ export interface Crumb {
 
 export function PageHeader({
   title,
-  description,
   breadcrumbs = [],
   children,
 }: {
   title: string;
-  description?: string;
   breadcrumbs?: Crumb[];
   children?: ReactNode;
 }) {
@@ -23,11 +21,6 @@ export function PageHeader({
       <Container size="lg" pt="xl" pb="lg">
         <BreadcrumbNav breadcrumbs={breadcrumbs} />
         <Title order={1}>{title}</Title>
-        {description && (
-          <Text size="lg" c="dimmed" mt="xs" maw={720}>
-            {description}
-          </Text>
-        )}
         {children}
       </Container>
     </Mantine>

@@ -18,7 +18,6 @@ const securityHeaders = {
 const discoveryLinks = [
   '</llms.txt>; rel="describedby"; type="text/markdown"',
   '</sitemap.xml>; rel="sitemap"; type="application/xml"',
-  '</rss.xml>; rel="alternate"; type="application/rss+xml"',
 ].join(", ");
 
 export const onRequest = defineMiddleware(async (context, next) => {

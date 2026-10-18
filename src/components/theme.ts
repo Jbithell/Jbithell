@@ -1,23 +1,9 @@
-import { createTheme, type CSSVariablesResolver, type MantineColorsTuple } from "@mantine/core";
-
-const brand: MantineColorsTuple = [
-  "#ffe9e9",
-  "#ffd0d0",
-  "#fd9d9d",
-  "#fc6766",
-  "#fc3b38",
-  "#fc231c",
-  "#fd160e",
-  "#e20a03",
-  "#c90000",
-  "#b00000",
-];
+import { createTheme, type CSSVariablesResolver } from "@mantine/core";
 
 export const theme = createTheme({
-  primaryColor: "brand",
-  colors: { brand },
-  // Darker shades in light mode so text and filled buttons pass WCAG AA contrast
-  primaryShade: { light: 8, dark: 4 },
+  // Neutral accents, so the photos provide the colour
+  primaryColor: "gray",
+  primaryShade: { light: 8, dark: 3 },
   autoContrast: true,
   defaultRadius: "md",
   cursorType: "pointer",

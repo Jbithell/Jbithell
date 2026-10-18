@@ -21,7 +21,7 @@ Sign in at [jbithell.com/\_emdash/admin](https://jbithell.com/_emdash/admin) wit
 | Event as Markdown | `/portfolio/{slug}.md` |
 | Filtered portfolio | `/portfolio/discipline/{slug}`, `/portfolio/role/{slug}` |
 | Contact | `/contact` |
-| Feeds and indexes | `/rss.xml`, `/llms.txt`, `/llms-full.txt`, `/sitemap.xml`, `/robots.txt` |
+| Feeds and indexes | `/llms.txt`, `/llms-full.txt`, `/sitemap.xml`, `/robots.txt` |
 
 The old `/events` URLs permanently redirect to the new ones. The mapping is in [src/legacy-event-slugs.json](src/legacy-event-slugs.json) and is applied in [astro.config.mjs](astro.config.mjs), which the Cloudflare adapter turns into `_redirects` rules served before the Worker runs.
 

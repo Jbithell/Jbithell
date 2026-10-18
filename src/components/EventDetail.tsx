@@ -81,7 +81,7 @@ export function EventDetail({
               {event.roles.map((role, i) => (
                 <span key={role.href}>
                   {i > 0 && ", "}
-                  <Anchor href={role.href} inherit>
+                  <Anchor href={role.href} inherit underline="always">
                     {role.label}
                   </Anchor>
                 </span>
@@ -126,7 +126,12 @@ export function EventDetail({
                   <Text component="figcaption" size="sm" c="dimmed" mt="xs">
                     Photo:{" "}
                     {event.imageCredit.href ? (
-                      <Anchor href={event.imageCredit.href} inherit rel="noopener">
+                      <Anchor
+                        href={event.imageCredit.href}
+                        inherit
+                        rel="noopener"
+                        underline="always"
+                      >
                         {event.imageCredit.label}
                       </Anchor>
                     ) : (

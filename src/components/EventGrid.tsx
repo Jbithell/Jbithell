@@ -1,4 +1,4 @@
-import { Button, Container, Group, SimpleGrid, Stack, Text, Title } from "@mantine/core";
+import { Button, Container, Group, SimpleGrid, Stack, Title } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { EventCard, type EventCardData } from "./EventCard";
 import { Mantine } from "./Mantine";
@@ -35,25 +35,18 @@ export function EventGrid({ groups }: { groups: { year: string; events: EventCar
 
 export function RecentWork({
   events,
-  description,
   more,
 }: {
   events: EventCardData[];
-  description: string;
   more: { href: string; label: string };
 }) {
   return (
     <Mantine>
       <Container size="lg" component="section" py="xl" aria-labelledby="recent-work">
-        <Group justify="space-between" align="flex-end" mb="lg">
-          <div>
-            <Title order={2} id="recent-work">
-              Recent work
-            </Title>
-            <Text c="dimmed" mt={4}>
-              {description}
-            </Text>
-          </div>
+        <Group justify="space-between" align="center" mb="lg">
+          <Title order={2} id="recent-work">
+            Event portfolio
+          </Title>
           <Button
             component="a"
             href={more.href}

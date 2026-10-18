@@ -21,7 +21,6 @@ Every event page is also available as Markdown by adding \`.md\` to its URL. [ll
 - [Contact](${siteUrl}/contact): Contact details
 - [CV](${links.linkedin}): CV on LinkedIn
 - [Development portfolio](${links.github}): Software projects on GitHub
-- [RSS feed](${siteUrl}/rss.xml): Event portfolio feed
 - [Sitemap](${siteUrl}/sitemap.xml)
 
 ## Live events portfolio

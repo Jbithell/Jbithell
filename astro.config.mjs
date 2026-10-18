@@ -25,7 +25,6 @@ export default defineConfig({
     "/portfolio/[slug].md": cached("events"),
     "/portfolio/discipline/[slug]": cached("events"),
     "/portfolio/role/[slug]": cached("events"),
-    "/rss.xml": cached("events"),
     "/sitemap.xml": cached("events"),
     "/sitemap-site.xml": cached("events"),
     "/llms.txt": cached("events"),

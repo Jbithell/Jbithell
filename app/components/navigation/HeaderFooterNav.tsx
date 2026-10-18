@@ -51,7 +51,7 @@ export function HeaderFooterNav({
           />
         ) : null}
         <Container size="xl" p="md" className={classes.content}>
-          <Center className={classes.center}>{children}</Center>
+          <Center className={classes.centre}>{children}</Center>
         </Container>
       </AppShell.Main>
       {footer ? (

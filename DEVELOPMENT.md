@@ -37,7 +37,8 @@ npm run dev
 The site runs at http://localhost:4321 with a local D1 database and R2 bucket in `.wrangler/state`. On a fresh database, open http://localhost:4321/_emdash/api/setup/dev-bypass?redirect=/_emdash/admin to load the seed (including every event and its photo) and sign in as a development admin without a passkey.
 
 - `npm run preview` builds the production Worker and serves it at http://localhost:8787, for checking performance with Lighthouse.
-- `npm run typecheck` checks the TypeScript and Astro files.
+- `npm run typecheck` generates the Worker types and checks the TypeScript and Astro files.
+- Passkeys only work on the production domain, so sign in locally with the dev bypass above, or put `EMDASH_SITE_URL=http://localhost:4321` in a `.dev.vars` file before running setup.
 - `npm run images` regenerates the site's own images (profile photo, background, icons) from `./images`. Portfolio photos live in EmDash's media library instead.
 - `emdash-env.d.ts` is regenerated from the content model whenever the dev server starts.
 
@@ -53,6 +54,8 @@ The first deploy creates the `jbithellcom` D1 database and `jbithellcom-media` R
 2. Enter your email and register a passkey.
 
 Notes:
+
+- `EMDASH_SITE_URL` in `wrangler.jsonc` pins sign-in to https://jbithell.com. Cloudflare's Git integration deploys a preview of every branch to a public `workers.dev` URL **using the production D1 database and R2 bucket**, and this stops anyone claiming the admin account through one. To give previews their own data instead, add a [`previews` block](https://docs.emdashcms.com/deployment/cloudflare/#worker-previews) with separate resources, or turn off non-production branch builds in the dashboard.
 
 - EmDash's Worker is about 5 MB gzipped, so it needs the [Workers Paid plan](https://developers.cloudflare.com/workers/platform/limits/#worker-size) (Workers Free allows 3 MB).
 - `EMDASH_ENCRYPTION_KEY` only protects plugin secrets. Before adding a plugin that stores secrets, set it with `npx emdash secrets generate` and `npx wrangler secret put EMDASH_ENCRYPTION_KEY`, and keep a copy.

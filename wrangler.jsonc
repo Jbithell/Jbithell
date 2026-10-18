@@ -8,6 +8,12 @@
   "main": "./src/worker.ts",
   "compatibility_date": "2026-02-24",
   "compatibility_flags": ["nodejs_compat"],
+  // EmDash's public origin. Passkeys are tied to it, so the setup wizard and sign-in only work on
+  // this domain (not on workers.dev preview URLs, which share the production database). For local
+  // development, override it in .dev.vars or sign in with the dev bypass
+  "vars": {
+    "EMDASH_SITE_URL": "https://jbithell.com"
+  },
   // EmDash content and media. Wrangler creates both on the first deploy
   "d1_databases": [
     {

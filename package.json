@@ -14,7 +14,7 @@
     "build": "astro build",
     "preview": "LOCAL_PREVIEW=1 astro build && wrangler dev",
     "deploy": "astro build && wrangler deploy",
-    "typecheck": "astro check",
+    "typecheck": "wrangler types && astro check",
     "images": "node optimiseImages.ts",
     "types:generate": "wrangler types"
   },

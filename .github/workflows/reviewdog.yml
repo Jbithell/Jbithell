@@ -25,7 +25,6 @@ jobs:
           # Generated files
           exclude: |
             ./package-lock.json
-            ./worker-configuration.d.ts
   alex:
     name: Alex Language Review
     runs-on: ubuntu-latest

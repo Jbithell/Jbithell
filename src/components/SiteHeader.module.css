@@ -1,0 +1,30 @@
+.header {
+  border-bottom: 1px solid var(--mantine-color-default-border);
+  background: var(--mantine-color-body);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mantine-spacing-xs);
+  color: var(--mantine-color-text);
+  font-weight: 700;
+  font-size: var(--mantine-font-size-md);
+  white-space: nowrap;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    font-size: var(--mantine-font-size-lg);
+  }
+}
+
+.moon {
+  @mixin dark {
+    display: none;
+  }
+}
+
+.sun {
+  @mixin light {
+    display: none;
+  }
+}

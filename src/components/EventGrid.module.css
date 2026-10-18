@@ -1,0 +1,5 @@
+/* Skip layout and paint for years scrolled out of view */
+.year {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}

@@ -1,0 +1,110 @@
+---
+import { decodeSlug, getEmDashEntry } from "emdash";
+import { PortableText } from "emdash/ui";
+import { EventDetail, type EventDetailData } from "../../components/EventDetail";
+import Base from "../../layouts/Base.astro";
+import {
+  eventDisciplines,
+  eventPath,
+  eventRoles,
+  eventSummary,
+  formatEventDate,
+  isoEventDate,
+  type EventEntry,
+} from "../../lib/events";
+import { cmsImage, cmsOgImage } from "../../lib/images";
+import { getEvents } from "../../lib/portfolio";
+
+const slug = decodeSlug(Astro.params.slug);
+if (!slug) return Astro.rewrite("/404");
+const { entry, error, cacheHint } = await getEmDashEntry("events", slug);
+if (error) throw error;
+if (!entry) return Astro.rewrite("/404");
+if (Astro.cache?.enabled) Astro.cache.set(cacheHint);
+const event = (entry as EventEntry).data;
+
+// Neighbouring events for the previous/next links
+const events = await getEvents(Astro);
+const index = events.findIndex((e) => e.data.id === event.id);
+const newer = index > 0 ? events[index - 1] : undefined;
+const older = index >= 0 && index < events.length - 1 ? events[index + 1] : undefined;
+
+const [image, ogImage] = await Promise.all([
+  cmsImage(Astro, event.featured_image, {
+    widths: [480, 640, 960, 1280, 1600],
+    sizes: "(min-width: 75em) 650px, (min-width: 62em) 56vw, 92vw",
+  }),
+  cmsOgImage(Astro, event.featured_image),
+]);
+
+const facts = [
+  { label: "Venue", value: event.venue },
+  { label: "Client", value: event.client },
+  { label: "Directed by", value: event.director },
+  { label: "Written by", value: event.author },
+  {
+    label: "Performances",
+    value: event.performances_attended ? String(event.performances_attended) : undefined,
+  },
+  { label: "Production", value: event.professional ? "Professional" : undefined },
+].filter((fact): fact is { label: string; value: string } => Boolean(fact.value));
+
+const path = eventPath(entry as EventEntry);
+const detail: EventDetailData = {
+  title: event.title,
+  dateLabel: formatEventDate(event),
+  dateTime: isoEventDate(event.date, event.date_precision),
+  image: image && { ...image, alt: image.alt || `Photo from ${event.title}` },
+  imageCredit: event.image_credit
+    ? { label: event.image_credit, href: event.image_credit_url }
+    : undefined,
+  disciplines: eventDisciplines(event).map((term) => ({
+    label: term.label,
+    href: `/portfolio/discipline/${term.slug}`,
+  })),
+  roles: eventRoles(event).map((term) => ({
+    label: term.label,
+    href: `/portfolio/role/${term.slug}`,
+  })),
+  facts,
+  previous: older && { title: older.data.title, href: eventPath(older) },
+  next: newer && { title: newer.data.title, href: eventPath(newer) },
+};
+
+const siteUrl = Astro.url.origin;
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Event Portfolio", href: "/portfolio" },
+  { label: event.title, href: path },
+];
+const hasDescription = (event.description?.length ?? 0) > 0;
+---
+
+<Base
+  title={`${event.title} (${detail.dateLabel})`}
+  description={eventSummary(event)}
+  image={ogImage}
+  imageAlt={ogImage ? detail.image?.alt : undefined}
+  breadcrumbs={breadcrumbs}
+  content={{ collection: "events", id: event.id, slug: event.slug }}
+  alternates={[{ href: `${path}.md`, type: "text/markdown", title: "Markdown" }]}
+  jsonLd={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: event.title,
+      url: siteUrl + path,
+      startDate: detail.dateTime,
+      ...(event.end_date ? { endDate: isoEventDate(event.end_date) } : {}),
+      ...(event.venue ? { location: { "@type": "Place", name: event.venue } } : {}),
+      ...(event.client ? { organizer: { "@type": "Organization", name: event.client } } : {}),
+      ...(event.director ? { director: { "@type": "Person", name: event.director } } : {}),
+      ...(ogImage ? { image: ogImage } : {}),
+      description: eventSummary(event),
+    },
+  ]}
+>
+  <EventDetail event={detail} breadcrumbs={breadcrumbs}>
+    {hasDescription && <PortableText value={event.description} />}
+  </EventDetail>
+</Base>

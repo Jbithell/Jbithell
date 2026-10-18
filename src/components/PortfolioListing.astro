@@ -1,0 +1,54 @@
+---
+import { EventGrid } from "./EventGrid";
+import { FilterNav } from "./FilterNav";
+import { PageHeader, type Crumb } from "./PageHeader";
+import Base from "../layouts/Base.astro";
+import { groupByYear, type EventEntry } from "../lib/events";
+import { disciplineLinks, toEventCards } from "../lib/portfolio";
+
+interface Props {
+  title: string;
+  /** Meta description */
+  description: string;
+  breadcrumbs: Crumb[];
+  events: EventEntry[];
+  /** The selected discipline filter */
+  discipline?: string;
+}
+
+const { title, description, breadcrumbs, events, discipline } = Astro.props;
+const [cards, filters] = await Promise.all([
+  toEventCards(Astro, events),
+  disciplineLinks(Astro, discipline),
+]);
+const siteUrl = Astro.url.origin;
+---
+
+<Base
+  title={title}
+  description={description}
+  breadcrumbs={breadcrumbs}
+  jsonLd={[
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: title,
+      description,
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: cards.length,
+        itemListElement: cards.map((card, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: siteUrl + card.href,
+          name: card.title,
+        })),
+      },
+    },
+  ]}
+>
+  <PageHeader title={title} breadcrumbs={breadcrumbs}>
+    <FilterNav label="Filter by discipline" links={filters} />
+  </PageHeader>
+  <EventGrid groups={groupByYear(cards)} />
+</Base>

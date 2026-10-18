@@ -1,0 +1,3206 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "defaultLocale": "en",
+  "meta": {
+    "name": "James Bithell",
+    "description": "Personal site and live events portfolio of James Bithell",
+    "author": "James Bithell"
+  },
+  "settings": {
+    "title": "James Bithell",
+    "tagline": "London, United Kingdom",
+    "timezone": "Europe/London",
+    "dateFormat": "d MMMM yyyy",
+    "social": {
+      "github": "jbithell",
+      "linkedin": "jbithell",
+      "facebook": "bithellj"
+    },
+    "seo": {
+      "titleSeparator": " | "
+    }
+  },
+  "collections": [
+    {
+      "slug": "events",
+      "label": "Events",
+      "labelSingular": "Event",
+      "description": "Event Portfolio: theatre, concerts and other events worked on",
+      "icon": "mask-happy",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search",
+        "seo"
+      ],
+      "urlPattern": "/portfolio/{slug}",
+      "titleField": "title",
+      "dateField": "date",
+      "admin": {
+        "listColumns": [
+          "date",
+          "venue"
+        ]
+      },
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "date",
+          "label": "Date",
+          "type": "datetime",
+          "required": true,
+          "indexed": true
+        },
+        {
+          "slug": "date_precision",
+          "label": "Date precision",
+          "type": "select",
+          "required": true,
+          "defaultValue": "day",
+          "validation": {
+            "options": [
+              "day",
+              "month",
+              "year"
+            ]
+          }
+        },
+        {
+          "slug": "end_date",
+          "label": "End date",
+          "type": "datetime"
+        },
+        {
+          "slug": "venue",
+          "label": "Venue",
+          "type": "string",
+          "searchable": true
+        },
+        {
+          "slug": "client",
+          "label": "Client",
+          "type": "string",
+          "searchable": true
+        },
+        {
+          "slug": "director",
+          "label": "Directed by",
+          "type": "string",
+          "searchable": true
+        },
+        {
+          "slug": "author",
+          "label": "Written by",
+          "type": "string",
+          "searchable": true
+        },
+        {
+          "slug": "featured_image",
+          "label": "Featured image",
+          "type": "image"
+        },
+        {
+          "slug": "image_credit",
+          "label": "Image credit",
+          "type": "string"
+        },
+        {
+          "slug": "image_credit_url",
+          "label": "Image credit link",
+          "type": "url"
+        },
+        {
+          "slug": "description",
+          "label": "Description",
+          "type": "portableText",
+          "searchable": true
+        },
+        {
+          "slug": "performances_attended",
+          "label": "Performances attended",
+          "type": "integer",
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "professional",
+          "label": "Professional production",
+          "type": "boolean",
+          "defaultValue": false
+        },
+        {
+          "slug": "paid",
+          "label": "Paid work",
+          "type": "boolean",
+          "defaultValue": false
+        }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "discipline",
+      "label": "Disciplines",
+      "labelSingular": "Discipline",
+      "hierarchical": false,
+      "collections": [
+        "events"
+      ],
+      "terms": [
+        {
+          "slug": "automation",
+          "label": "Automation"
+        },
+        {
+          "slug": "direction",
+          "label": "Direction"
+        },
+        {
+          "slug": "front-of-house",
+          "label": "Front of House"
+        },
+        {
+          "slug": "lighting",
+          "label": "Lighting"
+        },
+        {
+          "slug": "production",
+          "label": "Production"
+        },
+        {
+          "slug": "set",
+          "label": "Set"
+        },
+        {
+          "slug": "sound",
+          "label": "Sound"
+        },
+        {
+          "slug": "stage-management",
+          "label": "Stage Management"
+        },
+        {
+          "slug": "video",
+          "label": "Video"
+        }
+      ]
+    },
+    {
+      "name": "role",
+      "label": "Roles",
+      "labelSingular": "Role",
+      "hierarchical": false,
+      "collections": [
+        "events"
+      ],
+      "terms": [
+        {
+          "slug": "assistant-stage-manager",
+          "label": "Assistant Stage Manager"
+        },
+        {
+          "slug": "camera-operator",
+          "label": "Camera Operator"
+        },
+        {
+          "slug": "co-director",
+          "label": "Co-Director"
+        },
+        {
+          "slug": "crew",
+          "label": "Crew"
+        },
+        {
+          "slug": "crew-chief",
+          "label": "Crew Chief"
+        },
+        {
+          "slug": "director",
+          "label": "Director"
+        },
+        {
+          "slug": "financial-producer",
+          "label": "Financial Producer"
+        },
+        {
+          "slug": "followspot-operator",
+          "label": "Followspot Operator"
+        },
+        {
+          "slug": "front-of-house-assistant",
+          "label": "Front of House Assistant"
+        },
+        {
+          "slug": "front-of-house-manager",
+          "label": "Front of House Manager"
+        },
+        {
+          "slug": "head-flyman-hemp",
+          "label": "Head Flyman (Hemp)"
+        },
+        {
+          "slug": "house-casual-lx",
+          "label": "House Casual LX"
+        },
+        {
+          "slug": "lighting-advisor",
+          "label": "Lighting Advisor"
+        },
+        {
+          "slug": "lighting-designer",
+          "label": "Lighting Designer"
+        },
+        {
+          "slug": "lighting-operator",
+          "label": "Lighting Operator"
+        },
+        {
+          "slug": "lighting-programmer",
+          "label": "Lighting Programmer"
+        },
+        {
+          "slug": "lighting-rigging-assistant",
+          "label": "Lighting Rigging Assistant"
+        },
+        {
+          "slug": "operator",
+          "label": "Operator"
+        },
+        {
+          "slug": "producer",
+          "label": "Producer"
+        },
+        {
+          "slug": "production-manager",
+          "label": "Production Manager"
+        },
+        {
+          "slug": "production-sound-engineer",
+          "label": "Production Sound Engineer"
+        },
+        {
+          "slug": "production-sound-engineer-work-experience",
+          "label": "Production Sound Engineer (Work Experience)"
+        },
+        {
+          "slug": "programme-designer",
+          "label": "Programme Designer"
+        },
+        {
+          "slug": "set-build-assistant",
+          "label": "Set Build Assistant"
+        },
+        {
+          "slug": "sound-designer",
+          "label": "Sound Designer"
+        },
+        {
+          "slug": "sound-mixer",
+          "label": "Sound Mixer"
+        },
+        {
+          "slug": "sound-operator",
+          "label": "Sound Operator"
+        },
+        {
+          "slug": "sound-supervisor",
+          "label": "Sound Supervisor"
+        },
+        {
+          "slug": "stage-manager",
+          "label": "Stage Manager"
+        },
+        {
+          "slug": "standby-technician",
+          "label": "Standby Technician"
+        },
+        {
+          "slug": "technical-manager",
+          "label": "Technical Manager"
+        },
+        {
+          "slug": "video-designer",
+          "label": "Video Designer"
+        }
+      ]
+    }
+  ],
+  "menus": [],
+  "content": {
+    "events": [
+      {
+        "id": "event-demon-headmaster-2026",
+        "slug": "demon-headmaster-2026",
+        "status": "published",
+        "data": {
+          "title": "Demon Headmaster",
+          "date": "2026-03-17T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "director": "Lindsay Tricker",
+          "author": "Gillian Cross",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/17-march-2026-demon-headmaster.jpg",
+              "filename": "17-march-2026-demon-headmaster.jpg",
+              "alt": "Photo from Demon Headmaster"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/DXgn1qHDJi3/",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-leap-day-2025",
+        "slug": "leap-day-2025",
+        "status": "published",
+        "data": {
+          "title": "Leap Day",
+          "date": "2025-12-03T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "author": "Denver Casado",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-winter-bonanza-concert-2025",
+        "slug": "winter-bonanza-concert-2025",
+        "status": "published",
+        "data": {
+          "title": "Winter Bonanza Concert",
+          "date": "2025-11-27T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Rebecca Thorn",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-newsies-jr-2025",
+        "slug": "newsies-jr-2025",
+        "status": "published",
+        "data": {
+          "title": "Newsies JR",
+          "date": "2025-10-14T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "author": "Harvey Fierstein",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/14-october-2025-newsies.jpg",
+              "filename": "14-october-2025-newsies.jpg",
+              "alt": "Photo from Newsies JR"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/DQbc0CxDEKq/",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-frankie-builds-androids-2025",
+        "slug": "frankie-builds-androids-2025",
+        "status": "published",
+        "data": {
+          "title": "Frankie Builds Androids",
+          "date": "2025-03-18T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "author": "Kerry Kazmierowicztrimm",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/18-march-2025-frankie-builds-androids.jpg",
+              "filename": "18-march-2025-frankie-builds-androids.jpg",
+              "alt": "Photo from Frankie Builds Androids"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/DHtBg_1Ic89/",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound",
+            "video"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-rats-2024",
+        "slug": "rats-2024",
+        "status": "published",
+        "data": {
+          "title": "Rats!",
+          "date": "2024-12-04T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "author": "Nigel Hess",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/4-december-2024-rats.jpg",
+              "filename": "4-december-2024-rats.jpg",
+              "alt": "Photo from Rats!"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/DDZW0nPIliF/",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound",
+            "video"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-the-playhouse-apprentice-2024",
+        "slug": "the-playhouse-apprentice-2024",
+        "status": "published",
+        "data": {
+          "title": "The Playhouse Apprentice",
+          "date": "2024-11-20T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "author": "Jessica Swale",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/20-november-2024-playhouse-apprentice-2.jpg",
+              "filename": "20-november-2024-playhouse-apprentice-2.jpg",
+              "alt": "Photo from The Playhouse Apprentice"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/DDFN42loX5u/",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound",
+            "video"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-louis-dowdeswell-big-band-2024",
+        "slug": "louis-dowdeswell-big-band-2024",
+        "status": "published",
+        "data": {
+          "title": "Louis Dowdeswell Big Band",
+          "date": "2024-11-06T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Rebecca Thorn",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/6-november-2024-louis-dowdeswell-big-band.jpg",
+              "filename": "6-november-2024-louis-dowdeswell-big-band.jpg",
+              "alt": "Photo from Louis Dowdeswell Big Band"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/DCEUl0iIhpm/",
+          "performances_attended": 1,
+          "professional": true,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-bairns-14-september-2024",
+        "slug": "bairns-14-september-2024",
+        "status": "published",
+        "data": {
+          "title": "BAIRNS",
+          "date": "2024-09-14T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "The Bridge House Theatre, Penge",
+          "director": "Daniel Bainbridge",
+          "author": "Annie Davison",
+          "performances_attended": 1,
+          "professional": true,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-bairns-13-september-2024",
+        "slug": "bairns-13-september-2024",
+        "status": "published",
+        "data": {
+          "title": "BAIRNS",
+          "date": "2024-09-13T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Jack Studio Theatre, Brockley",
+          "director": "Daniel Bainbridge",
+          "author": "Annie Davison",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/13-september-2024-bairns.jpg",
+              "filename": "13-september-2024-bairns.jpg",
+              "alt": "Photo from BAIRNS"
+            }
+          },
+          "performances_attended": 0,
+          "professional": true,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-a-night-at-the-musicals-2024",
+        "slug": "a-night-at-the-musicals-2024",
+        "status": "published",
+        "data": {
+          "title": "A Night at the Musicals",
+          "date": "2024-03-21T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Rebecca Thorn",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/21-march-2024-night-at-the-musicals.jpg",
+              "filename": "21-march-2024-night-at-the-musicals.jpg",
+              "alt": "Photo from A Night at the Musicals"
+            }
+          },
+          "performances_attended": 1,
+          "professional": true,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-troy24-2024",
+        "slug": "troy24-2024",
+        "status": "published",
+        "data": {
+          "title": "Troy24",
+          "date": "2024-03-14T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "author": "David Calcutt",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/14-march-2024-troy24.jpg",
+              "filename": "14-march-2024-troy24.jpg",
+              "alt": "Photo from Troy24"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/C4xOZzAg_lY/",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound",
+            "video"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "video-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-disneys-the-aristocats-kids-2023",
+        "slug": "disneys-the-aristocats-kids-2023",
+        "status": "published",
+        "data": {
+          "title": "Disney's The Aristocats Kids",
+          "date": "2023-12-07T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Hayley Wellman",
+          "author": "Michael Bernard",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/7-december-2023-aristocats.jpeg",
+              "filename": "7-december-2023-aristocats.jpeg",
+              "alt": "Photo from Disney's The Aristocats Kids"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/C0y8Hg2IBR2",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-mixer"
+          ]
+        }
+      },
+      {
+        "id": "event-oliver-jr-2023",
+        "slug": "oliver-jr-2023",
+        "status": "published",
+        "data": {
+          "title": "Oliver! JR",
+          "date": "2023-11-23T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "author": "Lionel Bart",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/public/images/portfolio/23-november-2023-oliver-1920.e0ecb90d.webp",
+              "filename": "23-november-2023-oliver.webp",
+              "alt": "Photo from Oliver! JR"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/C0MnAlgtoT8",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-mixer"
+          ]
+        }
+      },
+      {
+        "id": "event-private-peaceful-2023",
+        "slug": "private-peaceful-2023",
+        "status": "published",
+        "data": {
+          "title": "Private Peaceful",
+          "date": "2023-03-15T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "author": "Michael Morpurgo adapted for the stage by Simon Reade",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/15-march-2023-private-peaceful.jpg",
+              "filename": "15-march-2023-private-peaceful.jpg",
+              "alt": "Photo from Private Peaceful"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-mixer"
+          ]
+        }
+      },
+      {
+        "id": "event-pirates-of-the-curry-bean-2022",
+        "slug": "pirates-of-the-curry-bean-2022",
+        "status": "published",
+        "data": {
+          "title": "Pirates of the Curry Bean",
+          "date": "2022-12-08T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Hayley Wellman",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/8-december-2022-pirates-of-curry-bean.jpg",
+              "filename": "8-december-2022-pirates-of-curry-bean.jpg",
+              "alt": "Photo from Pirates of the Curry Bean"
+            }
+          },
+          "image_credit": "@westminsterus on Instagram",
+          "image_credit_url": "https://www.instagram.com/p/Cl7BgQKoEW4/",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-mixer"
+          ]
+        }
+      },
+      {
+        "id": "event-beanstalk-2022",
+        "slug": "beanstalk-2022",
+        "status": "published",
+        "data": {
+          "title": "Beanstalk!",
+          "date": "2022-10-11T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-mixer"
+          ]
+        }
+      },
+      {
+        "id": "event-guys-and-dolls-2022",
+        "slug": "guys-and-dolls-2022",
+        "status": "published",
+        "data": {
+          "title": "Guys & Dolls",
+          "date": "2022-03-15T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Lindsay Tricker",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "sound"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant",
+            "sound-designer",
+            "sound-mixer"
+          ]
+        }
+      },
+      {
+        "id": "event-johnny-and-the-bomb-2021",
+        "slug": "johnny-and-the-bomb-2021",
+        "status": "published",
+        "data": {
+          "title": "Johnny and the Bomb",
+          "date": "2021-12-09T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Hayley Wellman",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/9-december-2021-johnny-and-the-bomb.jpg",
+              "filename": "9-december-2021-johnny-and-the-bomb.jpg",
+              "alt": "Photo from Johnny and the Bomb"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-colours-ball-2021",
+        "slug": "colours-ball-2021",
+        "status": "published",
+        "data": {
+          "title": "Colours Ball",
+          "date": "2021-06-20T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "The Forest, University of York",
+          "client": "University of York Students' Union",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "production",
+            "sound"
+          ],
+          "role": [
+            "crew-chief",
+            "sound-supervisor"
+          ]
+        }
+      },
+      {
+        "id": "event-summer-showcase-2021",
+        "slug": "summer-showcase-2021",
+        "status": "published",
+        "data": {
+          "title": "Summer Showcase",
+          "date": "2021-06-13T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2021-06-19T12:00:00.000Z",
+          "venue": "Dixon Drama Studio, University of York",
+          "client": "CHMS York",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/13-june-2021-showcase.jpg",
+              "filename": "13-june-2021-showcase.jpg",
+              "alt": "Photo from Summer Showcase"
+            }
+          },
+          "image_credit": "CHMS York",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-love-york-awards-2021",
+        "slug": "love-york-awards-2021",
+        "status": "published",
+        "data": {
+          "title": "Love York Awards",
+          "date": "2021-06-12T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "The Forest, University of York",
+          "client": "University of York Students' Union",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/12-june-2021-love-york-awards.jpg",
+              "filename": "12-june-2021-love-york-awards.jpg",
+              "alt": "Photo from Love York Awards"
+            }
+          },
+          "image_credit": "Luke Snell",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "production",
+            "sound"
+          ],
+          "role": [
+            "technical-manager",
+            "sound-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-a-midsummer-nights-dream-2021",
+        "slug": "a-midsummer-nights-dream-2021",
+        "status": "published",
+        "data": {
+          "title": "A Midsummer Night's Dream",
+          "date": "2021-05-27T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2021-05-30T12:00:00.000Z",
+          "venue": "Rowntree Park Stage",
+          "client": "University of York Shakespeare Society",
+          "author": "William Shakespeare",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "crew"
+          ]
+        }
+      },
+      {
+        "id": "event-high-note-2021",
+        "slug": "high-note-2021",
+        "status": "published",
+        "data": {
+          "title": "High Note",
+          "date": "2021-04-15T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Dixon Drama Studio, University of York",
+          "client": "Theatre, Film & Television, University of York",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "production"
+          ],
+          "role": [
+            "technical-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-queer-cabaret-2020",
+        "slug": "queer-cabaret-2020",
+        "status": "published",
+        "data": {
+          "title": "Queer Cabaret",
+          "date": "2020-10-24T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "The Forest, University of York",
+          "client": "University of York LGBTQ Network",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/24-oct-2020-queer-cabaret.md.jpg",
+              "filename": "24-oct-2020-queer-cabaret.jpg",
+              "alt": "Photo from Queer Cabaret"
+            }
+          },
+          "image_credit": "Queer Cabaret",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "production",
+            "sound"
+          ],
+          "role": [
+            "technical-manager",
+            "sound-operator",
+            "sound-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-dogfight-2020",
+        "slug": "dogfight-2020",
+        "status": "published",
+        "data": {
+          "title": "Dogfight",
+          "date": "2020-03-01T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "John Cooper Studio",
+          "client": "CHMS York",
+          "director": "Anna Gallon",
+          "author": "Peter Duchan",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/1-march-2020-dogfight.jpg",
+              "filename": "1-march-2020-dogfight.jpg",
+              "alt": "Photo from Dogfight"
+            }
+          },
+          "image_credit": "CHMS York",
+          "performances_attended": 4,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting",
+            "production"
+          ],
+          "role": [
+            "sound-designer",
+            "lighting-designer",
+            "technical-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-dance-society-showcase-2020",
+        "slug": "dance-society-showcase-2020",
+        "status": "published",
+        "data": {
+          "title": "Dance Society Showcase",
+          "date": "2020-02-29T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2020-03-01T12:00:00.000Z",
+          "venue": "Central Hall, University of York",
+          "client": "University of York Dance Society",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "production"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-operator",
+            "technical-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-election-results-night-2020",
+        "slug": "election-results-night-2020",
+        "status": "published",
+        "data": {
+          "title": "Election Results Night",
+          "date": "2020-02-22T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Roger Kirk Centre, University of York",
+          "client": "University of York Students' Union",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/22-february-2020-election-results-night.jpg",
+              "filename": "22-february-2020-election-results-night.jpg",
+              "alt": "Photo from Election Results Night"
+            }
+          },
+          "image_credit": "Jacob Dicker",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting",
+            "production"
+          ],
+          "role": [
+            "sound-designer",
+            "lighting-designer",
+            "technical-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-chicago-2020",
+        "slug": "chicago-2020",
+        "status": "published",
+        "data": {
+          "title": "Chicago",
+          "date": "2020-02-13T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2020-02-15T12:00:00.000Z",
+          "venue": "Joseph Rowntree Theatre",
+          "director": "Joe Spence",
+          "author": "Fred Ebb & Bob Fosse",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/13-february-2020-chicago.jpg",
+              "filename": "13-february-2020-chicago.jpg",
+              "alt": "Photo from Chicago"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 4,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-a-tale-of-two-cities-2020",
+        "slug": "a-tale-of-two-cities-2020",
+        "status": "published",
+        "data": {
+          "title": "A Tale of Two Cities",
+          "date": "2020-01-23T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2020-01-25T12:00:00.000Z",
+          "venue": "Dixon Drama Studio, University of York",
+          "client": "University of York Drama Society",
+          "director": "Eleanor Frampton",
+          "author": "Matthew Francis",
+          "performances_attended": 4,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "production"
+          ],
+          "role": [
+            "financial-producer"
+          ]
+        }
+      },
+      {
+        "id": "event-rapunzel-the-pantomime-2020",
+        "slug": "rapunzel-the-pantomime-2020",
+        "status": "published",
+        "data": {
+          "title": "Rapunzel The Pantomime",
+          "date": "2020-01-16T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2020-01-18T12:00:00.000Z",
+          "venue": "Central Hall, University of York",
+          "client": "University of York Pantomime Society",
+          "director": "Jacob Seldon",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-dance-society-competition-2019",
+        "slug": "dance-society-competition-2019",
+        "status": "published",
+        "data": {
+          "title": "Dance Society Competition",
+          "date": "2019-12-01T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Central Hall, University of York",
+          "client": "University of York Dance Society",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-chms-showcase-2019",
+        "slug": "chms-showcase-2019",
+        "status": "published",
+        "data": {
+          "title": "CHMS Showcase",
+          "date": "2019-11-28T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2019-11-30T12:00:00.000Z",
+          "venue": "Central Hall, University of York",
+          "client": "CHMS York",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/28-november-2019-chms-showcase.jpg",
+              "filename": "28-november-2019-chms-showcase.jpg",
+              "alt": "Photo from CHMS Showcase"
+            }
+          },
+          "image_credit": "Nathan Billis",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-yorks-got-talent-2019",
+        "slug": "yorks-got-talent-2019",
+        "status": "published",
+        "data": {
+          "title": "York's Got Talent",
+          "date": "2019-11-25T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Central Hall, University of York",
+          "client": "University of York Students' Union",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/25-november-2019-yorks-got-talent.jpg",
+              "filename": "25-november-2019-yorks-got-talent.jpg",
+              "alt": "Photo from York's Got Talent"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-woman-in-black-2019",
+        "slug": "woman-in-black-2019",
+        "status": "published",
+        "data": {
+          "title": "Woman in Black",
+          "date": "2019-11-12T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2019-11-16T12:00:00.000Z",
+          "venue": "Main House, York Theatre Royal",
+          "director": "Robin Herford",
+          "author": "Stephen Mallatratt",
+          "performances_attended": 0,
+          "professional": true,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "house-casual-lx"
+          ]
+        }
+      },
+      {
+        "id": "event-reasons-to-stay-alive-2019",
+        "slug": "reasons-to-stay-alive-2019",
+        "status": "published",
+        "data": {
+          "title": "Reasons to Stay Alive",
+          "date": "2019-11-05T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main House, York Theatre Royal",
+          "director": "Jonathan Watkins",
+          "author": "April De Angelis",
+          "performances_attended": 0,
+          "professional": true,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "house-casual-lx"
+          ]
+        }
+      },
+      {
+        "id": "event-takeover-festival-2019",
+        "slug": "takeover-festival-2019",
+        "status": "published",
+        "data": {
+          "title": "TakeOver Festival 2019",
+          "date": "2019-10-28T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2019-11-03T12:00:00.000Z",
+          "venue": "Main House, York Theatre Royal",
+          "performances_attended": 0,
+          "professional": true,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "production"
+          ],
+          "role": [
+            "production-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-spaced-out-and-ready-to-die-2019",
+        "slug": "spaced-out-and-ready-to-die-2019",
+        "status": "published",
+        "data": {
+          "title": "Spaced Out and Ready to Die",
+          "date": "2019-10-14T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Drama Barn, University of York",
+          "client": "University of York Drama Society",
+          "director": "Emily Wood",
+          "author": "Emily Wood",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-operator",
+            "lighting-designer",
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-yusu-comedy-night-2019",
+        "slug": "yusu-comedy-night-2019",
+        "status": "published",
+        "data": {
+          "title": "YUSU Comedy Night 2019",
+          "date": "2019-10-06T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Central Hall, University of York",
+          "client": "University of York Students' Union",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/6-october-2019-yusu-comedy-night-2019.jpeg",
+              "filename": "6-october-2019-yusu-comedy-night-2019.jpeg",
+              "alt": "Photo from YUSU Comedy Night 2019"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 1,
+          "professional": true,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-parade-2019",
+        "slug": "parade-2019",
+        "status": "published",
+        "data": {
+          "title": "Parade",
+          "date": "2019-08-08T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2019-08-10T12:00:00.000Z",
+          "venue": "The Other Palace",
+          "client": "NYMT",
+          "author": "Jason Robert Brown & Alfred Uhry",
+          "performances_attended": 1,
+          "professional": true,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "production-sound-engineer-work-experience"
+          ]
+        }
+      },
+      {
+        "id": "event-rent-2019",
+        "slug": "rent-2019",
+        "status": "published",
+        "data": {
+          "title": "RENT",
+          "date": "2019-06-20T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2019-06-22T12:00:00.000Z",
+          "venue": "John Cooper Studio",
+          "client": "CHMS York",
+          "director": "Jess Field",
+          "author": "Jonathan Larson",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/public/images/portfolio/20-june-2019-rent-1920.4c1498dd.webp",
+              "filename": "20-june-2019-rent.webp",
+              "alt": "Photo from RENT"
+            }
+          },
+          "image_credit": "Katherine Johnston",
+          "performances_attended": 4,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting",
+            "production"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator",
+            "lighting-designer",
+            "lighting-programmer",
+            "technical-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-love-york-awards-2019",
+        "slug": "love-york-awards-2019",
+        "status": "published",
+        "data": {
+          "title": "Love York Awards",
+          "date": "2019-06-05T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Joseph Rowntree Theatre",
+          "client": "University of York Students' Union",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/5-june-2019-love-york-awards.jpg",
+              "filename": "5-june-2019-love-york-awards.jpg",
+              "alt": "Photo from Love York Awards"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-from-up-here-2019",
+        "slug": "from-up-here-2019",
+        "status": "published",
+        "data": {
+          "title": "From Up Here",
+          "date": "2019-05-31T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2019-06-02T12:00:00.000Z",
+          "venue": "Drama Barn, University of York",
+          "client": "University of York Drama Society",
+          "director": "David Charter",
+          "author": "Aron Lee Lambert",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/31-may-2019-from-up-here.jpg",
+              "filename": "31-may-2019-from-up-here.jpg",
+              "alt": "Photo from From Up Here"
+            }
+          },
+          "image_credit": "Anna Bunch",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-operator",
+            "lighting-designer",
+            "lighting-operator",
+            "lighting-programmer"
+          ]
+        }
+      },
+      {
+        "id": "event-medium-readings-and-oracle-healings-2019",
+        "slug": "medium-readings-and-oracle-healings-2019",
+        "status": "published",
+        "data": {
+          "title": "Medium Readings and Oracle Healings",
+          "date": "2019-04-26T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Drama Barn, University of York",
+          "client": "University of York Drama Society",
+          "director": "Lucia Rimini",
+          "author": "Ashley Milne",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/26-april-2019-medium-readings-and-oracle-healings.jpeg",
+              "filename": "26-april-2019-medium-readings-and-oracle-healings.jpeg",
+              "alt": "Photo from Medium Readings and Oracle Healings"
+            }
+          },
+          "image_credit": "Greg Tiani",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-operator",
+            "lighting-designer",
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-macbeth-2019",
+        "slug": "macbeth-2019",
+        "status": "published",
+        "data": {
+          "title": "Macbeth",
+          "date": "2019-03-27T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "client": "Westminster Under School",
+          "director": "Charlie Hill",
+          "author": "William Shakespeare",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-image-of-an-unknown-young-woman-2019",
+        "slug": "image-of-an-unknown-young-woman-2019",
+        "status": "published",
+        "data": {
+          "title": "Image of an Unknown Young Woman",
+          "date": "2019-03-08T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Drama Barn, University of York",
+          "client": "University of York Drama Society",
+          "director": "Jessy Roberts",
+          "author": "Elinor Cook",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/8-march-2019-image-of-an-unknown-young-woman.jpg",
+              "filename": "8-march-2019-image-of-an-unknown-young-woman.jpg",
+              "alt": "Photo from Image of an Unknown Young Woman"
+            }
+          },
+          "image_credit": "Greg Tiani",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting",
+            "production"
+          ],
+          "role": [
+            "sound-operator",
+            "lighting-designer",
+            "lighting-operator",
+            "lighting-programmer",
+            "technical-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-tin-foil-hat-2019",
+        "slug": "tin-foil-hat-2019",
+        "status": "published",
+        "data": {
+          "title": "Tin foil hat",
+          "date": "2019-02-25T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Drama Barn, University of York",
+          "client": "University of York Drama Society",
+          "director": "Eloise Curtis",
+          "author": "Eloise Curtis",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/25-february-2019-tin-foil-hat.jpg",
+              "filename": "25-february-2019-tin-foil-hat.jpg",
+              "alt": "Photo from Tin foil hat"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-operator",
+            "lighting-designer",
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-legally-blonde-2019",
+        "slug": "legally-blonde-2019",
+        "status": "published",
+        "data": {
+          "title": "Legally Blonde",
+          "date": "2019-02-21T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Joseph Rowntree Theatre",
+          "client": "CHMS York",
+          "director": "Immy Wood",
+          "author": "Heather Hach",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/21-february-2019-legally-blonde.jpg",
+              "filename": "21-february-2019-legally-blonde.jpg",
+              "alt": "Photo from Legally Blonde"
+            }
+          },
+          "image_credit": "CHMS York",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-wesmun-2019",
+        "slug": "wesmun-2019",
+        "status": "published",
+        "data": {
+          "title": "WesMUN 2019",
+          "date": "2019-02-15T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2019-02-16T12:00:00.000Z",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-operator",
+            "lighting-designer",
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-sunday-roast-and-tiger-who-came-to-tea-2019",
+        "slug": "sunday-roast-and-tiger-who-came-to-tea-2019",
+        "status": "published",
+        "data": {
+          "title": "Sunday roast & Tiger who Came to Tea",
+          "date": "2019-02-11T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Drama Barn, University of York",
+          "client": "University of York Drama Society",
+          "director": "Aisling Lally",
+          "author": "Aisling Lally",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-operator",
+            "lighting-designer",
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-hercules-the-pantomime-2019",
+        "slug": "hercules-the-pantomime-2019",
+        "status": "published",
+        "data": {
+          "title": "Hercules The Pantomime",
+          "date": "2019-01-24T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Central Hall, University of York",
+          "client": "University of York Pantomime Society",
+          "director": "Holly Taylor",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/24-january-2019-hercules-the-pantomime.jpg",
+              "filename": "24-january-2019-hercules-the-pantomime.jpg",
+              "alt": "Photo from Hercules The Pantomime"
+            }
+          },
+          "image_credit": "Kat Johnston",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-porridge-2018",
+        "slug": "porridge-2018",
+        "status": "published",
+        "data": {
+          "title": "Porridge",
+          "date": "2018-12-06T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Hayley Wellman",
+          "author": "Craig Hawes",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-dance-society-competition-2018",
+        "slug": "dance-society-competition-2018",
+        "status": "published",
+        "data": {
+          "title": "Dance Society Competition",
+          "date": "2018-12-02T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Central Hall, University of York",
+          "client": "University of York Dance Society",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator",
+            "lighting-programmer"
+          ]
+        }
+      },
+      {
+        "id": "event-sherlock-the-sign-of-four-the-pantomime-2018",
+        "slug": "sherlock-the-sign-of-four-the-pantomime-2018",
+        "status": "published",
+        "data": {
+          "title": "Sherlock: The Sign of Four. The Pantomime",
+          "date": "2018-11-24T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "PZA/103, University of York",
+          "client": "University of York Pantomime Society",
+          "author": "Una Hogan",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator",
+            "lighting-designer",
+            "lighting-programmer"
+          ]
+        }
+      },
+      {
+        "id": "event-antigone-2018",
+        "slug": "antigone-2018",
+        "status": "published",
+        "data": {
+          "title": "Antigone",
+          "date": "2018-11-16T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Drama Barn, University of York",
+          "client": "University of York Drama Society",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "front-of-house"
+          ],
+          "role": [
+            "front-of-house-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-six-characters-in-search-of-an-author-2018",
+        "slug": "six-characters-in-search-of-an-author-2018",
+        "status": "published",
+        "data": {
+          "title": "Six Characters in Search of an Author",
+          "date": "2018-11-09T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Drama Barn, University of York",
+          "client": "University of York Drama Society",
+          "director": "Valeria Di Pasquale",
+          "author": "Luigi Pirandello",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/9-november-2018-six-characters-in-search-of-an-author.jpg",
+              "filename": "9-november-2018-six-characters-in-search-of-an-author.jpg",
+              "alt": "Photo from Six Characters in Search of an Author"
+            }
+          },
+          "image_credit": "Greg Tiani",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-operator",
+            "lighting-designer",
+            "lighting-operator",
+            "lighting-programmer"
+          ]
+        }
+      },
+      {
+        "id": "event-wedding-2018",
+        "slug": "wedding-2018",
+        "status": "published",
+        "data": {
+          "title": "Wedding",
+          "date": "2018-10-20T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Up School, Westminster School",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-advisor"
+          ]
+        }
+      },
+      {
+        "id": "event-sir-adrian-boult-memorial-concert-jacob-collier-2018",
+        "slug": "sir-adrian-boult-memorial-concert-jacob-collier-2018",
+        "status": "published",
+        "data": {
+          "title": "Sir Adrian Boult Memorial Concert - Jacob Collier",
+          "date": "2018-10-12T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-operator",
+            "lighting-programmer"
+          ]
+        }
+      },
+      {
+        "id": "event-o2-silver-clef-awards-2018",
+        "slug": "o2-silver-clef-awards-2018",
+        "status": "published",
+        "data": {
+          "title": "O2 Silver Clef Awards",
+          "date": "2018-07-07T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Grosvenor House Hotel",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-42nd-annual-phab-show-2018",
+        "slug": "42nd-annual-phab-show-2018",
+        "status": "published",
+        "data": {
+          "title": "42nd annual PHAB Show",
+          "date": "2018-07-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "director": "Bhavna Choraria",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-snow-white-and-me-2018",
+        "slug": "snow-white-and-me-2018",
+        "status": "published",
+        "data": {
+          "title": "Snow White and Me",
+          "date": "2018-06-28T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Prince of Wales Theatre Bar",
+          "director": "Kate Golledge",
+          "author": "Philip LaZebnik/Ronald Kruschak/Pippa Cleary",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "production-sound-engineer-work-experience"
+          ]
+        }
+      },
+      {
+        "id": "event-a-midsummer-nights-dream-2018",
+        "slug": "a-midsummer-nights-dream-2018",
+        "status": "published",
+        "data": {
+          "title": "A Midsummer Night's Dream",
+          "date": "2018-05-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Main Hall, Westminster Under School",
+          "author": "William Shakespeare",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-programmer"
+          ]
+        }
+      },
+      {
+        "id": "event-jazz-concert-up-school-2018",
+        "slug": "jazz-concert-up-school-2018",
+        "status": "published",
+        "data": {
+          "title": "Jazz Concert up school",
+          "date": "2018-04-01T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Up School, Westminster School",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-operator",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-cabaret-2018",
+        "slug": "cabaret-2018",
+        "status": "published",
+        "data": {
+          "title": "Cabaret",
+          "date": "2018-01-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/january-2018-cabaret.jpg",
+              "filename": "january-2018-cabaret.jpg",
+              "alt": "Photo from Cabaret"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "production"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-mixer",
+            "operator",
+            "programme-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-jungle-book-2017",
+        "slug": "jungle-book-2017",
+        "status": "published",
+        "data": {
+          "title": "Jungle Book",
+          "date": "2017-12-01T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Main Hall, Westminster Under School",
+          "director": "Hannah Verney",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/1-december-2017-jungle-book.jpg",
+              "filename": "1-december-2017-jungle-book.jpg",
+              "alt": "Photo from Jungle Book"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": true
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-operator",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-the-birds-2017",
+        "slug": "the-birds-2017",
+        "status": "published",
+        "data": {
+          "title": "The Birds",
+          "date": "2017-11-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Dominic Jones",
+          "author": "Aristophanes",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "production"
+          ],
+          "role": [
+            "technical-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-american-classics-2017",
+        "slug": "american-classics-2017",
+        "status": "published",
+        "data": {
+          "title": "American Classics",
+          "date": "2017-10-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting",
+            "production",
+            "front-of-house"
+          ],
+          "role": [
+            "sound-designer",
+            "followspot-operator",
+            "programme-designer",
+            "front-of-house-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-elizabethan-festival-2017",
+        "slug": "elizabethan-festival-2017",
+        "status": "published",
+        "data": {
+          "title": "Elizabethan Festival 2017",
+          "date": "2017-09-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "production-sound-engineer"
+          ]
+        }
+      },
+      {
+        "id": "event-wedding-july-2017",
+        "slug": "wedding-july-2017",
+        "status": "published",
+        "data": {
+          "title": "Wedding",
+          "date": "2017-07-08T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Up School, Westminster School",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-designer",
+            "lighting-designer",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-norvil-and-josephine-magic-at-phab-2017",
+        "slug": "norvil-and-josephine-magic-at-phab-2017",
+        "status": "published",
+        "data": {
+          "title": "Norvil and Josephine Magic at PHAB 2017",
+          "date": "2017-07-01T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Up School, Westminster School",
+          "director": "Christopher Howell",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting",
+            "automation"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator",
+            "lighting-rigging-assistant",
+            "head-flyman-hemp"
+          ]
+        }
+      },
+      {
+        "id": "event-41st-annual-phab-show-2017",
+        "slug": "41st-annual-phab-show-2017",
+        "status": "published",
+        "data": {
+          "title": "41st annual PHAB Show",
+          "date": "2017-07-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "director": "Bhavna Choraria",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-mixer",
+            "operator",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-wedding-may-2017",
+        "slug": "wedding-may-2017",
+        "status": "published",
+        "data": {
+          "title": "Wedding",
+          "date": "2017-05-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-hanging-hooke-2017",
+        "slug": "hanging-hooke-2017",
+        "status": "published",
+        "data": {
+          "title": "Hanging Hooke",
+          "date": "2017-03-01T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "director": "Siobhan Nicholas",
+          "performances_attended": 2,
+          "professional": true,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-drinking-companions-and-a-talk-in-the-park-2017",
+        "slug": "drinking-companions-and-a-talk-in-the-park-2017",
+        "status": "published",
+        "data": {
+          "title": "Drinking Companions & A Talk in the Park",
+          "date": "2017-03-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "James Bithell",
+          "author": "Alan Ayckbourn",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/march-2017-drinking-companions--a-talk-in-the-park.jpg",
+              "filename": "march-2017-drinking-companions--a-talk-in-the-park.jpg",
+              "alt": "Photo from Drinking Companions & A Talk in the Park"
+            }
+          },
+          "image_credit": "James Bithell",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "direction",
+            "production"
+          ],
+          "role": [
+            "director",
+            "programme-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-tis-pity-shes-a-whore-2017",
+        "slug": "tis-pity-shes-a-whore-2017",
+        "status": "published",
+        "data": {
+          "title": "Tis Pity She's A Whore",
+          "date": "2017-03-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Rhiannon Williams",
+          "author": "John Ford",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-operator",
+            "lighting-operator",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-oklahoma-2017",
+        "slug": "oklahoma-2017",
+        "status": "published",
+        "data": {
+          "title": "Oklahoma!",
+          "date": "2017-02-07T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Up School, Westminster School",
+          "director": "Peter Chequer",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/7-february-2017-oklahoma.jpg",
+              "filename": "7-february-2017-oklahoma.jpg",
+              "alt": "Photo from Oklahoma!"
+            }
+          },
+          "image_credit": "Sandy Crole",
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-the-crucible-2017",
+        "slug": "the-crucible-2017",
+        "status": "published",
+        "data": {
+          "title": "The Crucible",
+          "date": "2017-01-01T12:00:00.000Z",
+          "date_precision": "year",
+          "venue": "Main Hall, Westminster Under School",
+          "client": "Westminster Under School",
+          "director": "Charlie Hill",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-miles-gloriosus-2017",
+        "slug": "miles-gloriosus-2017",
+        "status": "published",
+        "data": {
+          "title": "Miles Gloriosus",
+          "date": "2017-01-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Dominic Jones",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "production-sound-engineer"
+          ]
+        }
+      },
+      {
+        "id": "event-wedding-december-2016",
+        "slug": "wedding-december-2016",
+        "status": "published",
+        "data": {
+          "title": "Wedding",
+          "date": "2016-12-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-designer",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-renaissance-festival-2016",
+        "slug": "renaissance-festival-2016",
+        "status": "published",
+        "data": {
+          "title": "Renaissance Festival 2016",
+          "date": "2016-10-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "director": "Peter Chequer",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting",
+            "production"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-operator",
+            "lighting-programmer",
+            "programme-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-the-tempest-2016",
+        "slug": "the-tempest-2016",
+        "status": "published",
+        "data": {
+          "title": "The Tempest",
+          "date": "2016-10-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "director": "Peter Chequer",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/october-2016-the-tempest.jpg",
+              "filename": "october-2016-the-tempest.jpg",
+              "alt": "Photo from The Tempest"
+            }
+          },
+          "image_credit": "Sandy Crole",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting",
+            "set"
+          ],
+          "role": [
+            "lighting-programmer",
+            "set-build-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-wedding-october-2016",
+        "slug": "wedding-october-2016",
+        "status": "published",
+        "data": {
+          "title": "Wedding",
+          "date": "2016-10-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-elizabethan-festival-2016",
+        "slug": "elizabethan-festival-2016",
+        "status": "published",
+        "data": {
+          "title": "Elizabethan Festival",
+          "date": "2016-09-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-40th-annual-phab-show-2016",
+        "slug": "40th-annual-phab-show-2016",
+        "status": "published",
+        "data": {
+          "title": "40th Annual PHAB Show",
+          "date": "2016-07-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "director": "Bhavna Choraria",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-mixer",
+            "operator"
+          ]
+        }
+      },
+      {
+        "id": "event-norvil-and-josephine-magic-at-phab-2016",
+        "slug": "norvil-and-josephine-magic-at-phab-2016",
+        "status": "published",
+        "data": {
+          "title": "Norvil and Josephine Magic at PHAB 2016",
+          "date": "2016-07-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "director": "Christopher Howell",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting",
+            "automation"
+          ],
+          "role": [
+            "sound-mixer",
+            "operator",
+            "lighting-rigging-assistant",
+            "head-flyman-hemp"
+          ]
+        }
+      },
+      {
+        "id": "event-desperate-measures-2016",
+        "slug": "desperate-measures-2016",
+        "status": "published",
+        "data": {
+          "title": "Desperate Measures",
+          "date": "2016-05-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Chris Barton",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/may-2016-desperate-measures.jpg",
+              "filename": "may-2016-desperate-measures.jpg",
+              "alt": "Photo from Desperate Measures"
+            }
+          },
+          "image_credit": "Sandy Crole",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "standby-technician"
+          ]
+        }
+      },
+      {
+        "id": "event-hippolytus-2016",
+        "slug": "hippolytus-2016",
+        "status": "published",
+        "data": {
+          "title": "Hippolytus",
+          "date": "2016-03-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall Studio, Westminster School",
+          "client": "Westminster School",
+          "director": "Amy Gandon",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "video"
+          ],
+          "role": [
+            "sound-designer",
+            "camera-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-wesmun-2016",
+        "slug": "wesmun-2016",
+        "status": "published",
+        "data": {
+          "title": "WesMUN 2016",
+          "date": "2016-02-12T12:00:00.000Z",
+          "date_precision": "day",
+          "end_date": "2016-02-15T12:00:00.000Z",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "lighting"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-mixer",
+            "operator",
+            "lighting-rigging-assistant"
+          ]
+        }
+      },
+      {
+        "id": "event-renaissance-festival-2015",
+        "slug": "renaissance-festival-2015",
+        "status": "published",
+        "data": {
+          "title": "Renaissance Festival 2015",
+          "date": "2015-10-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-black-comedy-2015",
+        "slug": "black-comedy-2015",
+        "status": "published",
+        "data": {
+          "title": "Black Comedy",
+          "date": "2015-09-21T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Millicent Fawcett Hall Studio, Westminster School",
+          "client": "Westminster School",
+          "director": "James Bithell & Laura de Lisle",
+          "author": "Peter Shaffer",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/21-september-2015-black-comedy.jpg",
+              "filename": "21-september-2015-black-comedy.jpg",
+              "alt": "Photo from Black Comedy"
+            }
+          },
+          "image_credit": "Sandy Crole",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "direction",
+            "production"
+          ],
+          "role": [
+            "co-director",
+            "producer",
+            "programme-designer"
+          ]
+        }
+      },
+      {
+        "id": "event-39th-annual-phab-show-2015",
+        "slug": "39th-annual-phab-show-2015",
+        "status": "published",
+        "data": {
+          "title": "39th Annual PHAB Show",
+          "date": "2015-07-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "director": "Ransford Agyare-Kwabi",
+          "performances_attended": 1,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-a-midsummer-nights-dream-2015",
+        "slug": "a-midsummer-nights-dream-2015",
+        "status": "published",
+        "data": {
+          "title": "A Midsummer Night's Dream",
+          "date": "2015-06-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/june-2015-a-midsummer-nights-dream.jpg",
+              "filename": "june-2015-a-midsummer-nights-dream.jpg",
+              "alt": "Photo from A Midsummer Night's Dream"
+            }
+          },
+          "image_credit": "Sandy Crole",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "production"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-mixer",
+            "operator",
+            "technical-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-treasure-island-2015",
+        "slug": "treasure-island-2015",
+        "status": "published",
+        "data": {
+          "title": "Treasure Island",
+          "date": "2015-05-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Millicent Fawcett Hall Studio, Westminster School",
+          "client": "Westminster School",
+          "director": "Chris Barton",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/may-2015-treasure-island.jpg",
+              "filename": "may-2015-treasure-island.jpg",
+              "alt": "Photo from Treasure Island"
+            }
+          },
+          "image_credit": "Sandy Crole",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "lighting"
+          ],
+          "role": [
+            "lighting-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-guys-and-dolls-2015",
+        "slug": "guys-and-dolls-2015",
+        "status": "published",
+        "data": {
+          "title": "Guys & Dolls",
+          "date": "2015-03-01T12:00:00.000Z",
+          "date_precision": "month",
+          "venue": "Up School, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "featured_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/jbithell/jbithell/e536bc3fd85954c8e97ba17fd32ddc8bdc7e06ba/images/portfolio/march-2015-guys--dolls.jpg",
+              "filename": "march-2015-guys--dolls.jpg",
+              "alt": "Photo from Guys & Dolls"
+            }
+          },
+          "image_credit": "Sandy Crole",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "automation",
+            "stage-management"
+          ],
+          "role": [
+            "head-flyman-hemp",
+            "stage-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-doggs-hamlet-and-cahoots-macbeth-2014",
+        "slug": "doggs-hamlet-and-cahoots-macbeth-2014",
+        "status": "published",
+        "data": {
+          "title": "Dogg's Hamlet & Cahoot's Macbeth",
+          "date": "2014-09-01T12:00:00.000Z",
+          "date_precision": "day",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "director": "David Hemsley-Brown & Eduardo Strike",
+          "performances_attended": 2,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-operator"
+          ]
+        }
+      },
+      {
+        "id": "event-renaissance-festival-2014",
+        "slug": "renaissance-festival-2014",
+        "status": "published",
+        "data": {
+          "title": "Renaissance Festival 2014",
+          "date": "2014-01-01T12:00:00.000Z",
+          "date_precision": "year",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "performances_attended": 0,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "stage-management"
+          ],
+          "role": [
+            "assistant-stage-manager"
+          ]
+        }
+      },
+      {
+        "id": "event-the-prince-of-denmark-2014",
+        "slug": "the-prince-of-denmark-2014",
+        "status": "published",
+        "data": {
+          "title": "The Prince of Denmark",
+          "date": "2014-01-01T12:00:00.000Z",
+          "date_precision": "year",
+          "venue": "Millicent Fawcett Hall, Westminster School",
+          "client": "Westminster School",
+          "director": "Peter Chequer",
+          "performances_attended": 3,
+          "professional": false,
+          "paid": false
+        },
+        "taxonomies": {
+          "discipline": [
+            "sound",
+            "stage-management"
+          ],
+          "role": [
+            "sound-designer",
+            "sound-operator",
+            "stage-manager"
+          ]
+        }
+      }
+    ]
+  }
+}

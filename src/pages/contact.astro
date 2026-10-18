@@ -1,0 +1,19 @@
+---
+import { getSiteSettings } from "emdash";
+import { ContactCard } from "../components/ContactCard";
+import Base from "../layouts/Base.astro";
+import { EMAIL, socialLinks } from "../lib/site";
+
+const settings = await getSiteSettings();
+---
+
+<Base
+  title="Contact"
+  description={`Contact ${settings.title || "James Bithell"} by email at ${EMAIL}, on Facebook Messenger or LinkedIn.`}
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Contact", href: "/contact" },
+  ]}
+>
+  <ContactCard email={EMAIL} links={socialLinks(settings.social)} />
+</Base>

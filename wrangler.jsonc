@@ -5,11 +5,50 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "jbithellcom",
-  "compatibility_date": "2025-04-04",
-  "main": "./workers/app.ts",
-  "assets": {
-    // Serve prerendered pages at /events rather than redirecting to /events/
-    "html_handling": "drop-trailing-slash"
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-02-24",
+  "compatibility_flags": ["nodejs_compat"],
+  // EmDash's public origin. Passkeys are tied to it, so the setup wizard and sign-in only work on
+  // this domain (not on workers.dev preview URLs, which share the production database). For local
+  // development, override it in .dev.vars or sign in with the dev bypass
+  "vars": {
+    "EMDASH_SITE_URL": "https://jbithell.com"
+  },
+  // www.jbithell.com redirects to jbithell.com (see src/middleware.ts)
+  "routes": [
+    { "pattern": "jbithell.com", "custom_domain": true },
+    { "pattern": "www.jbithell.com", "custom_domain": true }
+  ],
+  "workers_dev": false,
+  // Preview URLs for each version and branch. They use the production database and bucket
+  "preview_urls": true,
+  // Run the Worker next to the D1 primary, as each uncached page makes several D1 queries.
+  // aws:eu-west-2 (London) suits a D1 database in Western Europe (WEUR): check its location under
+  // Storage & databases > D1 and change this if it's elsewhere. Don't enable D1 read replicas with this
+  "placement": {
+    "mode": "targeted",
+    "region": "aws:eu-west-2"
+  },
+  // EmDash content and media. Wrangler creates both on the first deploy
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "jbithellcom"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "jbithellcom-media"
+    }
+  ],
+  // Resizes CMS images into responsive WebP/AVIF variants
+  "images": {
+    "binding": "IMAGES"
+  },
+  // EmDash scheduled publishing and maintenance
+  "triggers": {
+    "crons": ["* * * * *"]
   },
   "version_metadata": {
     "binding": "CF_VERSION_METADATA"

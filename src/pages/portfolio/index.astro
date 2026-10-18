@@ -1,0 +1,18 @@
+---
+import PortfolioListing from "../../components/PortfolioListing.astro";
+import { eventYear } from "../../lib/events";
+import { getEvents } from "../../lib/portfolio";
+
+const events = await getEvents(Astro);
+const since = events.length ? eventYear(events[events.length - 1].data) : "2014";
+---
+
+<PortfolioListing
+  title="Event Portfolio"
+  description={`James Bithell's Event Portfolio - theatre, concerts and events worked on since ${since}`}
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Event Portfolio", href: "/portfolio" },
+  ]}
+  events={events}
+/>

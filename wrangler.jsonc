@@ -14,6 +14,21 @@
   "vars": {
     "EMDASH_SITE_URL": "https://jbithell.com"
   },
+  // www.jbithell.com redirects to jbithell.com (see src/middleware.ts)
+  "routes": [
+    { "pattern": "jbithell.com", "custom_domain": true },
+    { "pattern": "www.jbithell.com", "custom_domain": true }
+  ],
+  "workers_dev": false,
+  // Version preview URLs would expose the setup wizard and admin on workers.dev, against the production database
+  "preview_urls": false,
+  // Run the Worker next to the D1 primary, as each uncached page makes several D1 queries.
+  // aws:eu-west-2 (London) suits a D1 database in Western Europe (WEUR): check its location under
+  // Storage & databases > D1 and change this if it's elsewhere. Don't enable D1 read replicas with this
+  "placement": {
+    "mode": "targeted",
+    "region": "aws:eu-west-2"
+  },
   // EmDash content and media. Wrangler creates both on the first deploy
   "d1_databases": [
     {

@@ -1,18 +1,5 @@
 import { defineMiddleware } from "astro:middleware";
-
-// Static assets get the same headers from public/_headers. Keep the two in sync
-const securityHeaders = {
-  "X-Content-Type-Options": "nosniff",
-  "Referrer-Policy": "strict-origin-when-cross-origin",
-  "Permissions-Policy":
-    "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()",
-  // 'self' rather than 'none' so the EmDash admin can preview pages in a frame
-  "Content-Security-Policy":
-    "frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests",
-  "X-Frame-Options": "SAMEORIGIN",
-  "Strict-Transport-Security": "max-age=31536000",
-  "Cross-Origin-Opener-Policy": "same-origin",
-};
+import { securityHeaders } from "./lib/headers";
 
 // Lets agents discover the machine-readable versions of the site without parsing HTML
 const discoveryLinks = [
@@ -20,12 +7,15 @@ const discoveryLinks = [
   '</sitemap.xml>; rel="sitemap"; type="application/xml"',
 ].join(", ");
 
-export const onRequest = defineMiddleware(async (context, next) => {
-  const response = await next();
+export const onRequest = defineMiddleware(async (context, next) =>
+  withHeaders(await next(), context.url.pathname),
+);
+
+function withHeaders(response: Response, pathname: string) {
   // Redirect responses can be immutable
   const headers = new Headers(response.headers);
   for (const [name, value] of Object.entries(securityHeaders)) headers.set(name, value);
-  if (!context.url.pathname.startsWith("/_emdash/")) {
+  if (!pathname.startsWith("/_emdash/")) {
     const existing = headers.get("Link");
     headers.set("Link", existing ? `${existing}, ${discoveryLinks}` : discoveryLinks);
   }
@@ -34,4 +24,4 @@ export const onRequest = defineMiddleware(async (context, next) => {
     statusText: response.statusText,
     headers,
   });
-});
+}

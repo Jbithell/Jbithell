@@ -59,6 +59,8 @@ export default defineConfig({
       storage: r2({ binding: "MEDIA" }),
       // Keeps public HTML identical for every visitor, so it can be served from the edge cache
       toolbar: "client",
+      // Redirects www.jbithell.com to jbithell.com before EmDash runs
+      middleware: { outer: "./src/outer-middleware.ts" },
     }),
   ],
   devToolbar: { enabled: false },

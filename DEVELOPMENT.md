@@ -55,11 +55,12 @@ The first deploy creates the `jbithellcom` D1 database and `jbithellcom-media` R
 
 Notes:
 
-- `EMDASH_SITE_URL` in `wrangler.jsonc` pins sign-in to https://jbithell.com. Cloudflare's Git integration deploys a preview of every branch to a public `workers.dev` URL **using the production D1 database and R2 bucket**, and this stops anyone claiming the admin account through one. To give previews their own data instead, add a [`previews` block](https://docs.emdashcms.com/deployment/cloudflare/#worker-previews) with separate resources, or turn off non-production branch builds in the dashboard.
+- The Worker serves jbithell.com and www.jbithell.com as custom domains (`routes` in `wrangler.jsonc`), and www redirects to jbithell.com (`src/outer-middleware.ts`). The `workers.dev` address and version preview URLs are turned off: previews would run against the production D1 database and R2 bucket. `EMDASH_SITE_URL` also pins sign-in to https://jbithell.com.
+- The Worker runs next to the D1 primary (`placement` in `wrangler.jsonc`), set to London (`aws:eu-west-2`) for a database in Western Europe. Check the database's location under **Storage & databases > D1** in the dashboard and change the region if it's elsewhere. Don't enable D1 read replicas alongside this.
 
 - EmDash's Worker is about 5 MB gzipped, so it needs the [Workers Paid plan](https://developers.cloudflare.com/workers/platform/limits/#worker-size) (Workers Free allows 3 MB).
 - `EMDASH_ENCRYPTION_KEY` only protects plugin secrets. Before adding a plugin that stores secrets, set it with `npx emdash secrets generate` and `npx wrangler secret put EMDASH_ENCRYPTION_KEY`, and keep a copy.
-- Public pages are cached at the edge by the Workers Cache (`routeRules` in `astro.config.mjs`) and purged by EmDash on publish. Add a rule for any new public route.
+- Public pages are cached at the edge by the Workers Cache (`routeRules` in `astro.config.mjs`), so most visits never run the Worker or query D1, and EmDash purges them on publish. Add a rule for any new public route. EmDash's optional KV object cache isn't enabled: cache misses that refill the edge cache bypass it by design, so it would mainly speed up signed-in editing.
 - CMS images are resized by the Cloudflare Images binding (free for up to 5,000 unique transformations a month). The `image.remotePatterns` entry for `jbithell.com` in `astro.config.mjs` must match the production domain, or images are served at full size.
 
 ## Seed

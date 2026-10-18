@@ -10,7 +10,7 @@ import type { CvItemData } from "../components/CvItem";
 import { cmsImage } from "./images";
 import { projectPath } from "./projects";
 
-type AstroLike = Pick<AstroGlobal, "url" | "locals" | "cache">;
+type AstroLike = Pick<AstroGlobal, "url" | "locals">;
 
 /** Who the CV is rendered for: everyone at /cv, or a signed-in editor or share link at /cv/private */
 export type CvAudience = "public" | "private";
@@ -97,7 +97,7 @@ const LOGO = { widths: [56, 112], sizes: "56px" };
 
 /**
  * The CV's experience, volunteering and education, newest first. The public audience only gets
- * entries marked public, and only it sets cache hints, so the private CV is never cached
+ * entries marked public
  */
 export async function getCv(astro: AstroLike, audience: CvAudience) {
   const where = audience === "public" ? { where: { visibility: "public" } } : {};
@@ -107,18 +107,11 @@ export async function getCv(astro: AstroLike, audience: CvAudience) {
   ]);
   if (experience.error) throw experience.error;
   if (education.error) throw education.error;
-  const cache = (hint?: { tags?: string[]; lastModified?: Date }) => {
-    if (audience === "public" && hint && astro.cache?.enabled) astro.cache.set(hint);
-  };
-  cache(experience.cacheHint);
-  cache(education.cacheHint);
-
   const showPrivate = audience === "private";
   const roles = await Promise.all(
     (experience.entries as ContentEntry<Experience>[]).map(async ({ data }) => {
       const projects = await getEmDashReferences<Project>("experience", data.id, "projects");
       if (projects.error) throw projects.error;
-      cache(projects.cacheHint);
       const item: CvItem = {
         card: {
           id: data.id,

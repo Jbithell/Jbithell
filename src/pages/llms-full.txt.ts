@@ -5,11 +5,13 @@ import { eventMarkdown, markdownResponse } from "../lib/markdown";
 import { getEvents } from "../lib/portfolio";
 import { EMAIL } from "../lib/site";
 
+export const prerender = true;
+
 export const GET: APIRoute = async (context) => {
   const settings = await getSiteSettings();
   const siteUrl = (settings.url || context.url.origin).replace(/\/$/, "");
   const name = settings.title || "James Bithell";
-  const events = await getEvents(context);
+  const events = await getEvents();
   return markdownResponse(
     [
       `# ${name}: Event Portfolio`,

@@ -4,7 +4,7 @@ import type { Project } from "../../emdash-env";
 import type { ProjectCardData } from "../components/ProjectCard";
 import { cmsImage } from "./images";
 
-type AstroLike = Pick<AstroGlobal, "url" | "locals" | "cache">;
+type AstroLike = Pick<AstroGlobal, "url" | "locals">;
 
 export type ProjectEntry = ContentEntry<Project>;
 
@@ -13,12 +13,11 @@ const CARD_SIZES = "(min-width: 75em) 360px, (min-width: 62em) 30vw, (min-width:
 const CARD_WIDTHS = [320, 480, 640, 960];
 
 /** All published projects, in the order set by their sort field */
-export async function getProjects(astro: AstroLike, { cache = true } = {}) {
-  const { entries, error, cacheHint } = await getEmDashCollection("projects", {
+export async function getProjects() {
+  const { entries, error } = await getEmDashCollection("projects", {
     orderBy: { sort: "asc", title: "asc" },
   });
   if (error) throw error;
-  if (cache && astro.cache?.enabled) astro.cache.set(cacheHint);
   return entries as ProjectEntry[];
 }
 

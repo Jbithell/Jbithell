@@ -19,7 +19,7 @@ interface Props {
 const { title, description, breadcrumbs, events, discipline } = Astro.props;
 const [cards, filters] = await Promise.all([
   toEventCards(Astro, events),
-  disciplineLinks(Astro, discipline),
+  disciplineLinks(discipline),
 ]);
 const siteUrl = Astro.url.origin;
 ---

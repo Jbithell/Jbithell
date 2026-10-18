@@ -3,7 +3,9 @@ import PortfolioListing from "../../components/PortfolioListing.astro";
 import { eventYear } from "../../lib/events";
 import { getEvents } from "../../lib/portfolio";
 
-const events = await getEvents(Astro);
+export const prerender = true;
+
+const events = await getEvents();
 const since = events.length ? eventYear(events[events.length - 1].data) : "2014";
 ---
 

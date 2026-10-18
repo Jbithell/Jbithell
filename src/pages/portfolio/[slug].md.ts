@@ -1,18 +1,16 @@
-import type { APIRoute } from "astro";
-import { decodeSlug, getEmDashEntry } from "emdash";
-import type { EventEntry } from "../../lib/events";
+import type { APIRoute, GetStaticPaths } from "astro";
+import { eventPath, type EventEntry } from "../../lib/events";
 import { eventMarkdown, markdownResponse } from "../../lib/markdown";
+import { getEvents } from "../../lib/portfolio";
 
-/** Markdown version of an event page */
-export const GET: APIRoute = async (context) => {
-  const slug = decodeSlug(context.params.slug);
-  const { entry, cacheHint } = slug ? await getEmDashEntry("events", slug) : { entry: null };
-  if (!entry) return new Response("Not found", { status: 404 });
-  if (context.cache?.enabled && cacheHint) context.cache.set(cacheHint);
-  const path = `/portfolio/${entry.id}`;
-  const response = markdownResponse(
-    eventMarkdown((entry as EventEntry).data, context.url.origin + path),
-  );
-  response.headers.set("Link", `<${path}>; rel="canonical"`);
-  return response;
-};
+export const prerender = true;
+
+export const getStaticPaths = (async () =>
+  (await getEvents()).map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }))) satisfies GetStaticPaths;
+
+/** Markdown version of an event page. Its canonical Link header is set in public/_headers */
+export const GET: APIRoute<{ entry: EventEntry }> = ({ props, url }) =>
+  markdownResponse(eventMarkdown(props.entry.data, url.origin + eventPath(props.entry)));

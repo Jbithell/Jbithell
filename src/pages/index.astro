@@ -8,12 +8,14 @@ import { siteImage } from "../lib/siteImages";
 import { socialLinks } from "../lib/site";
 import { person } from "../lib/structuredData";
 
+export const prerender = true;
+
 const settings = await getSiteSettings();
 const name = settings.title || "James Bithell";
 const siteUrl = (settings.url || Astro.url.origin).replace(/\/$/, "");
 const links = socialLinks(settings.social);
 
-const events = await getEvents(Astro);
+const events = await getEvents();
 const recent = await toEventCards(
   Astro,
   events.filter((event) => event.data.featured_image).slice(0, 6)

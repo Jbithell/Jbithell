@@ -7,14 +7,16 @@ import { getEvents } from "../lib/portfolio";
 import { getProjects, projectPath, projectSummary } from "../lib/projects";
 import { EMAIL, socialLinks } from "../lib/site";
 
+export const prerender = true;
+
 export const GET: APIRoute = async (context) => {
   const settings = await getSiteSettings();
   const siteUrl = (settings.url || context.url.origin).replace(/\/$/, "");
   const name = settings.title || "James Bithell";
   const links = socialLinks(settings.social);
   const [events, projects, cv] = await Promise.all([
-    getEvents(context),
-    getProjects(context),
+    getEvents(),
+    getProjects(),
     getCv(context, "public"),
   ]);
   const cvLines = [

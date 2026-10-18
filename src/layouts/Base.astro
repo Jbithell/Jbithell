@@ -24,7 +24,7 @@ import "@mantine/core/styles/Text.css";
 import "@mantine/core/styles/Title.css";
 import "@mantine/core/styles/Typography.css";
 import "../styles/global.css";
-import { getSiteSettingsWithCacheHint } from "emdash";
+import { getSiteSettings } from "emdash";
 import { createPublicPageContext } from "emdash/page";
 import { EmDashBodyEnd, EmDashBodyStart, EmDashHead } from "emdash/ui";
 import { MantineStyles } from "../components/Mantine";
@@ -48,7 +48,7 @@ interface Props {
   content?: { collection: string; id: string; slug?: string | null };
   /** Extra <link rel="alternate"> versions of this page */
   alternates?: { href: string; type: string; title?: string }[];
-  /** A page that must not be cached at the edge or indexed, such as the private CV */
+  /** A page that must not be indexed, such as the private CV */
   noCache?: boolean;
 }
 
@@ -64,9 +64,7 @@ const {
   noCache = false,
 } = Astro.props;
 
-const { data: settings, cacheHint } = await getSiteSettingsWithCacheHint();
-// Setting a hint would turn caching back on for a page that opted out
-if (Astro.cache?.enabled && !noCache) Astro.cache.set(cacheHint);
+const settings = await getSiteSettings();
 
 const siteTitle = settings.title || "James Bithell";
 const siteUrl = (settings.url || Astro.url.origin).replace(/\/$/, "");

@@ -5,6 +5,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "jbithellcom",
+  // Saves wrangler looking it up, so the Workers Builds token needs fewer permissions
+  "account_id": "45bac1175cf5fafe9dffbeb41ecea928",
   "main": "./src/worker.ts",
   "compatibility_date": "2026-02-24",
   "compatibility_flags": ["nodejs_compat"],
@@ -33,7 +35,11 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "jbithellcom"
+      "database_name": "jbithellcom",
+      "database_id": "86413729-f1dc-4b97-8a7e-328634c8ae22",
+      // Workers Builds prerenders the site from the production database. Only builds there use it
+      // (see `remoteBindings` in astro.config.mjs). Local builds and `npm run dev` use a local database
+      "remote": true
     }
   ],
   "r2_buckets": [
@@ -42,11 +48,12 @@
       "bucket_name": "jbithellcom-media"
     }
   ],
-  // Resizes CMS images into responsive WebP/AVIF variants
+  // Resizes images for the EmDash admin. The public site's images are resized while building
   "images": {
     "binding": "IMAGES"
   },
-  // EmDash scheduled publishing and maintenance
+  // EmDash scheduled publishing and maintenance. Scheduled posts rebuild the site through
+  // src/plugins/rebuild.ts when they're published
   "triggers": {
     "crons": ["* * * * *"]
   },

@@ -1,5 +1,4 @@
 ---
-import { decodeSlug, getEmDashEntry } from "emdash";
 import { PortableText } from "emdash/ui";
 import { EventDetail, type EventDetailData } from "../../components/EventDetail";
 import Base from "../../layouts/Base.astro";
@@ -15,19 +14,25 @@ import {
 import { cmsImage, cmsOgImage } from "../../lib/images";
 import { getEvents } from "../../lib/portfolio";
 
-const slug = decodeSlug(Astro.params.slug);
-if (!slug) return Astro.rewrite("/404");
-const { entry, error, cacheHint } = await getEmDashEntry("events", slug);
-if (error) throw error;
-if (!entry) return Astro.rewrite("/404");
-if (Astro.cache?.enabled) Astro.cache.set(cacheHint);
-const event = (entry as EventEntry).data;
+export const prerender = true;
 
-// Neighbouring events for the previous/next links
-const events = await getEvents(Astro);
-const index = events.findIndex((e) => e.data.id === event.id);
-const newer = index > 0 ? events[index - 1] : undefined;
-const older = index >= 0 && index < events.length - 1 ? events[index + 1] : undefined;
+export async function getStaticPaths() {
+  const events = await getEvents();
+  return events.map((entry, i) => ({
+    params: { slug: entry.id },
+    // Neighbouring events for the previous/next links
+    props: { entry, newer: events[i - 1], older: events[i + 1] },
+  }));
+}
+
+interface Props {
+  entry: EventEntry;
+  newer?: EventEntry;
+  older?: EventEntry;
+}
+
+const { entry, newer, older } = Astro.props;
+const event = entry.data;
 
 const [image, ogImage] = await Promise.all([
   cmsImage(Astro, event.featured_image, {
@@ -49,7 +54,7 @@ const facts = [
   { label: "Production", value: event.professional ? "Professional" : undefined },
 ].filter((fact): fact is { label: string; value: string } => Boolean(fact.value));
 
-const path = eventPath(entry as EventEntry);
+const path = eventPath(entry);
 const detail: EventDetailData = {
   title: event.title,
   dateLabel: formatEventDate(event),

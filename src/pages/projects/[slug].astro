@@ -1,10 +1,10 @@
 ---
-import { decodeSlug, getEmDashEntry } from "emdash";
 import { PortableText } from "emdash/ui";
 import { ProjectDetail, type ProjectDetailData } from "../../components/ProjectDetail";
 import Base from "../../layouts/Base.astro";
 import { cmsImage, cmsOgImage } from "../../lib/images";
 import {
+  getProjects,
   projectBadges,
   projectPath,
   projectSummary,
@@ -12,13 +12,18 @@ import {
   type ProjectEntry,
 } from "../../lib/projects";
 
-const slug = decodeSlug(Astro.params.slug);
-if (!slug) return Astro.rewrite("/404");
-const { entry, error, cacheHint } = await getEmDashEntry("projects", slug);
-if (error) throw error;
-if (!entry) return Astro.rewrite("/404");
-if (Astro.cache?.enabled) Astro.cache.set(cacheHint);
-const project = (entry as ProjectEntry).data;
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return (await getProjects()).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+interface Props {
+  entry: ProjectEntry;
+}
+
+const { entry } = Astro.props;
+const project = entry.data;
 
 const [image, ogImage] = await Promise.all([
   cmsImage(Astro, project.featured_image, {

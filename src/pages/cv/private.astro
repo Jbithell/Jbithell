@@ -15,10 +15,8 @@ import {
   shareLinkUrl,
 } from "../../lib/cv";
 
-// Rendered per visitor, so it must never reach the shared edge cache. EmDash's middleware also
-// opts responses marked private out of the route cache
+// Rendered per visitor by the Worker (not prerendered), so it must never be cached
 Astro.response.headers.set("Cache-Control", "private, no-store");
-if (Astro.cache?.enabled) Astro.cache.set(false);
 
 const access = await getCvAccess(Astro);
 if (!access) Astro.response.status = 403;

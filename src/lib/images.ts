@@ -17,7 +17,7 @@ export interface ResponsiveImage {
 
 /**
  * Resolve an EmDash image field into a responsive src/srcset, using Astro's image service
- * (the Cloudflare Images binding in production). Mirrors EmDash's own <EmDashImage> component.
+ * (sharp, while building). Mirrors EmDash's own <EmDashImage> component.
  */
 export async function cmsImage(
   astro: Pick<AstroGlobal, "url" | "locals">,
@@ -26,7 +26,7 @@ export async function cmsImage(
 ): Promise<ResponsiveImage | null> {
   if (!image) return null;
   const storageKey = image.meta?.storageKey;
-  let src =
+  const src =
     image.src ||
     (typeof storageKey === "string"
       ? astro.locals.emdash?.getPublicMediaUrl?.(storageKey)
@@ -46,10 +46,10 @@ export async function cmsImage(
           : undefined,
     },
   };
-  if (!image.width || !image.height) return result;
+  // Only media on the public bucket is resized (see image.remotePatterns). Local builds use the
+  // media library's own URLs, which the build can't download from
+  if (!image.width || !image.height || src.startsWith("/")) return result;
 
-  // Astro only optimises absolute URLs on an authorised host (see image.remotePatterns)
-  if (src.startsWith("/") && !src.startsWith("//")) src = new URL(src, astro.url.origin).href;
   const maxWidth = image.width;
   const candidates = [...new Set(widths.map((w) => Math.min(w, maxWidth)))];
   try {
@@ -87,6 +87,7 @@ export async function cmsOgImage(
       : undefined);
   if (!path) return undefined;
   const src = new URL(path, astro.url.origin).href;
+  if (path.startsWith("/")) return src;
   const width = Math.min(1200, image.width);
   try {
     const result = await getImage({

@@ -5,6 +5,8 @@ import { PageHeader } from "../../components/PageHeader";
 import Base from "../../layouts/Base.astro";
 import { getCv } from "../../lib/cv";
 
+export const prerender = true;
+
 const settings = await getSiteSettings();
 const name = settings.title || "James Bithell";
 const cv = await getCv(Astro, "public");

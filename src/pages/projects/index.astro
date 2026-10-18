@@ -4,6 +4,8 @@ import { ProjectGrid } from "../../components/ProjectGrid";
 import Base from "../../layouts/Base.astro";
 import { getProjects, toProjectCards } from "../../lib/projects";
 
+export const prerender = true;
+
 const title = "Projects Portfolio";
 const description =
   "James Bithell's Projects Portfolio - software and hardware projects, from theatre tech to weather stations";
@@ -11,7 +13,7 @@ const breadcrumbs = [
   { label: "Home", href: "/" },
   { label: title, href: "/projects" },
 ];
-const cards = await toProjectCards(Astro, await getProjects(Astro));
+const cards = await toProjectCards(Astro, await getProjects());
 const siteUrl = Astro.url.origin;
 ---
 

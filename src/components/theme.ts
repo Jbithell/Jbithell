@@ -1,8 +1,11 @@
-import { createTheme, type CSSVariablesResolver } from "@mantine/core";
+import { createTheme, virtualColor, type CSSVariablesResolver } from "@mantine/core";
 
 export const theme = createTheme({
   // Neutral accents, so the photos provide the colour
-  primaryColor: "gray",
+  // A virtual colour gives filled buttons a text colour per colour scheme: "gray"
+  // would use white text in dark mode too, which is unreadable on gray.3
+  colors: { primary: virtualColor({ name: "primary", light: "gray", dark: "gray" }) },
+  primaryColor: "primary",
   primaryShade: { light: 8, dark: 3 },
   autoContrast: true,
   defaultRadius: "md",

@@ -2,8 +2,10 @@
 import { getSiteSettings } from "emdash";
 import { RecentWork } from "../components/EventGrid";
 import { HomeHero } from "../components/HomeHero";
+import { RecentProjects } from "../components/ProjectGrid";
 import Base from "../layouts/Base.astro";
 import { getEvents, toEventCards } from "../lib/portfolio";
+import { getProjects, toProjectCards } from "../lib/projects";
 import { siteImage } from "../lib/siteImages";
 import { socialLinks } from "../lib/site";
 import { person } from "../lib/structuredData";
@@ -20,6 +22,9 @@ const recent = await toEventCards(
   Astro,
   events.filter((event) => event.data.featured_image).slice(0, 6)
 );
+
+const projects = await getProjects();
+const recentProjects = await toProjectCards(Astro, projects.slice(0, 6));
 
 const profile = siteImage("james-bithell-profile.jpg", "140px", `Profile photo of ${name} smiling`);
 const background = siteImage("backgrounds/wales3.jpg", "100vw");
@@ -48,6 +53,12 @@ const background = siteImage("backgrounds/wales3.jpg", "100vw");
     background={background}
     links={links}
   />
+  {recentProjects.length > 0 && (
+    <RecentProjects
+      projects={recentProjects}
+      more={{ href: "/projects", label: `All ${projects.length} projects` }}
+    />
+  )}
   <RecentWork
     events={recent}
     more={{ href: "/portfolio", label: `All ${events.length} events` }}

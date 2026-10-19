@@ -65,21 +65,21 @@ export function HomeHero({
             <Stack gap="xs" mt="lg">
               <Button
                 component="a"
-                href="/portfolio"
-                size="md"
-                justify="space-between"
-                rightSection={<IconMasksTheater size={20} aria-hidden="true" />}
-              >
-                Event Portfolio
-              </Button>
-              <Button
-                component="a"
                 href="/projects"
                 size="md"
                 justify="space-between"
                 rightSection={<IconCode size={20} aria-hidden="true" />}
               >
                 Projects Portfolio
+              </Button>
+              <Button
+                component="a"
+                href="/portfolio"
+                size="md"
+                justify="space-between"
+                rightSection={<IconMasksTheater size={20} aria-hidden="true" />}
+              >
+                Event Portfolio
               </Button>
               <Button
                 component="a"

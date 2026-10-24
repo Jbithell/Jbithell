@@ -108,7 +108,6 @@ export function ProjectDetail({
                   fetchPriority="high"
                   decoding="async"
                   h="auto"
-                  style={project.image.style}
                 />
               </Paper>
             </Grid.Col>

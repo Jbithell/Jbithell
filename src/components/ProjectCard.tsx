@@ -36,7 +36,9 @@ export function ProjectCard({
             fetchPriority={priority ? "high" : undefined}
             decoding="async"
             className={classes.image}
-            style={image.style}
+            // Projects are often illustrated by a logo, so show the whole image rather than cropping
+            // it to the card, without the placeholder colour behind any transparency
+            style={{ objectFit: "contain" }}
           />
         ) : (
           <div className={classes.placeholder}>
